@@ -1,0 +1,20 @@
+.customer-info input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: transparent;
+    padding: 8px 10px;
+    color: var(--text-white);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: auto;
+    outline: none;
+}
+
+.customer-info input::placeholder{
+    color: var(--text-white);
+    font-size: 15px;
+    line-height: auto;
+    font-weight: 400;
+}

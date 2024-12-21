@@ -1,0 +1,27 @@
+.dash-tab-main-container{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.dash-user-greetings{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    display: flex;
+    gap: 5px;
+}
+
+.dash-user-greetings strong{
+    font-weight: 500;
+}
+
+.dash-user-can-do-details{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.dash-user-can-do-details strong {
+    font-weight: 500;
+}

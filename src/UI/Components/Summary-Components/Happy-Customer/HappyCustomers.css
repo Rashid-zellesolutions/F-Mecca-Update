@@ -1,0 +1,60 @@
+.happy-customers{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.happy-customers h3{
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 600;
+}
+
+.happy-customer-comment{
+    display: flex;
+    flex-direction: column;
+    width: 425px;
+    gap: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.customer-frofile-and-rating{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.customer-profile-and-name{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.customer-profile-and-name h3{
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 600;
+}
+
+.customer-rating{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    color: #F0AD4E;
+}
+
+.happy-customer-comment p{
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+
+@media only screen and (max-width: 1024px){
+    .happy-customer-comment{
+        width: 100%;
+    }
+}

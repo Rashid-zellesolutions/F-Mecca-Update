@@ -1,0 +1,14 @@
+@media only screen and (max-width: 480px){
+    .dektop-order-and-price{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 481px){
+    .summery-orders-and-price{
+        display: none;
+    }
+    .dektop-order-and-price{
+        display: flex;
+    }
+}

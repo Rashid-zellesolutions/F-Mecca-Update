@@ -1,0 +1,124 @@
+.date-and-time-main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.date-and-time-main-heading{
+    font-size: 22px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.date-and-time-container{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    gap: 30px;
+}
+
+.date-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+.react-calendar{
+    width: 100% !important;
+}
+
+.react-calendar__tile--now {
+    background: transparent !important;
+    border: 1px solid var(--active-nav-item-color) !important;
+    border-radius: 5px !important;
+}
+
+.react-calendar__tile--active {
+    background: var(--active-nav-item-color) !important;
+    color: white !important;
+    border-radius: 5px !important;
+}
+
+.react-calendar__navigation button:nth-child(1){
+    display: none !important;
+}
+
+.react-calendar__navigation button:nth-child(2){
+    font-size: 25px;
+}
+
+.react-calendar__navigation button:nth-child(3){
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.react-calendar__navigation button:nth-child(4){
+    font-size: 25px;
+}
+
+
+
+.react-calendar__navigation button:nth-child(5){
+    display: none !important;
+}
+
+
+/* Time start */
+.time-container{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 15px;
+    gap: 5px;
+}
+
+.time-slot-heading{
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 500;
+    color: var(--active-nav-item-color);
+}
+
+.time-zone-span{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+    
+}
+
+.time-zone-span p{
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 400;
+}
+
+.time-stamps-buttons{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.time-stamps-buttons button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(89, 89, 89, 0.1);
+    color: #595959;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 400;
+    border: 1px solid var(--border-color); 
+    cursor: pointer;
+}

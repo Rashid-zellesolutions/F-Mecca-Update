@@ -1,0 +1,282 @@
+.review_add_label{
+    margin: 0 0 0px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-color);
+    padding: 0;
+    line-height: 21px;
+}
+.write_review_main{
+    padding: 25px 60px 0px 60px;
+    background-color: #f7f7f7;
+}
+.write_review {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+    margin-top: 10px;
+    position: relative;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: scaleY(0); /* For accordion effect */
+    transform-origin: top;
+    transition: max-height 0.4s ease-in, opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.write_review.open {
+    max-height: 1000px; /* A value larger than the content height */
+    opacity: 1;
+    transform: scaleY(1); /* Expand the accordion */
+}
+
+
+
+.review_loader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 999999999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.review_loader img{
+ height: 60px;
+ width: 60px;
+}
+
+.review_loader p{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.review_success{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 999999999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.success_popup_review{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 20px 35px;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+}
+
+.success_popup_review img{
+    height: 60px;
+    width: auto;
+}
+
+.success_popup_review p{
+    font-size: 12px;
+    list-style: 14px;
+    margin: 0px 0 0 0;
+    color: var(--text-color);
+    font-weight: 400;
+}
+.success_popup_review h3{
+    font-size: 19px;
+    list-style: 18px;
+    margin: 5px 0 0 0;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.write_review h3{
+    color: var(--text-color);
+    font-size: 25px;
+    line-height: var(--heading-line-height);
+    font-weight: 600;
+}
+
+.write_review > form{
+    display: flex;
+    width: 80%;
+    gap: 15px;
+
+}
+
+.write_review_left{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.write_review_right{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button_add_label{
+    width: 180px;
+    padding: 10px 0px;
+    border: 0px solid;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: var(--text-color);
+    color: #fff;
+    transition:background-color 1s ;
+
+}
+
+.write_review_right button:hover{
+    background-color: #DB202B;
+    color: #fff;    
+}
+
+.write_review_btn{
+    width: 180px;
+    padding: 10px 0px;
+    border: 0px solid;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: var(--text-color);
+    color: #fff;
+    transition:background-color 1s ;
+    cursor: pointer;
+}
+
+.write_review_btn:hover{
+    background-color: #2F7A97;
+    color: #fff;    
+}
+
+.image-preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.image-preview {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.remove-image-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.remove-image-button:hover {
+    background: darkred;
+}
+/* Styling for the file input container */
+.image_upload_review {
+    display: none; /* Hide the default file input */
+}
+
+/* Custom label that looks like a square button with a + icon */
+.image-upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: #FDFDFD; /* Blue background */
+    color: var(--text-color);
+    font-size: 30px;
+    text-align: center;
+    line-height: 60px; /* Center the icon vertically */
+    border-radius: 8px; /* Optional: Rounded corners */
+    cursor: pointer;
+    border: 1.5px dashed  var(--border-color);
+    gap: 1px;
+}
+
+.image-upload-label > .icon{
+    margin: 0;
+    padding: 0;
+    line-height: auto;
+    color: var(--text-color);
+    position: relative;
+    font-size: 40px;
+}
+
+.image-upload-label > .text{
+    margin: 0;
+    padding: 0;
+    line-height: 18px;
+    color: var(--text-color);
+    font-size: 8px;
+
+}
+
+.remove-image-button{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--text-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    height: 15px;
+    width: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.remove-image-button p{
+    /* font-size: 12px; */
+    /* line-height: 4px; */
+}
+
+.remove-success-button{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: var(--text-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

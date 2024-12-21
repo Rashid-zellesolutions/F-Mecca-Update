@@ -1,0 +1,74 @@
+.furniture-main-container{
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    padding: 20px 130px;
+    z-index: 22222;
+}
+
+.links-container{
+    display: flex;
+    width: 80%;
+    padding: 0px 20px;
+    justify-content: space-between;
+}
+
+.furniture-heading{
+    color: var(--text-color);
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+
+.living-room-links{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.living-room-links a{
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: 400;
+}
+
+.living-room-links a:hover{
+    color: var(--hover-font-color);
+    text-decoration: underline;
+}
+
+.shop-via-chat-option{
+    padding: 0px 0px 30px 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.furniture-menu-images-div{
+    display: flex;
+    flex-direction: column;
+}
+
+.furniture-menu-image{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+.furniture-menu-image img{
+    width: 250px;
+    height: 180px;
+}
+
+.furniture-menu-image h3{
+    color: var(--text-color);
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+

@@ -1,0 +1,88 @@
+.products-slider-main-container{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    padding: var(--global-padding);
+    overflow: hidden;
+}
+
+.feature-product-heading{
+    color: var(--text-color);
+    font-size: 25px;
+    line-height: var(--heading-line-height);
+    font-weight: 600;
+    /* margin-bottom: 9px; */
+}
+
+/* @media only screen and (max-width: 1200px){
+    .products-slider-main-container{
+        padding: 20px 30px;
+    }
+} */
+
+
+
+
+
+.products-slider{
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 30px;
+    cursor: grab;
+    transition: all 0.3s ease-in-out;
+}
+
+.products-slider.dragging {
+    transition: none;
+    cursor: grabbing;
+}
+
+/* Custom scrollbar styling for Webkit browsers */
+.products-slider::-webkit-scrollbar {
+    height: 4px; 
+}
+
+.products-slider::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+}
+
+.products-slider::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+}
+
+.products-slider::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+@media only screen and (max-width: 700px){
+    .products-slider{
+        display: flex;
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .products-slider-main-container{
+        display: flex;
+        width: 100%;
+        padding: 15px 10px;
+        gap: 15px;
+    }
+
+    .feature-product-heading{
+        color: var(--text-color);
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 600;
+    }
+}

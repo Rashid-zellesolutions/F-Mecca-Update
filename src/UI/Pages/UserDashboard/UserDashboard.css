@@ -1,0 +1,21 @@
+.user-dashboard-main-page{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 35px 60px 70px 60px;
+    gap: 35px;
+}
+
+.user-dashboard-main-heading{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-dashboard-main-heading h3{
+    font-size: 25px;
+    line-height: 28px;
+    font-weight: 600;
+    color: var(--text-color);
+}

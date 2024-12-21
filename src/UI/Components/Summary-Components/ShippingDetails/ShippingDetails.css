@@ -1,0 +1,36 @@
+.shipping-main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 30px;
+    color: var(--text-color);
+    gap: 20px;
+    border: 1px solid #D7D7D7;
+}
+
+.shipping-main-container h3{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+/* Mobile styling */
+.mobile-delivery-options h3{
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+@media only screen and (max-width: 480px){
+    .shipping-main-container {
+        padding: 0;
+        border: none;
+    }
+    .shipping-main-container h3{
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: 600;
+    }
+}
+

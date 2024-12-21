@@ -1,0 +1,243 @@
+
+/* Language Modal Styling */
+.show-language-modal{
+    position: fixed;
+    display: flex;
+    /* width: 0; */
+    width: 100%;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999999999999;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.show-language-modal.increase-width-language-modal{
+    /* width: 100%; */
+    visibility: visible;
+    opacity: 1;
+}
+
+.language-modal-containt-div{
+    display: flex;
+    flex-direction: column;
+    width: 430px;
+    background-color: #fff;
+    height: 100%;
+    position: absolute;
+    z-index: 9999;
+    right: -430px;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.language-modal-containt-div.show-language-modal-inner-container{
+    right: 0;
+}
+
+.close-language-modal{
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.close-language-modal img{
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* .close-language-modal.hide-close-btn{
+    display: none;
+} */
+
+
+
+/* .hide-language-modal{
+    display: none;
+} */
+
+.select-language-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    background-color: #f7f7f7;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 30px;
+}
+
+.modal-headin-div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-headin-div h3{
+    font-size: 15px;
+    line-height: 23px;
+    font-weight: 500;
+}
+
+.select-language-dropdown{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    justify-content: start;
+}
+
+.select-language-dropdown h3{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 23px;
+    color: var(--text-color);
+}
+
+.languages-drop-down{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    height: 45px;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.languages-drop-down.open-language-dropdown{
+    height: 170px;
+}
+
+.selected-language{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px 10px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.selected-language span{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.selected-language span img{
+    height: 32px;
+    width: auto;
+    object-fit: cover;
+}
+
+.selected-language span h3{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+}
+
+.select-lan-arrow-down{
+    height: 18px;
+    width: auto;
+    transition: transform 0.3s ease;
+    transform: rotate(180deg);
+}
+
+.select-lan-arrow-up{
+    height: 18px;
+    width: auto;
+    transition: transform 0.3s ease;
+    transform: rotate(360deg);
+}
+
+.defrent-languages{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+}
+
+.single-language{
+    display: flex;
+    width: 100%;
+    padding: 2px 5px;
+    gap: 15px;
+    align-items: center;
+    cursor: pointer;
+    gap: 15px;
+}
+
+.single-selected-language{
+    display: flex;
+    width: 100%;
+    padding: 2px 5px;
+    gap: 15px;
+    align-items: center;
+    background-color: #f7f7f7;
+    border-radius: 6px;
+
+}
+
+.single-selected-language img{
+    height: 28px;
+    width: 28px;
+    object-fit: cover;
+}
+
+.single-selected-language h3{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+}
+
+.single-language img{
+    height: 28px;
+    width: auto;
+    object-fit: cover;
+}
+
+.single-language h3{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+}
+
+.select-language-modal-detail-section{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    padding: 15px;
+}
+
+.select-language-modal-detail-section h3{
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 23px;
+    color: #595959;
+}
+
+.select-language-modal-detail-section p{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 300;
+}
+
+/* Language Modal Style End */

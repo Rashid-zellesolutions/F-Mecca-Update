@@ -1,0 +1,812 @@
+.summery-main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #666666;
+    /* padding: 10px; */
+    color: var(--text-white);
+}
+
+.summery-heading-div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+
+.summery-heading-div h3{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    color: var(--text-white);
+}
+
+.summery-heading-div button{
+    color: var(--text-white);
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.summery-order-number{
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+    color: var(--text-white);
+}
+
+.summery-user-name-and-icon{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 5px;
+    padding: 15px 10px 10px 10px;
+    border-bottom: 1px solid #949494;
+}
+
+.summery-user-name-and-icon img{
+    height: 25px;
+    width: auto;
+    object-fit: cover;
+}
+
+.summery-user-name-and-icon p{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    color: var(--text-white);
+}
+
+.summery-user-name-and-number{
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #949494;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.summery-user-name{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 30%;
+}
+
+
+.summery-user-name h3{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+.summery-user-name p{
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 15px;
+}
+
+.summery-user-address{
+    display: flex;
+    width: 70%;
+}
+.summery-user-address p{
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 15px;
+}
+
+.summery-order-details-icon{
+    display: flex;
+    width: 100%;
+    padding: 15px 10px 10px 10px;
+    gap: 5px;
+    border-bottom: 1px solid #949494;
+    align-items: center;
+}
+
+.summery-order-details-icon img{
+    height: 25px;
+    width: auto;
+    object-fit: cover;
+}
+
+.summery-order-details-icon p{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+.summery-orders-div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 170px;
+    padding: 10px;
+    border-bottom: 1px solid #949494;
+    gap: 10px;
+}
+
+.summery-orders-and-price{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.summery-orders{
+    display: flex;
+    width: 65%;
+    flex-direction: column;
+
+}
+
+.summery-orders p{
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 15px;
+}
+
+.order-under-line-div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: end;
+    padding-right: 20px;
+}
+
+.order-under-line{
+    display: flex;
+    height: 1px;
+    width: 100px;
+    align-items: flex-end;
+    background-color: #949494;
+}
+
+.summery-orders-and-price p{
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 15px;
+} 
+
+.summery-total-price{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 1px solid #949494;
+    border-bottom: 1px solid #949494;
+    margin-top: 15px;
+    /* margin-bottom: 15px; */
+}
+
+.summer-total{
+    display: flex;
+    width: 100%;
+    gap: 10px; 
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #949494;
+}
+
+.summer-total p{
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 15px;
+}
+
+.summer-total h3{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.summery-contact-use{
+    display: flex;
+    width: 100%;
+    padding: 15px 10px 15px 10px;
+}
+
+.summery-problame-and-contact{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    border: 1px solid #949494;
+    border-radius: 25px;
+}
+
+.summery-problame-and-contact p{
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 15px;
+}
+
+.summery-problame-and-contact h3{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #FFC750;
+    cursor: pointer;
+}
+
+.return-home-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.return-home-btn button{
+    display: flex;
+    width: max-content;
+    background-color: #C61B1A;
+    color: var(--text-white);
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid #C61B1A;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Desktop Styling */
+.desktop-summery-main-container{
+    display: none;
+    width: 100%;
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+.desktop-summery-main-div{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    /* height: 80vh; */
+    background-color: #666666;
+    border-radius: 25px;
+    padding: 10px 50px;
+    color: var(--text-white);
+}
+
+.desktop-summery-main-div h3{
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 38px;
+}
+
+.desktop-summery-main-div p{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 23px;
+}
+
+.desktop-customer-details{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    padding: 20px 0 10px 0;
+}
+
+.desktop-customer-details img{
+    height: 38px;
+    width: auto;
+    object-fit: cover;
+}
+
+.desktop-customer-details p{
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 23px;
+}
+
+.desktop-user-and-address{
+    display: flex;
+    padding: 15px 10px;
+    width: 100%;
+    border: 1px solid #949494;
+    border-radius: 5px;
+    /* gap: 10px; */
+    justify-content: space-between;
+}
+
+.desktop-user-and-number{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 5px;
+}
+
+.desktop-user-and-number h3{
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 23px;
+}
+
+.desktop-user-and-address p{
+    width: 60%;
+    text-align: start;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 23px;
+}
+
+.desktop-order-heading{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+    padding: 20px 0 10px 0;
+}
+
+.desktop-order-heading img{
+    height: 38px;
+    width: auto;
+    object-fit: cover;
+}
+
+ .desktop-order-details-main{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 200px;
+    border: 1px solid #949494;
+    border-radius: 5px;
+    gap: 10px;
+}
+
+.desktop-order-details-main::-webkit-scrollbar{
+    display: none;
+}
+
+.dektop-order-and-price{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.desktop-orders{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.desktop-orders p{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 23px;
+}
+
+.desktop-order-under-line-div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: end;
+}
+
+.desktop-order-under-line{
+    width: 100px;
+    height: 2px;
+    background-color: #949494;
+}
+
+.dektop-order-and-price p{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+} 
+
+.desktop-price-total-div{
+    display: flex;
+    width: 100%;
+    color: var(--text-white);
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #949494;
+    border-radius: 5px;
+}
+
+.desktop-total{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #949494;
+    width: 100%;
+    gap: 10px;
+    
+}
+
+.desktop-total:last-child {
+    border-right: none;
+}
+
+.desktop-total p{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 23px;
+}
+
+.desktop-total h3{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.desktop-contact-us{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border: 1px solid #949494;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+.desktop-contact-us p{
+    font-size: 15px;
+    line-height: 23px;
+    font-weight: 400;
+}
+
+.desktop-contact-us h3{
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 23px;
+    color: #FFC750;
+}
+
+/* Order track map */
+
+.desktop-order-track{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    position: relative;
+    background-image: url('../../../Assets/Furniture Mecca/Cart Page/map-image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    padding: 20px 35px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-placed-main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    border-radius: 25px;
+    color: var(--text-white);
+}
+
+.order-track-heading-secton{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.tick-and-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 20px;
+}
+
+.tick-and-heading img{
+    height: 64px;
+    width: auto;
+    object-fit: contain;
+}
+
+.togle-order-track-btn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.rotate-up{
+    transform: rotate(180deg);
+    transition: transform 0.5s ease;
+}
+
+.rotate-down{
+    transform: rotate(360deg);
+    transition: transform 0.5s ease;
+}
+
+.order-track-steps-main{
+    display: flex;
+    width: 100%;
+    height: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: display 0.3s ease, height 0.3s ease, transform 0.3s ease, padding 0.3s ease;
+}
+
+.order-track-steps-main.show-track{
+    height: 120px;
+    opacity: 1;
+    visibility: visible;
+    padding: 30px;
+}
+
+.order-track-steps{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.order-track-steps.show-order-track{
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+.order-track-steps img{
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+}
+
+.step-line{
+    width: 100px;
+    height: 3px;
+    background-color: #ffff;
+}
+
+.return-home-btn-div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.return-home-btn-div button{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    gap: 10px;
+    padding: 12px 15px;
+    background-color: #C61B1A;
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Media query */
+@media only screen and (min-width: 481px){
+    .summery-main-container{
+        display: none;
+    }
+    .desktop-summery-main-container{
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px){
+    .order-track-heading-secton {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 0 50px;
+    }
+
+    .tick-and-heading img {
+        height: 50px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .order-track-steps-main.show-track {
+        height: 100px;
+    }
+
+    .order-track-steps img {
+        height: 25px;
+    }
+
+    .step-line {
+        width: 60px;
+    }
+    
+    
+}
+
+/* Tablate View Query */
+@media only screen and (min-width: 781px) and (max-width: 1024px){
+    .desktop-summery-main-div {
+        padding: 10px 20px;
+    }
+
+    .desktop-user-and-number {
+        width: 35%;
+    }
+
+    .desktop-user-and-number h3 {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .desktop-user-and-address p {
+        width: 60%;
+        text-align: start;
+        font-size: 10px;
+        font-weight: 300;
+        line-height: 18px;
+    }
+
+    .dektop-order-and-price p {
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 17px;
+    }
+
+    .desktop-order-under-line {
+        width: 60px;
+        height: 3px;
+    }
+
+    .desktop-total {
+        gap: 5px;
+    }
+
+    .desktop-total p {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 16px;
+    }
+    .desktop-total h3 {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+    }
+
+    .desktop-contact-us {
+        padding: 10px;
+    }
+
+    .desktop-contact-us p {
+        font-size: 10px;
+        line-height: 16px;
+    }
+
+    .desktop-contact-us h3 {
+        font-size: 12px;
+        line-height: 18px;
+        color: #FFC750;
+    }
+    
+    .tick-and-heading img {
+        height: 40px;
+        width: auto;
+        object-fit: contain;
+    }
+    .order-track-heading-secton{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: start;
+        gap: 10px;
+        padding: 10px 45px;
+    }
+
+    .tick-and-heading {
+        gap: 10px;
+        padding: 5px 10px;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .tick-and-heading h3{
+        font-size: 12px;
+    }
+
+    .order-track-steps-main.show-track {
+        height: 80px;
+    }
+
+    .order-track-steps img {
+        height: 22px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .step-line {
+        width: 35px;
+    }
+}
+
+/* Ipad screen query */
+@media only screen and (min-width: 481px) and (max-width: 780px){
+    .desktop-order-track{
+        display: none;
+    }
+    .desktop-summery-main-div{
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .desktop-user-and-number {
+        width: 35%;
+        gap: 0px;
+    }
+
+    .desktop-user-and-address p {
+        font-size: 11px;
+        line-height: 20px;
+    }
+    .dektop-order-and-price p {
+        font-weight: 600;
+    }
+    .desktop-total {
+        gap: 10px;
+    }
+
+    .desktop-total p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .desktop-total h3 {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+    }
+
+    .desktop-contact-us {
+        padding: 10px;
+    }
+
+    .desktop-contact-us p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .desktop-contact-us h3 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+}

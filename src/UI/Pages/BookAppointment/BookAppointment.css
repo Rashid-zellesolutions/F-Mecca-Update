@@ -1,0 +1,111 @@
+.book-an-appointment-main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+    padding: var(--global-padding);
+}
+
+.book-appointment-head {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.book-appointment-main-container{
+    font-size: 25px;
+    line-height: 28px;
+    font-family: 600;
+    color: var(--text-color);
+}
+
+.book-appointment-slogan{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+/* book appointment body */
+.book-appointments-body{
+    display: flex;
+    width: 100%;
+    gap: 30px;
+}
+
+.book-appointment-select-tab-container{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding: 30px 30px 30px 0px;
+    gap: 20px;
+    border-right: 1px solid var(--border-color);
+}
+
+.tab-select-card{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    padding: 30px 20px;
+    gap: 15px;
+    border-radius: 10px;
+    border: 1px solid #FDFDFD;
+    box-shadow: 1px 1px 8px 0px #00000026;
+    cursor: pointer;
+    transition:  all 0.3s ease-in-out;
+}
+
+.tab-select-card.selected-tab{
+    background-color: var(--active-nav-item-color);
+}
+
+.tab-select-card:hover {
+    background-color: var(--active-nav-item-color);
+    
+}
+
+.tab-sect-card-icon{
+    width: 20px;
+    height: 20px;
+    background-image: url('../../../Assets/icons/home-black-outlined.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease-in-out;
+    /* object-fit: contain; */
+}
+
+.tab-select-card.selected-tab .tab-sect-card-icon{
+    background-image: url('../../../Assets/icons/home-icon.png');
+}
+
+.tab-select-card:hover .tab-sect-card-icon{
+    background-image: url('../../../Assets/icons/home-icon.png');
+}
+
+.tab-select-card p{
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    transition: all 0.3s ease-in-out;
+}
+
+.tab-select-card.selected-tab p{
+    color: #fff;
+    font-size: 22px;
+}
+
+.tab-select-card:hover  p{
+    font-size: 22px;
+    color: #fff;
+}
+
+.content-according-to-selected-tab{
+    display: flex;
+    width: 75%;
+}

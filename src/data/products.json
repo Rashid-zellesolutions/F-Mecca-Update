@@ -1,0 +1,1769 @@
+[
+    {
+      "discount": {
+        "is_discountable": 1,
+        "discount_type": "percentage",
+        "discount_value": "10"
+      },
+      "manage_stock": {
+        "is_stock_manage": 1,
+        "location": "Warehouse 1",
+        "quantity": "20",
+        "stock_status": "in_stock"
+      },
+      "_id": "6729a4abb0bd79a447b41d39",
+      "uid": 1,
+      "name": "Rome Bedroom Set Queen Bed Dresser Mirror",
+      "slug": "rome-bedroom-set",
+      "permalink": "https://example.com/products/ashley-loveseat",
+      "type": "simple",
+      "status": "published",
+      "featured": 1,
+      "description": "A comfortable Rome Bedroom Set that fits perfectly in your living room.",
+      "short_description": "Stylish and comfortable loveseat by Ashley.",
+      "sku": "ASHLEY-LOVESEAT-001",
+      "regular_price": "499.99",
+      "tax_status": "taxable",
+      "tax_class": "furniture",
+      "brand": "Ashley Furniture",
+      "sold_individually": 0,
+      "shipping_required": 1,
+      "shipping_taxable": 1,
+      "collection": [
+        "Living Room",
+        "Furniture"
+      ],
+      "attributes": [
+        {
+          "_id": "att_color",
+          "name": "Color",
+          "type": "select",
+          "options": [
+            {
+              "name": "Beige",
+              "value": "beige",
+              "_id": "6729a4abb0bd79a447b41d3a"
+            },
+            {
+              "name": "Gray",
+              "value": "gray",
+              "_id": "6729a4abb0bd79a447b41d3b"
+            }
+          ]
+        },
+        {
+          "_id": "att_material",
+          "name": "Material",
+          "type": "text",
+          "options": [
+            {
+              "name": "Fabric",
+              "value": "fabric",
+              "_id": "6729a4abb0bd79a447b41d3c"
+            },
+            {
+              "name": "Leather",
+              "value": "leather",
+              "_id": "6729a4abb0bd79a447b41d3d"
+            }
+          ]
+        }
+      ],
+      "meun_order": 1,
+      "enable_review": 1,
+      "variations": [],
+      "categories": [
+        {
+          "uid": "cat001",
+          "name": "Furniture",
+          "slug": "furniture",
+          "_id": "6729a4abb0bd79a447b41d3e"
+        },
+        {
+          "uid": "cat002",
+          "name": "Living Room",
+          "slug": "living-room",
+          "_id": "6729a4abb0bd79a447b41d3f"
+        }
+      ],
+      "tags": [
+        "Comfort",
+        "Living Room",
+        "Ashley"
+      ],
+      "images": [
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d40"
+        },
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d41"
+        }
+      ],
+      "gtin": "1234567890123",
+      "mpn": "ASH-LOV-001",
+      "ean": "1234567890123",
+      "createdAt": "2024-11-05T04:52:59.556Z",
+      "updatedAt": "2024-11-05T04:52:59.556Z",
+      "__v": 0
+    },
+    {
+      "discount": {
+        "is_discountable": 1,
+        "discount_type": "percentage",
+        "discount_value": "10"
+      },
+      "manage_stock": {
+        "is_stock_manage": 1,
+        "location": "Warehouse 1",
+        "quantity": "20",
+        "stock_status": "in_stock"
+      },
+      "_id": "6729a4abb0bd79a447b41d39",
+      "uid": 1,
+      "name": "Rome Bedroom Set Queen Bed Dresser Mirror",
+      "slug": "rome-bedroom-set",
+      "permalink": "https://example.com/products/ashley-loveseat",
+      "type": "simple",
+      "status": "published",
+      "featured": 1,
+      "description": "A comfortable Rome Bedroom Set that fits perfectly in your living room.",
+      "short_description": "Stylish and comfortable loveseat by Ashley.",
+      "sku": "ASHLEY-LOVESEAT-001",
+      "regular_price": "499.99",
+      "tax_status": "taxable",
+      "tax_class": "furniture",
+      "brand": "Ashley Furniture",
+      "sold_individually": 0,
+      "shipping_required": 1,
+      "shipping_taxable": 1,
+      "collection": [
+        "Living Room",
+        "Furniture"
+      ],
+      "attributes": [
+        {
+          "_id": "att_color",
+          "name": "Color",
+          "type": "select",
+          "options": [
+            {
+              "name": "Beige",
+              "value": "beige",
+              "_id": "6729a4abb0bd79a447b41d3a"
+            },
+            {
+              "name": "Gray",
+              "value": "gray",
+              "_id": "6729a4abb0bd79a447b41d3b"
+            }
+          ]
+        },
+        {
+          "_id": "att_material",
+          "name": "Material",
+          "type": "text",
+          "options": [
+            {
+              "name": "Fabric",
+              "value": "fabric",
+              "_id": "6729a4abb0bd79a447b41d3c"
+            },
+            {
+              "name": "Leather",
+              "value": "leather",
+              "_id": "6729a4abb0bd79a447b41d3d"
+            }
+          ]
+        }
+      ],
+      "meun_order": 1,
+      "enable_review": 1,
+      "variations": [],
+      "categories": [
+        {
+          "uid": "cat001",
+          "name": "Furniture",
+          "slug": "furniture",
+          "_id": "6729a4abb0bd79a447b41d3e"
+        },
+        {
+          "uid": "cat002",
+          "name": "Living Room",
+          "slug": "living-room",
+          "_id": "6729a4abb0bd79a447b41d3f"
+        }
+      ],
+      "tags": [
+        "Comfort",
+        "Living Room",
+        "Ashley"
+      ],
+      "images": [
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d40"
+        },
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d41"
+        }
+      ],
+      "gtin": "1234567890123",
+      "mpn": "ASH-LOV-001",
+      "ean": "1234567890123",
+      "createdAt": "2024-11-05T04:52:59.556Z",
+      "updatedAt": "2024-11-05T04:52:59.556Z",
+      "__v": 0
+    },
+    {
+      "discount": {
+        "is_discountable": 1,
+        "discount_type": "percentage",
+        "discount_value": "10"
+      },
+      "manage_stock": {
+        "is_stock_manage": 1,
+        "location": "Warehouse 1",
+        "quantity": "20",
+        "stock_status": "in_stock"
+      },
+      "_id": "6729a4abb0bd79a447b41d39",
+      "uid": 1,
+      "name": "Rome Bedroom Set Queen Bed Dresser Mirror",
+      "slug": "rome-bedroom-set",
+      "permalink": "https://example.com/products/ashley-loveseat",
+      "type": "simple",
+      "status": "published",
+      "featured": 1,
+      "description": "A comfortable Rome Bedroom Set that fits perfectly in your living room.",
+      "short_description": "Stylish and comfortable loveseat by Ashley.",
+      "sku": "ASHLEY-LOVESEAT-001",
+      "regular_price": "499.99",
+      "tax_status": "taxable",
+      "tax_class": "furniture",
+      "brand": "Ashley Furniture",
+      "sold_individually": 0,
+      "shipping_required": 1,
+      "shipping_taxable": 1,
+      "collection": [
+        "Living Room",
+        "Furniture"
+      ],
+      "attributes": [
+        {
+          "_id": "att_color",
+          "name": "Color",
+          "type": "select",
+          "options": [
+            {
+              "name": "Beige",
+              "value": "beige",
+              "_id": "6729a4abb0bd79a447b41d3a"
+            },
+            {
+              "name": "Gray",
+              "value": "gray",
+              "_id": "6729a4abb0bd79a447b41d3b"
+            }
+          ]
+        },
+        {
+          "_id": "att_material",
+          "name": "Material",
+          "type": "text",
+          "options": [
+            {
+              "name": "Fabric",
+              "value": "fabric",
+              "_id": "6729a4abb0bd79a447b41d3c"
+            },
+            {
+              "name": "Leather",
+              "value": "leather",
+              "_id": "6729a4abb0bd79a447b41d3d"
+            }
+          ]
+        }
+      ],
+      "meun_order": 1,
+      "enable_review": 1,
+      "variations": [],
+      "categories": [
+        {
+          "uid": "cat001",
+          "name": "Furniture",
+          "slug": "furniture",
+          "_id": "6729a4abb0bd79a447b41d3e"
+        },
+        {
+          "uid": "cat002",
+          "name": "Living Room",
+          "slug": "living-room",
+          "_id": "6729a4abb0bd79a447b41d3f"
+        }
+      ],
+      "tags": [
+        "Comfort",
+        "Living Room",
+        "Ashley"
+      ],
+      "images": [
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d40"
+        },
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d41"
+        }
+      ],
+      "gtin": "1234567890123",
+      "mpn": "ASH-LOV-001",
+      "ean": "1234567890123",
+      "createdAt": "2024-11-05T04:52:59.556Z",
+      "updatedAt": "2024-11-05T04:52:59.556Z",
+      "__v": 0
+    },
+
+    {
+      "discount": {
+        "is_discountable": 1,
+        "discount_type": "percentage",
+        "discount_value": "10"
+      },
+      "manage_stock": {
+        "is_stock_manage": 1,
+        "location": "Warehouse 1",
+        "quantity": "20",
+        "stock_status": "in_stock"
+      },
+      "_id": "6729a4abb0bd79a447b41d39",
+      "uid": 1,
+      "name": "Rome Bedroom Set Queen Bed Dresser Mirror",
+      "slug": "rome-bedroom-set",
+      "permalink": "https://example.com/products/ashley-loveseat",
+      "type": "simple",
+      "status": "published",
+      "featured": 1,
+      "description": "A comfortable Rome Bedroom Set that fits perfectly in your living room.",
+      "short_description": "Stylish and comfortable loveseat by Ashley.",
+      "sku": "ASHLEY-LOVESEAT-001",
+      "regular_price": "499.99",
+      "tax_status": "taxable",
+      "tax_class": "furniture",
+      "brand": "Ashley Furniture",
+      "sold_individually": 0,
+      "shipping_required": 1,
+      "shipping_taxable": 1,
+      "collection": [
+        "Living Room",
+        "Furniture"
+      ],
+      "attributes": [
+        {
+          "_id": "att_color",
+          "name": "Color",
+          "type": "select",
+          "options": [
+            {
+              "name": "Beige",
+              "value": "beige",
+              "_id": "6729a4abb0bd79a447b41d3a"
+            },
+            {
+              "name": "Gray",
+              "value": "gray",
+              "_id": "6729a4abb0bd79a447b41d3b"
+            }
+          ]
+        },
+        {
+          "_id": "att_material",
+          "name": "Material",
+          "type": "text",
+          "options": [
+            {
+              "name": "Fabric",
+              "value": "fabric",
+              "_id": "6729a4abb0bd79a447b41d3c"
+            },
+            {
+              "name": "Leather",
+              "value": "leather",
+              "_id": "6729a4abb0bd79a447b41d3d"
+            }
+          ]
+        }
+      ],
+      "meun_order": 1,
+      "enable_review": 1,
+      "variations": [],
+      "categories": [
+        {
+          "uid": "cat001",
+          "name": "Furniture",
+          "slug": "furniture",
+          "_id": "6729a4abb0bd79a447b41d3e"
+        },
+        {
+          "uid": "cat002",
+          "name": "Living Room",
+          "slug": "living-room",
+          "_id": "6729a4abb0bd79a447b41d3f"
+        }
+      ],
+      "tags": [
+        "Comfort",
+        "Living Room",
+        "Ashley"
+      ],
+      "images": [
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d40"
+        },
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d41"
+        }
+      ],
+      "gtin": "1234567890123",
+      "mpn": "ASH-LOV-001",
+      "ean": "1234567890123",
+      "createdAt": "2024-11-05T04:52:59.556Z",
+      "updatedAt": "2024-11-05T04:52:59.556Z",
+      "__v": 0
+    },
+
+    {
+      "discount": {
+        "is_discountable": 1,
+        "discount_type": "percentage",
+        "discount_value": "10"
+      },
+      "manage_stock": {
+        "is_stock_manage": 1,
+        "location": "Warehouse 1",
+        "quantity": "20",
+        "stock_status": "in_stock"
+      },
+      "_id": "6729a4abb0bd79a447b41d39",
+      "uid": 1,
+      "name": "Rome Bedroom Set Queen Bed Dresser Mirror",
+      "slug": "rome-bedroom-set",
+      "permalink": "https://example.com/products/ashley-loveseat",
+      "type": "simple",
+      "status": "published",
+      "featured": 1,
+      "description": "A comfortable Rome Bedroom Set that fits perfectly in your living room.",
+      "short_description": "Stylish and comfortable loveseat by Ashley.",
+      "sku": "ASHLEY-LOVESEAT-001",
+      "regular_price": "499.99",
+      "tax_status": "taxable",
+      "tax_class": "furniture",
+      "brand": "Ashley Furniture",
+      "sold_individually": 0,
+      "shipping_required": 1,
+      "shipping_taxable": 1,
+      "collection": [
+        "Living Room",
+        "Furniture"
+      ],
+      "attributes": [
+        {
+          "_id": "att_color",
+          "name": "Color",
+          "type": "select",
+          "options": [
+            {
+              "name": "Beige",
+              "value": "beige",
+              "_id": "6729a4abb0bd79a447b41d3a"
+            },
+            {
+              "name": "Gray",
+              "value": "gray",
+              "_id": "6729a4abb0bd79a447b41d3b"
+            }
+          ]
+        },
+        {
+          "_id": "att_material",
+          "name": "Material",
+          "type": "text",
+          "options": [
+            {
+              "name": "Fabric",
+              "value": "fabric",
+              "_id": "6729a4abb0bd79a447b41d3c"
+            },
+            {
+              "name": "Leather",
+              "value": "leather",
+              "_id": "6729a4abb0bd79a447b41d3d"
+            }
+          ]
+        }
+      ],
+      "meun_order": 1,
+      "enable_review": 1,
+      "variations": [],
+      "categories": [
+        {
+          "uid": "cat001",
+          "name": "Furniture",
+          "slug": "furniture",
+          "_id": "6729a4abb0bd79a447b41d3e"
+        },
+        {
+          "uid": "cat002",
+          "name": "Living Room",
+          "slug": "living-room",
+          "_id": "6729a4abb0bd79a447b41d3f"
+        }
+      ],
+      "tags": [
+        "Comfort",
+        "Living Room",
+        "Ashley"
+      ],
+      "images": [
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d40"
+        },
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d41"
+        }
+      ],
+      "gtin": "1234567890123",
+      "mpn": "ASH-LOV-001",
+      "ean": "1234567890123",
+      "createdAt": "2024-11-05T04:52:59.556Z",
+      "updatedAt": "2024-11-05T04:52:59.556Z",
+      "__v": 0
+    },
+
+    {
+      "discount": {
+        "is_discountable": 1,
+        "discount_type": "percentage",
+        "discount_value": "10"
+      },
+      "manage_stock": {
+        "is_stock_manage": 1,
+        "location": "Warehouse 1",
+        "quantity": "20",
+        "stock_status": "in_stock"
+      },
+      "_id": "6729a4abb0bd79a447b41d39",
+      "uid": 1,
+      "name": "Rome Bedroom Set Queen Bed Dresser Mirror",
+      "slug": "rome-bedroom-set",
+      "permalink": "https://example.com/products/ashley-loveseat",
+      "type": "simple",
+      "status": "published",
+      "featured": 1,
+      "description": "A comfortable Rome Bedroom Set that fits perfectly in your living room.",
+      "short_description": "Stylish and comfortable loveseat by Ashley.",
+      "sku": "ASHLEY-LOVESEAT-001",
+      "regular_price": "499.99",
+      "tax_status": "taxable",
+      "tax_class": "furniture",
+      "brand": "Ashley Furniture",
+      "sold_individually": 0,
+      "shipping_required": 1,
+      "shipping_taxable": 1,
+      "collection": [
+        "Living Room",
+        "Furniture"
+      ],
+      "attributes": [
+        {
+          "_id": "att_color",
+          "name": "Color",
+          "type": "select",
+          "options": [
+            {
+              "name": "Beige",
+              "value": "beige",
+              "_id": "6729a4abb0bd79a447b41d3a"
+            },
+            {
+              "name": "Gray",
+              "value": "gray",
+              "_id": "6729a4abb0bd79a447b41d3b"
+            }
+          ]
+        },
+        {
+          "_id": "att_material",
+          "name": "Material",
+          "type": "text",
+          "options": [
+            {
+              "name": "Fabric",
+              "value": "fabric",
+              "_id": "6729a4abb0bd79a447b41d3c"
+            },
+            {
+              "name": "Leather",
+              "value": "leather",
+              "_id": "6729a4abb0bd79a447b41d3d"
+            }
+          ]
+        }
+      ],
+      "meun_order": 1,
+      "enable_review": 1,
+      "variations": [],
+      "categories": [
+        {
+          "uid": "cat001",
+          "name": "Furniture",
+          "slug": "furniture",
+          "_id": "6729a4abb0bd79a447b41d3e"
+        },
+        {
+          "uid": "cat002",
+          "name": "Living Room",
+          "slug": "living-room",
+          "_id": "6729a4abb0bd79a447b41d3f"
+        }
+      ],
+      "tags": [
+        "Comfort",
+        "Living Room",
+        "Ashley"
+      ],
+      "images": [
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d40"
+        },
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d41"
+        }
+      ],
+      "gtin": "1234567890123",
+      "mpn": "ASH-LOV-001",
+      "ean": "1234567890123",
+      "createdAt": "2024-11-05T04:52:59.556Z",
+      "updatedAt": "2024-11-05T04:52:59.556Z",
+      "__v": 0
+    },
+
+    {
+      "discount": {
+        "is_discountable": 1,
+        "discount_type": "percentage",
+        "discount_value": "10"
+      },
+      "manage_stock": {
+        "is_stock_manage": 1,
+        "location": "Warehouse 1",
+        "quantity": "20",
+        "stock_status": "in_stock"
+      },
+      "_id": "6729a4abb0bd79a447b41d39",
+      "uid": 1,
+      "name": "Rome Bedroom Set Queen Bed Dresser Mirror",
+      "slug": "rome-bedroom-set",
+      "permalink": "https://example.com/products/ashley-loveseat",
+      "type": "simple",
+      "status": "published",
+      "featured": 1,
+      "description": "A comfortable Rome Bedroom Set that fits perfectly in your living room.",
+      "short_description": "Stylish and comfortable loveseat by Ashley.",
+      "sku": "ASHLEY-LOVESEAT-001",
+      "regular_price": "499.99",
+      "tax_status": "taxable",
+      "tax_class": "furniture",
+      "brand": "Ashley Furniture",
+      "sold_individually": 0,
+      "shipping_required": 1,
+      "shipping_taxable": 1,
+      "collection": [
+        "Living Room",
+        "Furniture"
+      ],
+      "attributes": [
+        {
+          "_id": "att_color",
+          "name": "Color",
+          "type": "select",
+          "options": [
+            {
+              "name": "Beige",
+              "value": "beige",
+              "_id": "6729a4abb0bd79a447b41d3a"
+            },
+            {
+              "name": "Gray",
+              "value": "gray",
+              "_id": "6729a4abb0bd79a447b41d3b"
+            }
+          ]
+        },
+        {
+          "_id": "att_material",
+          "name": "Material",
+          "type": "text",
+          "options": [
+            {
+              "name": "Fabric",
+              "value": "fabric",
+              "_id": "6729a4abb0bd79a447b41d3c"
+            },
+            {
+              "name": "Leather",
+              "value": "leather",
+              "_id": "6729a4abb0bd79a447b41d3d"
+            }
+          ]
+        }
+      ],
+      "meun_order": 1,
+      "enable_review": 1,
+      "variations": [],
+      "categories": [
+        {
+          "uid": "cat001",
+          "name": "Furniture",
+          "slug": "furniture",
+          "_id": "6729a4abb0bd79a447b41d3e"
+        },
+        {
+          "uid": "cat002",
+          "name": "Living Room",
+          "slug": "living-room",
+          "_id": "6729a4abb0bd79a447b41d3f"
+        }
+      ],
+      "tags": [
+        "Comfort",
+        "Living Room",
+        "Ashley"
+      ],
+      "images": [
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d40"
+        },
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d41"
+        }
+      ],
+      "gtin": "1234567890123",
+      "mpn": "ASH-LOV-001",
+      "ean": "1234567890123",
+      "createdAt": "2024-11-05T04:52:59.556Z",
+      "updatedAt": "2024-11-05T04:52:59.556Z",
+      "__v": 0
+    },
+
+    {
+      "discount": {
+        "is_discountable": 1,
+        "discount_type": "percentage",
+        "discount_value": "10"
+      },
+      "manage_stock": {
+        "is_stock_manage": 1,
+        "location": "Warehouse 1",
+        "quantity": "20",
+        "stock_status": "in_stock"
+      },
+      "_id": "6729a4abb0bd79a447b41d39",
+      "uid": 1,
+      "name": "Rome Bedroom Set Queen Bed Dresser Mirror",
+      "slug": "rome-bedroom-set",
+      "permalink": "https://example.com/products/ashley-loveseat",
+      "type": "simple",
+      "status": "published",
+      "featured": 1,
+      "description": "A comfortable Rome Bedroom Set that fits perfectly in your living room.",
+      "short_description": "Stylish and comfortable loveseat by Ashley.",
+      "sku": "ASHLEY-LOVESEAT-001",
+      "regular_price": "499.99",
+      "tax_status": "taxable",
+      "tax_class": "furniture",
+      "brand": "Ashley Furniture",
+      "sold_individually": 0,
+      "shipping_required": 1,
+      "shipping_taxable": 1,
+      "collection": [
+        "Living Room",
+        "Furniture"
+      ],
+      "attributes": [
+        {
+          "_id": "att_color",
+          "name": "Color",
+          "type": "select",
+          "options": [
+            {
+              "name": "Beige",
+              "value": "beige",
+              "_id": "6729a4abb0bd79a447b41d3a"
+            },
+            {
+              "name": "Gray",
+              "value": "gray",
+              "_id": "6729a4abb0bd79a447b41d3b"
+            }
+          ]
+        },
+        {
+          "_id": "att_material",
+          "name": "Material",
+          "type": "text",
+          "options": [
+            {
+              "name": "Fabric",
+              "value": "fabric",
+              "_id": "6729a4abb0bd79a447b41d3c"
+            },
+            {
+              "name": "Leather",
+              "value": "leather",
+              "_id": "6729a4abb0bd79a447b41d3d"
+            }
+          ]
+        }
+      ],
+      "meun_order": 1,
+      "enable_review": 1,
+      "variations": [],
+      "categories": [
+        {
+          "uid": "cat001",
+          "name": "Furniture",
+          "slug": "furniture",
+          "_id": "6729a4abb0bd79a447b41d3e"
+        },
+        {
+          "uid": "cat002",
+          "name": "Living Room",
+          "slug": "living-room",
+          "_id": "6729a4abb0bd79a447b41d3f"
+        }
+      ],
+      "tags": [
+        "Comfort",
+        "Living Room",
+        "Ashley"
+      ],
+      "images": [
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d40"
+        },
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d41"
+        }
+      ],
+      "gtin": "1234567890123",
+      "mpn": "ASH-LOV-001",
+      "ean": "1234567890123",
+      "createdAt": "2024-11-05T04:52:59.556Z",
+      "updatedAt": "2024-11-05T04:52:59.556Z",
+      "__v": 0
+    },
+
+    {
+      "discount": {
+        "is_discountable": 1,
+        "discount_type": "percentage",
+        "discount_value": "10"
+      },
+      "manage_stock": {
+        "is_stock_manage": 1,
+        "location": "Warehouse 1",
+        "quantity": "20",
+        "stock_status": "in_stock"
+      },
+      "_id": "6729a4abb0bd79a447b41d39",
+      "uid": 1,
+      "name": "Rome Bedroom Set Queen Bed Dresser Mirror",
+      "slug": "rome-bedroom-set",
+      "permalink": "https://example.com/products/ashley-loveseat",
+      "type": "simple",
+      "status": "published",
+      "featured": 1,
+      "description": "A comfortable Rome Bedroom Set that fits perfectly in your living room.",
+      "short_description": "Stylish and comfortable loveseat by Ashley.",
+      "sku": "ASHLEY-LOVESEAT-001",
+      "regular_price": "499.99",
+      "tax_status": "taxable",
+      "tax_class": "furniture",
+      "brand": "Ashley Furniture",
+      "sold_individually": 0,
+      "shipping_required": 1,
+      "shipping_taxable": 1,
+      "collection": [
+        "Living Room",
+        "Furniture"
+      ],
+      "attributes": [
+        {
+          "_id": "att_color",
+          "name": "Color",
+          "type": "select",
+          "options": [
+            {
+              "name": "Beige",
+              "value": "beige",
+              "_id": "6729a4abb0bd79a447b41d3a"
+            },
+            {
+              "name": "Gray",
+              "value": "gray",
+              "_id": "6729a4abb0bd79a447b41d3b"
+            }
+          ]
+        },
+        {
+          "_id": "att_material",
+          "name": "Material",
+          "type": "text",
+          "options": [
+            {
+              "name": "Fabric",
+              "value": "fabric",
+              "_id": "6729a4abb0bd79a447b41d3c"
+            },
+            {
+              "name": "Leather",
+              "value": "leather",
+              "_id": "6729a4abb0bd79a447b41d3d"
+            }
+          ]
+        }
+      ],
+      "meun_order": 1,
+      "enable_review": 1,
+      "variations": [],
+      "categories": [
+        {
+          "uid": "cat001",
+          "name": "Furniture",
+          "slug": "furniture",
+          "_id": "6729a4abb0bd79a447b41d3e"
+        },
+        {
+          "uid": "cat002",
+          "name": "Living Room",
+          "slug": "living-room",
+          "_id": "6729a4abb0bd79a447b41d3f"
+        }
+      ],
+      "tags": [
+        "Comfort",
+        "Living Room",
+        "Ashley"
+      ],
+      "images": [
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d40"
+        },
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d41"
+        }
+      ],
+      "gtin": "1234567890123",
+      "mpn": "ASH-LOV-001",
+      "ean": "1234567890123",
+      "createdAt": "2024-11-05T04:52:59.556Z",
+      "updatedAt": "2024-11-05T04:52:59.556Z",
+      "__v": 0
+    },
+
+    {
+      "discount": {
+        "is_discountable": 1,
+        "discount_type": "percentage",
+        "discount_value": "10"
+      },
+      "manage_stock": {
+        "is_stock_manage": 1,
+        "location": "Warehouse 1",
+        "quantity": "20",
+        "stock_status": "in_stock"
+      },
+      "_id": "6729a4abb0bd79a447b41d39",
+      "uid": 1,
+      "name": "Rome Bedroom Set Queen Bed Dresser Mirror",
+      "slug": "rome-bedroom-set",
+      "permalink": "https://example.com/products/ashley-loveseat",
+      "type": "simple",
+      "status": "published",
+      "featured": 1,
+      "description": "A comfortable Rome Bedroom Set that fits perfectly in your living room.",
+      "short_description": "Stylish and comfortable loveseat by Ashley.",
+      "sku": "ASHLEY-LOVESEAT-001",
+      "regular_price": "499.99",
+      "tax_status": "taxable",
+      "tax_class": "furniture",
+      "brand": "Ashley Furniture",
+      "sold_individually": 0,
+      "shipping_required": 1,
+      "shipping_taxable": 1,
+      "collection": [
+        "Living Room",
+        "Furniture"
+      ],
+      "attributes": [
+        {
+          "_id": "att_color",
+          "name": "Color",
+          "type": "select",
+          "options": [
+            {
+              "name": "Beige",
+              "value": "beige",
+              "_id": "6729a4abb0bd79a447b41d3a"
+            },
+            {
+              "name": "Gray",
+              "value": "gray",
+              "_id": "6729a4abb0bd79a447b41d3b"
+            }
+          ]
+        },
+        {
+          "_id": "att_material",
+          "name": "Material",
+          "type": "text",
+          "options": [
+            {
+              "name": "Fabric",
+              "value": "fabric",
+              "_id": "6729a4abb0bd79a447b41d3c"
+            },
+            {
+              "name": "Leather",
+              "value": "leather",
+              "_id": "6729a4abb0bd79a447b41d3d"
+            }
+          ]
+        }
+      ],
+      "meun_order": 1,
+      "enable_review": 1,
+      "variations": [],
+      "categories": [
+        {
+          "uid": "cat001",
+          "name": "Furniture",
+          "slug": "furniture",
+          "_id": "6729a4abb0bd79a447b41d3e"
+        },
+        {
+          "uid": "cat002",
+          "name": "Living Room",
+          "slug": "living-room",
+          "_id": "6729a4abb0bd79a447b41d3f"
+        }
+      ],
+      "tags": [
+        "Comfort",
+        "Living Room",
+        "Ashley"
+      ],
+      "images": [
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d40"
+        },
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d41"
+        }
+      ],
+      "gtin": "1234567890123",
+      "mpn": "ASH-LOV-001",
+      "ean": "1234567890123",
+      "createdAt": "2024-11-05T04:52:59.556Z",
+      "updatedAt": "2024-11-05T04:52:59.556Z",
+      "__v": 0
+    },
+
+    {
+      "discount": {
+        "is_discountable": 1,
+        "discount_type": "percentage",
+        "discount_value": "10"
+      },
+      "manage_stock": {
+        "is_stock_manage": 1,
+        "location": "Warehouse 1",
+        "quantity": "20",
+        "stock_status": "in_stock"
+      },
+      "_id": "6729a4abb0bd79a447b41d39",
+      "uid": 1,
+      "name": "Rome Bedroom Set Queen Bed Dresser Mirror",
+      "slug": "rome-bedroom-set",
+      "permalink": "https://example.com/products/ashley-loveseat",
+      "type": "simple",
+      "status": "published",
+      "featured": 1,
+      "description": "A comfortable Rome Bedroom Set that fits perfectly in your living room.",
+      "short_description": "Stylish and comfortable loveseat by Ashley.",
+      "sku": "ASHLEY-LOVESEAT-001",
+      "regular_price": "499.99",
+      "tax_status": "taxable",
+      "tax_class": "furniture",
+      "brand": "Ashley Furniture",
+      "sold_individually": 0,
+      "shipping_required": 1,
+      "shipping_taxable": 1,
+      "collection": [
+        "Living Room",
+        "Furniture"
+      ],
+      "attributes": [
+        {
+          "_id": "att_color",
+          "name": "Color",
+          "type": "select",
+          "options": [
+            {
+              "name": "Beige",
+              "value": "beige",
+              "_id": "6729a4abb0bd79a447b41d3a"
+            },
+            {
+              "name": "Gray",
+              "value": "gray",
+              "_id": "6729a4abb0bd79a447b41d3b"
+            }
+          ]
+        },
+        {
+          "_id": "att_material",
+          "name": "Material",
+          "type": "text",
+          "options": [
+            {
+              "name": "Fabric",
+              "value": "fabric",
+              "_id": "6729a4abb0bd79a447b41d3c"
+            },
+            {
+              "name": "Leather",
+              "value": "leather",
+              "_id": "6729a4abb0bd79a447b41d3d"
+            }
+          ]
+        }
+      ],
+      "meun_order": 1,
+      "enable_review": 1,
+      "variations": [],
+      "categories": [
+        {
+          "uid": "cat001",
+          "name": "Furniture",
+          "slug": "furniture",
+          "_id": "6729a4abb0bd79a447b41d3e"
+        },
+        {
+          "uid": "cat002",
+          "name": "Living Room",
+          "slug": "living-room",
+          "_id": "6729a4abb0bd79a447b41d3f"
+        }
+      ],
+      "tags": [
+        "Comfort",
+        "Living Room",
+        "Ashley"
+      ],
+      "images": [
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d40"
+        },
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d41"
+        }
+      ],
+      "gtin": "1234567890123",
+      "mpn": "ASH-LOV-001",
+      "ean": "1234567890123",
+      "createdAt": "2024-11-05T04:52:59.556Z",
+      "updatedAt": "2024-11-05T04:52:59.556Z",
+      "__v": 0
+    },
+
+    {
+      "discount": {
+        "is_discountable": 1,
+        "discount_type": "percentage",
+        "discount_value": "10"
+      },
+      "manage_stock": {
+        "is_stock_manage": 1,
+        "location": "Warehouse 1",
+        "quantity": "20",
+        "stock_status": "in_stock"
+      },
+      "_id": "6729a4abb0bd79a447b41d39",
+      "uid": 1,
+      "name": "Rome Bedroom Set Queen Bed Dresser Mirror",
+      "slug": "rome-bedroom-set",
+      "permalink": "https://example.com/products/ashley-loveseat",
+      "type": "simple",
+      "status": "published",
+      "featured": 1,
+      "description": "A comfortable Rome Bedroom Set that fits perfectly in your living room.",
+      "short_description": "Stylish and comfortable loveseat by Ashley.",
+      "sku": "ASHLEY-LOVESEAT-001",
+      "regular_price": "499.99",
+      "tax_status": "taxable",
+      "tax_class": "furniture",
+      "brand": "Ashley Furniture",
+      "sold_individually": 0,
+      "shipping_required": 1,
+      "shipping_taxable": 1,
+      "collection": [
+        "Living Room",
+        "Furniture"
+      ],
+      "attributes": [
+        {
+          "_id": "att_color",
+          "name": "Color",
+          "type": "select",
+          "options": [
+            {
+              "name": "Beige",
+              "value": "beige",
+              "_id": "6729a4abb0bd79a447b41d3a"
+            },
+            {
+              "name": "Gray",
+              "value": "gray",
+              "_id": "6729a4abb0bd79a447b41d3b"
+            }
+          ]
+        },
+        {
+          "_id": "att_material",
+          "name": "Material",
+          "type": "text",
+          "options": [
+            {
+              "name": "Fabric",
+              "value": "fabric",
+              "_id": "6729a4abb0bd79a447b41d3c"
+            },
+            {
+              "name": "Leather",
+              "value": "leather",
+              "_id": "6729a4abb0bd79a447b41d3d"
+            }
+          ]
+        }
+      ],
+      "meun_order": 1,
+      "enable_review": 1,
+      "variations": [],
+      "categories": [
+        {
+          "uid": "cat001",
+          "name": "Furniture",
+          "slug": "furniture",
+          "_id": "6729a4abb0bd79a447b41d3e"
+        },
+        {
+          "uid": "cat002",
+          "name": "Living Room",
+          "slug": "living-room",
+          "_id": "6729a4abb0bd79a447b41d3f"
+        }
+      ],
+      "tags": [
+        "Comfort",
+        "Living Room",
+        "Ashley"
+      ],
+      "images": [
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d40"
+        },
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d41"
+        }
+      ],
+      "gtin": "1234567890123",
+      "mpn": "ASH-LOV-001",
+      "ean": "1234567890123",
+      "createdAt": "2024-11-05T04:52:59.556Z",
+      "updatedAt": "2024-11-05T04:52:59.556Z",
+      "__v": 0
+    },
+
+    {
+      "discount": {
+        "is_discountable": 1,
+        "discount_type": "percentage",
+        "discount_value": "10"
+      },
+      "manage_stock": {
+        "is_stock_manage": 1,
+        "location": "Warehouse 1",
+        "quantity": "20",
+        "stock_status": "in_stock"
+      },
+      "_id": "6729a4abb0bd79a447b41d39",
+      "uid": 1,
+      "name": "Rome Bedroom Set Queen Bed Dresser Mirror",
+      "slug": "rome-bedroom-set",
+      "permalink": "https://example.com/products/ashley-loveseat",
+      "type": "simple",
+      "status": "published",
+      "featured": 1,
+      "description": "A comfortable Rome Bedroom Set that fits perfectly in your living room.",
+      "short_description": "Stylish and comfortable loveseat by Ashley.",
+      "sku": "ASHLEY-LOVESEAT-001",
+      "regular_price": "499.99",
+      "tax_status": "taxable",
+      "tax_class": "furniture",
+      "brand": "Ashley Furniture",
+      "sold_individually": 0,
+      "shipping_required": 1,
+      "shipping_taxable": 1,
+      "collection": [
+        "Living Room",
+        "Furniture"
+      ],
+      "attributes": [
+        {
+          "_id": "att_color",
+          "name": "Color",
+          "type": "select",
+          "options": [
+            {
+              "name": "Beige",
+              "value": "beige",
+              "_id": "6729a4abb0bd79a447b41d3a"
+            },
+            {
+              "name": "Gray",
+              "value": "gray",
+              "_id": "6729a4abb0bd79a447b41d3b"
+            }
+          ]
+        },
+        {
+          "_id": "att_material",
+          "name": "Material",
+          "type": "text",
+          "options": [
+            {
+              "name": "Fabric",
+              "value": "fabric",
+              "_id": "6729a4abb0bd79a447b41d3c"
+            },
+            {
+              "name": "Leather",
+              "value": "leather",
+              "_id": "6729a4abb0bd79a447b41d3d"
+            }
+          ]
+        }
+      ],
+      "meun_order": 1,
+      "enable_review": 1,
+      "variations": [],
+      "categories": [
+        {
+          "uid": "cat001",
+          "name": "Furniture",
+          "slug": "furniture",
+          "_id": "6729a4abb0bd79a447b41d3e"
+        },
+        {
+          "uid": "cat002",
+          "name": "Living Room",
+          "slug": "living-room",
+          "_id": "6729a4abb0bd79a447b41d3f"
+        }
+      ],
+      "tags": [
+        "Comfort",
+        "Living Room",
+        "Ashley"
+      ],
+      "images": [
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d40"
+        },
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d41"
+        }
+      ],
+      "gtin": "1234567890123",
+      "mpn": "ASH-LOV-001",
+      "ean": "1234567890123",
+      "createdAt": "2024-11-05T04:52:59.556Z",
+      "updatedAt": "2024-11-05T04:52:59.556Z",
+      "__v": 0
+    },
+
+    {
+      "discount": {
+        "is_discountable": 1,
+        "discount_type": "percentage",
+        "discount_value": "10"
+      },
+      "manage_stock": {
+        "is_stock_manage": 1,
+        "location": "Warehouse 1",
+        "quantity": "20",
+        "stock_status": "in_stock"
+      },
+      "_id": "6729a4abb0bd79a447b41d39",
+      "uid": 1,
+      "name": "Rome Bedroom Set Queen Bed Dresser Mirror",
+      "slug": "rome-bedroom-set",
+      "permalink": "https://example.com/products/ashley-loveseat",
+      "type": "simple",
+      "status": "published",
+      "featured": 1,
+      "description": "A comfortable Rome Bedroom Set that fits perfectly in your living room.",
+      "short_description": "Stylish and comfortable loveseat by Ashley.",
+      "sku": "ASHLEY-LOVESEAT-001",
+      "regular_price": "499.99",
+      "tax_status": "taxable",
+      "tax_class": "furniture",
+      "brand": "Ashley Furniture",
+      "sold_individually": 0,
+      "shipping_required": 1,
+      "shipping_taxable": 1,
+      "collection": [
+        "Living Room",
+        "Furniture"
+      ],
+      "attributes": [
+        {
+          "_id": "att_color",
+          "name": "Color",
+          "type": "select",
+          "options": [
+            {
+              "name": "Beige",
+              "value": "beige",
+              "_id": "6729a4abb0bd79a447b41d3a"
+            },
+            {
+              "name": "Gray",
+              "value": "gray",
+              "_id": "6729a4abb0bd79a447b41d3b"
+            }
+          ]
+        },
+        {
+          "_id": "att_material",
+          "name": "Material",
+          "type": "text",
+          "options": [
+            {
+              "name": "Fabric",
+              "value": "fabric",
+              "_id": "6729a4abb0bd79a447b41d3c"
+            },
+            {
+              "name": "Leather",
+              "value": "leather",
+              "_id": "6729a4abb0bd79a447b41d3d"
+            }
+          ]
+        }
+      ],
+      "meun_order": 1,
+      "enable_review": 1,
+      "variations": [],
+      "categories": [
+        {
+          "uid": "cat001",
+          "name": "Furniture",
+          "slug": "furniture",
+          "_id": "6729a4abb0bd79a447b41d3e"
+        },
+        {
+          "uid": "cat002",
+          "name": "Living Room",
+          "slug": "living-room",
+          "_id": "6729a4abb0bd79a447b41d3f"
+        }
+      ],
+      "tags": [
+        "Comfort",
+        "Living Room",
+        "Ashley"
+      ],
+      "images": [
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d40"
+        },
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d41"
+        }
+      ],
+      "gtin": "1234567890123",
+      "mpn": "ASH-LOV-001",
+      "ean": "1234567890123",
+      "createdAt": "2024-11-05T04:52:59.556Z",
+      "updatedAt": "2024-11-05T04:52:59.556Z",
+      "__v": 0
+    },
+    
+    {
+      "discount": {
+        "is_discountable": 1,
+        "discount_type": "percentage",
+        "discount_value": "10"
+      },
+      "manage_stock": {
+        "is_stock_manage": 1,
+        "location": "Warehouse 1",
+        "quantity": "20",
+        "stock_status": "in_stock"
+      },
+      "_id": "6729a4abb0bd79a447b41d39",
+      "uid": 1,
+      "name": "Rome Bedroom Set Queen Bed Dresser Mirror",
+      "slug": "rome-bedroom-set",
+      "permalink": "https://example.com/products/ashley-loveseat",
+      "type": "simple",
+      "status": "published",
+      "featured": 1,
+      "description": "A comfortable Rome Bedroom Set that fits perfectly in your living room.",
+      "short_description": "Stylish and comfortable loveseat by Ashley.",
+      "sku": "ASHLEY-LOVESEAT-001",
+      "regular_price": "499.99",
+      "tax_status": "taxable",
+      "tax_class": "furniture",
+      "brand": "Ashley Furniture",
+      "sold_individually": 0,
+      "shipping_required": 1,
+      "shipping_taxable": 1,
+      "collection": [
+        "Living Room",
+        "Furniture"
+      ],
+      "attributes": [
+        {
+          "_id": "att_color",
+          "name": "Color",
+          "type": "select",
+          "options": [
+            {
+              "name": "Beige",
+              "value": "beige",
+              "_id": "6729a4abb0bd79a447b41d3a"
+            },
+            {
+              "name": "Gray",
+              "value": "gray",
+              "_id": "6729a4abb0bd79a447b41d3b"
+            }
+          ]
+        },
+        {
+          "_id": "att_material",
+          "name": "Material",
+          "type": "text",
+          "options": [
+            {
+              "name": "Fabric",
+              "value": "fabric",
+              "_id": "6729a4abb0bd79a447b41d3c"
+            },
+            {
+              "name": "Leather",
+              "value": "leather",
+              "_id": "6729a4abb0bd79a447b41d3d"
+            }
+          ]
+        }
+      ],
+      "meun_order": 1,
+      "enable_review": 1,
+      "variations": [],
+      "categories": [
+        {
+          "uid": "cat001",
+          "name": "Furniture",
+          "slug": "furniture",
+          "_id": "6729a4abb0bd79a447b41d3e"
+        },
+        {
+          "uid": "cat002",
+          "name": "Living Room",
+          "slug": "living-room",
+          "_id": "6729a4abb0bd79a447b41d3f"
+        }
+      ],
+      "tags": [
+        "Comfort",
+        "Living Room",
+        "Ashley"
+      ],
+      "images": [
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d40"
+        },
+        {
+          "image_url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/01/how-to-check-if-a-link-is-safe.webp",
+          "alt_text": "Ashley Loveseat in Beige",
+          "title": "Ashley Loveseat",
+          "link_url": "https://example.com/products/ashley-loveseat",
+          "description": "Beige Ashley Loveseat",
+          "_id": "6729a4abb0bd79a447b41d41"
+        }
+      ],
+      "gtin": "1234567890123",
+      "mpn": "ASH-LOV-001",
+      "ean": "1234567890123",
+      "createdAt": "2024-11-05T04:52:59.556Z",
+      "updatedAt": "2024-11-05T04:52:59.556Z",
+      "__v": 0
+    }
+]

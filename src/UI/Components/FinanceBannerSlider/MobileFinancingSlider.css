@@ -1,0 +1,32 @@
+/* Mobile Slider */
+.mobile-carousel-container{
+    position: relative;
+    width: 100%;
+    height: max-content;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.mobile-carousel{
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100%;
+}
+
+.mobile-carousel-slide{
+    min-width: 100%;
+    height: auto;
+}
+
+.mobile-carousel-slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (min-width: 810px){
+    .mobile-carousel-container{
+        display: none;
+    }
+}

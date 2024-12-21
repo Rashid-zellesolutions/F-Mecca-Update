@@ -1,0 +1,21 @@
+.login-register-main-page{
+    display: flex;
+    width: 100%;
+    padding: 35px 75px 70px 75px;
+    gap: 30px;
+}
+
+.mobile-login-and-register-page{
+    display: none;
+    padding: 30px 10px;
+    position: relative;
+}
+
+@media only screen and (max-width: 480px){
+    .login-register-main-page{
+        display: none;
+    }
+    .mobile-login-and-register-page{
+        display: flex;
+    }
+}

@@ -1,0 +1,73 @@
+.deal-of-the-day-main-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding: 25px 60px;
+}
+
+.deal-of-the-day-heading{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.deal-of-the-day-heading::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Position the border at the bottom */
+    left: 0;
+    width: 84px; /* Adjust this percentage as needed */
+    height: 2px; /* Match the border thickness */
+    z-index: 222;
+    background-color: var(--active-nav-item-color); /* Use the desired border color */
+}
+
+.deal-of-the-day-heading h3{
+    font-size: 25px;
+    line-height: 37px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.deal-of-day-view-all-div{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: end;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 12px;
+}
+
+.deal-of-the-day-heading span{
+    display: flex;
+    align-items: center;
+}
+
+.deal-of-the-day-heading span p{
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 600;
+}
+
+.deal-of-the-day-items{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    gap: 20px;
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px){
+    .deal-of-the-day-items{
+        display: grid;
+        grid-template-columns: auto;
+        place-items: center;
+        width: 100%;
+        margin: auto;
+
+    }
+}
+

@@ -1,0 +1,120 @@
+.page-not-found-main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.maintanance-gif-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.maintanance-gif-div img{
+    height: 150px;
+    width: auto;
+    object-fit: contain;
+}
+
+.error-message-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
+}
+
+.something-wrong-text{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 45px;
+    color: #C61B1A;
+}
+
+.error-response-div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 45px;
+}
+
+.error-response-div p{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 23px;
+    color: #595959;
+}
+
+.appreciation-text{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.main-logo-div{
+    display: flex;
+    width: 100%;
+    margin-bottom: 45px;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-logo-div img{
+    height: auto;
+    width: auto;
+    object-fit: cover;
+}
+
+@media only screen and (min-width: 481px) and (max-width: 780px){
+    .page-not-found-main-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        padding: 25px 50px;
+    }
+
+    .something-wrong-text{
+        font-size: 22px;
+    }
+
+    .error-response-div p {
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 22px;
+    }
+
+    .appreciation-text {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    .something-wrong-text{
+        font-size: 22px;
+    }
+
+    .error-response-div p {
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 22px;
+    }
+
+    .appreciation-text {
+        font-size: 20px;
+        text-align: center;
+    }
+}

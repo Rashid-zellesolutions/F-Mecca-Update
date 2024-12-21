@@ -1,0 +1,219 @@
+.product{
+    width: 480px;
+    flex: 1 0 auto;
+}
+
+.product-img{
+    width: 100%;
+    min-width: 480px;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    object-fit: cover;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.product-img img:hover{
+  transform: scale(1.5);
+}
+
+.product-img-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: var(--button-color);
+    /* background-color: #000;  */
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.4);
+    /* padding: 5px 10px; */
+    font-size: 16px;
+    width: 140px;
+}
+
+.top_rated_head{
+    font-size: 14px;
+    font-weight: bold;
+    
+    color: white;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.product-img-detail span{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 16px;
+    padding: 5px 0;
+}
+.top_rated_price_cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px 0;
+}
+.top_rated_price_cont p{
+    font-size: 10px;
+    line-height: 16px;
+    color: white;
+}
+.top_rated_price_cont h3{
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0px 0px;
+    color: white;
+    line-height: 32px;
+}
+.product-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.product-details h3{
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 15px 0px 2px 10px;
+}
+
+.product-details p{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: var(--text-color);
+    padding: 5px 0px 0px 10px;
+}
+
+.product-details button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    color: #000;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 500;
+    height: auto;
+    border: none;
+    border-bottom: 1px solid #000;
+    width: max-content;
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.product-details button > div{
+    color: #000;
+    text-decoration: none;
+    position: relative; 
+    z-index: 1; 
+    transition: color 0.3s ease;
+}
+
+.product-details button:hover{
+    gap: 20px;
+    /* padding-bottom: 5px; */
+    border-bottom: 1px solid var(--active-nav-item-color);
+}
+
+.product-details button:hover > div{
+    color: var(--active-nav-item-color);
+}
+
+@media only screen and (max-width: 700px){
+    .product{
+        width: 250px;
+        flex: none;
+    }
+    
+    .product-img{
+        width: 250px;
+        height: 250px;
+        overflow: hidden;
+        position: relative;
+        min-width: 250px;
+        
+    }
+
+    .product-img-detail{
+        top: 5px;
+        right: 5px;
+        padding: 5px;
+    }
+
+    .product-img-detail h3 {
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 10px;
+    }
+
+    .product-img-detail span {
+        font-size: 16px;
+        line-height: 10px;
+    }
+
+    .product-img-detail p {
+        font-size: 8px;
+        line-height: 10px;
+    }
+    
+    .product-img img {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.2s;
+        cursor: pointer;
+    }
+
+    .product-details p{
+        font-size: 12px;
+        line-height: 16px;
+        color: var(--text-color);
+        padding: 5px 0px 0px 10px;
+        text-align: justify;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .product-details h3{
+        padding: 10px 0 0 5px;
+        font-size: 18px;
+        line-height: 21px;
+        font-weight: 600;
+    }
+    .product-details p{
+        padding: 10px 0 0 5px;
+        font-size: 10px;
+        line-height: 11px;
+        font-weight: 400;
+    }
+
+    .product-details button{
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 500;
+        margin-top: 30px;
+        margin-left: 5px;
+        margin-bottom: 15px;
+    }
+}

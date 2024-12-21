@@ -1,0 +1,160 @@
+.more-to-explore-main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 32px;
+    background-color: #f7f7f7;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.more-to-explore-main-container h3{
+    font-size: 25px;
+    line-height: 37px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.explore-card{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: #ffff;
+    padding: 24px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 32px;
+}
+
+@media only screen and (max-width: 1020px){
+    .explore-card{
+        width: 35%;
+    }
+}
+
+.explore-card span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.explore-card span h3{
+    font-size: 25px;
+    line-height: 20px;
+    font-weight: 700;
+    color: var(--active-nav-item-color);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 875px){
+    .more-to-explore-main-container{
+        padding: 20px;
+    }
+    .explore-card{
+        width: 50%;
+    }
+
+    .explore-card span h3{
+        font-size: 28px;
+    }
+}
+
+.explore-card span p{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--active-nav-item-color);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 875px){
+    .explore-card{
+        width: 50%;
+    }
+
+    .explore-card span h3{
+        font-size: 28px;
+    }
+
+    .explore-card span p{
+        font-size: 22px;
+        line-height: 32px;
+    }
+}
+
+@media only screen and (max-width: 690px){
+    .more-to-explore-main-container{
+        padding: 15px;
+    }
+    .explore-card{
+        width: 70%;
+    }
+
+    .explore-card span h3{
+        font-size: 32px;
+    }
+
+    .explore-card span p{
+        font-size: 26px;
+        line-height: 40px;
+    }
+}
+
+@media only screen and (max-width: 665px){
+    .explore-card{
+        width: 80%;
+    }
+
+    .explore-card span h3{
+        font-size: 28px;
+    }
+
+    .explore-card span p{
+        font-size: 22px;
+        line-height: 32px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .more-to-explore-main-container{
+        padding: 10px;
+    }
+    .explore-card{
+        width: 100%;
+    }
+
+    .explore-card span h3{
+        font-size: 26px;
+    }
+
+    .explore-card span p{
+        font-size: 22px;
+        line-height: 32px;
+    }
+}
+
+
+@media only screen and (max-width: 320px){
+    .explore-card span h3{
+        font-size: 24px;
+    }
+
+    .explore-card span p{
+        font-size: 20px;
+        line-height: 32px;
+    }
+}
+
+.explore-card p{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+
+

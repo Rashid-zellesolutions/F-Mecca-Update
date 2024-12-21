@@ -1,0 +1,233 @@
+
+.payment-types-inner-container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #d7d7d7;
+}
+
+.select-payment-method{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 11px 24px;
+    gap: 15px;
+    cursor: pointer;
+    
+}
+
+.acima{
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.select-payment-method input[type='radio'] {
+    display: none;
+}
+
+.radio-label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+}
+
+/* Custom radio circle */
+.radio-label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border: 1px solid #d7d7d7; /* Border color */
+    border-radius: 50%;
+    background-color: white; /* Default background */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.radio-label{
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+/* Style for checked state */
+.select-payment-method input[type='radio']:checked + .radio-label:before {
+    background-color: #C61B1A; /* Background for checked state */
+    border-color: #C61B1A; /* Border color for checked state */
+    box-shadow: inset 0 0 0 1px white;
+    
+}
+
+.select-payment-method p{
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+.select-payment-method p:nth-child(3){
+    font-size: 11px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+.select-payment-method p:nth-child(4){
+    font-size: 11px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #50BED3;
+    cursor: pointer;
+}
+
+/* Acima Option */
+.acima-payment-method{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 0px;
+    padding: 0px 24px;
+    gap: 15px;
+    background-color: #fafafa;
+    overflow: hidden;
+    transition: height 0.3s ease, padding 0.3s ease;
+}
+
+.acima-payment-method.acima-payment-toggle{
+    height: 100px;
+    padding: 12px 24px;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+
+.acima-payment-method img{
+    width: 266px;
+    height: auto;
+}
+
+.acima-payment-method p{
+    margin-left: 25px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+/* Credit Card Data */
+.credit-card-data{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    gap: 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #d7d7d7;
+    /* padding:0 50px 12px 50px; */
+    transition: height 0.3s ease, padding 0.3s ease;
+}
+
+.credit-card-data.show-credit-card{
+    height: auto;
+    padding: 11px 24px;
+    
+}
+
+.credit-card-cards{
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    padding: 0 50px;
+}
+
+.card-number-input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.card-number-input-label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card-number-input-label p{
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.card-number-input-field{
+    border: none;
+    background-color: #F9FAFA;
+    height: 48px;
+    width: 100%;
+    padding: 14px 10px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    /* box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1); */
+    outline: none;
+    color: var(--text-color);
+}
+
+.credit-card-expiry-and-sec-number{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+.card-number-input-card-types{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pay-secure-option{
+    display: flex;
+    width: 100%;
+    padding: 10px 50px;
+    background-color: #fafafa;
+    border-top: 1px solid #d7d7d7;
+}
+
+.pay-secure-option p{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+
+
+/* Paypal Data */
+.paypal{
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.paypal-data{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #fafafa;
+    overflow: hidden;
+    padding: 0 50px;
+    height: 0;
+    transition: height 0.3s ease, padding 0.3s ease;
+}
+
+.paypal-data.show-paypal{
+    padding: 10px 50px;
+    height: 40px;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.paypal-data p{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+}

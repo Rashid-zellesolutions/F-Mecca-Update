@@ -1,0 +1,34 @@
+.activeCategoryPage{
+    width: 100%;
+}
+
+.content_1_section{
+    display: flex;
+    /* width: 100%; */
+    box-sizing: border-box;
+    margin: 35px 60px;
+}
+
+.left_side_cont,
+.right_side_cont
+{
+    flex: 1;
+}
+
+.right_side_cont img{
+    height: 500px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.section_1_ASP{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 35px 60px;
+}
+
+.section_3_ASP{
+    margin: 35px 60px;
+}

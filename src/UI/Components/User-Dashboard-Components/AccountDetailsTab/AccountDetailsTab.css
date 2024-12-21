@@ -1,0 +1,151 @@
+.account-details-main-section{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.user-details-edit-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 25px;
+}
+
+.user-first-and-last-name{
+    display: flex;
+    width: 100%;
+    gap: 40px;
+}
+
+.first-and-last-name-label{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    width: 50%;
+    gap: 10px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.first-and-last-name-label input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: var(--text-color);
+    outline: none;
+}
+
+.displayed-name-label{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.displayed-name-label input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: var(--text-color);
+    outline: none;
+}
+
+.displayed-name-label p{
+    font-size: 10px;
+    line-height: 15px;
+    font-weight: 300;
+    color: #000;
+}
+
+.save-user-details-btn-div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: end;
+}
+
+.save-user-details-btn-div button{
+    background: #50BED3;
+    border: 1px solid #50BED3;
+    cursor: pointer;
+    padding: 5px 30px;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+.change-password-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 25px;
+    align-items: start;
+    justify-content: start;
+}
+
+.change-password-section h3{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+    color: #000;
+}
+
+.password-change-input{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+}
+
+.password-change-input input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    outline: none;
+    background-color: #fff;
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+}
+
+.password-save-btn{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+}
+
+.password-save-btn button{
+    padding: 5px 30px;
+    background-color: #50BED3;
+    border: 1px solid #50BED3;
+    color: #fff;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+    border-radius: 25px;
+    cursor: pointer;
+}

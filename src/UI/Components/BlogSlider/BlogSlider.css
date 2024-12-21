@@ -1,0 +1,165 @@
+.blogs-main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: var(--global-padding);
+    text-align: center;
+    gap: 10px;
+}
+
+.blogs-main-container h3{
+    font-size: 25px;
+    font-weight: 600;
+    line-height: var(--heading-line-height);
+    color: #595959;
+}
+
+.blogs-main-container h3 span{
+    color: var(--active-nav-item-color);
+}
+
+.blogs-main-para{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+
+.blogs-slider-main-container{
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* Optional: Override default slick width for slides */
+/* .slick-list {
+    overflow: hidden !important; 
+}
+
+.slick-track {
+    display: flex !important; 
+} */
+
+.blog-cards-container{
+    display: flex;
+    width: 25%;
+    padding: 0;
+    height: auto;
+    margin-top: 15px;
+}
+
+.slick-slider{
+    margin-bottom: 25px;
+    display: flex !important;
+    width: 100%;
+}
+
+.blogs-slider-main-container .slick-track{
+    display: flex !important;
+}
+
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 15px;
+    line-height: 30px;
+}
+
+
+.slick-arrow.slick-next,
+.slick-arrow.slick-prev{
+    display: none !important;
+}
+
+.blog-slider-arrow{
+    background-color: #FFFFFF !important;
+    border: 1px solid var(--text-color) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    top: 45% !important;
+}
+
+.blog-slider-arrow img{
+    width: auto !important;
+    height: 20px !important;
+    object-fit: contain !important;
+}
+
+.blog-slider-arrow-left{
+    left: -5px !important;
+}
+
+.blog-slider-arrow-right{
+    right: -5px !important;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: -25px;
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+} 
+
+@media only screen and (max-width: 480px){
+    .blogs-main-container{
+        padding: 15px 10px;
+        gap: 0px;
+    }
+    .blogs-main-container h3{
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 600;
+        /* display: flex; */
+        /* justify-content: center; */
+        /* text-align: center; */
+        width: 100%;
+        text-align: center;
+        /* padding: 0px 20px; */
+    }
+    .blogs-main-para{
+        display: none;
+    }
+
+    .blog-cards-container{
+        margin-top: 15px;
+    }
+
+    .blog-para-and-see-more p{
+        display: none;
+    }
+    .blog-slider-arrow{
+        background-color: #FFFFFF !important;
+        border: 1px solid var(--text-color) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    .blog-slider-arrow img{
+        width: auto !important;
+        height: 12px !important;
+        object-fit: contain !important;
+    }
+
+    .blog-slider-arrow-left{
+        left: 15px !important;
+    }
+
+    .blog-slider-arrow-right{
+        right: 15px !important;
+    }
+}
+
+

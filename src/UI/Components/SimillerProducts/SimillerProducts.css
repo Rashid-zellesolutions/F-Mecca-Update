@@ -1,0 +1,103 @@
+.similler-products-main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: var(--global-padding);
+}
+
+.similler-products-main-container h3 {
+    font-size: 25px;
+    line-height: var(--heading-line-height);
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.similler-products-wrapper {
+    position: relative;
+    display: flex;
+}
+
+.similler-products-cards {
+    /* display: flex;
+    width: 100%; */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-flow: column; 
+    overflow-x: hidden;
+    white-space: nowrap; 
+    gap: 10px;
+    padding: 10px 0;
+}
+
+
+.similler-products-cards::-webkit-scrollbar{
+    display: none;
+}
+
+.scroll-button {
+    display: none;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    outline: none;
+    z-index: 999;
+    width: 38px;
+    height: 38px;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-button.show-arrow-on-slider{
+    display: flex;
+}
+
+.scroll-button img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+.scroll-button.left {
+    left: 0;
+}
+
+.scroll-button.right {
+    right: 0;
+}
+
+.disable-similler-product-arrow{
+    opacity: 0.2;
+}
+
+@media only screen and (max-width: 480px){
+    .similler-products-main-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 20px 10px;
+        /* padding: var(--global-padding); */
+    }
+
+    .similler-products-main-container h3 {
+        font-size: 15px;
+        line-height: 18px;
+        font-weight: 600;
+        color: var(--text-color);
+    }
+
+    .similler-products-cards {
+        grid-template-columns: repeat(2, 1fr);
+        overflow-x: hidden;
+        white-space: nowrap;
+        gap: 10px;
+        padding: 10px 0;
+    }
+    .scroll-button img {
+        width: auto;
+        height: 30px;
+        object-fit: contain;
+    }
+}

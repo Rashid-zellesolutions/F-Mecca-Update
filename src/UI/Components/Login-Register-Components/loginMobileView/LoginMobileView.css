@@ -1,0 +1,115 @@
+.mobile-login-main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: start;
+    justify-content: start;
+    gap: 30px;
+    overflow: hidden;
+    visibility: visible;
+    opacity: 1;
+    z-index: 9999;
+    /* transform: translateX(0%); */
+    transition: all 0.3s ease-in-out;
+}
+
+.mobile-login-main.slide-login-sec-right{
+    /* transform: translateX(100%); */
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+    display: none;
+}
+
+.login-sec-signup-btn-div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login-sec-signup-btn-div p{
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.login-sec-signup-btn-div button{
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    outline: none;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.mobile-login-sec-inputs{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    align-items: start;
+    justify-content: start;
+    padding: 20px 10px;
+    box-shadow: 0px 1px 4px 0px #00000026;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transform: translateX(0%);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.mobile-login-sec-inputs h3{
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.mobile-login-input-label{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.login-and-register-input{
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: var(--text-color);
+    outline: none;
+}
+
+.mobile-logn-sec-login-btn-div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: end;
+}
+
+.mobile-logn-sec-login-btn-div button{
+    background-color: var(--active-nav-item-color);
+    border: 1px solid var(--active-nav-item-color);
+    outline: none;
+    color: #fff;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 5px 30px;
+    cursor: pointer;
+}
+

@@ -1,0 +1,81 @@
+.landing-page-financing-main-container{
+    display: flex;
+    /* width: 100%; */
+    height: auto;
+    /* margin: 0; */
+    margin: 0 60px;
+    padding: 0;
+}
+
+.landing-page-financing-left{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.landing-page-financing-left img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.landing-page-financing-right{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.landing-page-financing-right img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.financing-page-buttons-div{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    /* gap: 20px;  */
+    background-image: url('../../../Assets/Furniture Mecca/Landing Page/financing/btns-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.financing-page-buttons-div-column{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.financing-page-buttons-div-column button{
+    background-color: #fff;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 0px 65px;
+    height: 60px;
+    border-radius: 100px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.financing-page-buttons-div-column button img{
+    width: auto;
+    height: 40px;
+    object-fit: contain;
+}
+
+@media only screen and (max-width: 480px){
+    .landing-page-financing-main-container{
+        display: none;
+    }
+}

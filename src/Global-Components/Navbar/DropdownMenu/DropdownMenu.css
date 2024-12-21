@@ -1,0 +1,131 @@
+.mattresses-main-div{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 25px 50px;
+    gap: 15px;
+    background-color: var(--bg-color);
+    z-index: 22222;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-wrap: nowrap;
+}
+
+.menu-links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+    gap: 7px;
+}
+
+.living-room-heading{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 26px;
+    position: relative;
+    padding-left: 20px; 
+    padding-bottom: 0px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.living-room-heading::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 47%;
+    transform: translateY(-50%);
+    width: 10px; 
+    height: 10px; 
+    background-color: var(--text-color); 
+}
+
+.mattresses-links-div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.mattres-links{
+    padding: 5px 20px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: normal;
+    color: var(--text-color);
+}
+
+.mattres-links a{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.mattres-links a:hover{
+    color: #7f7f7f;
+    /* text-decoration: underline; */
+}
+
+.mattres-links.active a{
+    color: var(--active-nav-item-color);
+    font-weight: 600;
+}
+
+.mattresses-images-div{
+    display: flex;
+    width: 80%;
+    padding: 10px 0px;
+    gap: 15px;
+    justify-content: center;
+    position: relative;
+}
+
+.mattress-image {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 315px !important;
+    /* height: 235px; */
+    height: auto;
+    gap: 00px;
+}
+
+.mattress-image img{
+    width: 100%;
+    height: 210px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.mattress-image > .pricing{
+ display: flex;
+ align-items: center;
+ justify-content: flex-start;
+}
+
+.image-title a{
+    color: var(--text-color);
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 600;
+    letter-spacing: normal;
+    text-decoration: none;
+}
+.price{
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    letter-spacing: normal;
+}
+
+.price.new{
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 5px;
+}

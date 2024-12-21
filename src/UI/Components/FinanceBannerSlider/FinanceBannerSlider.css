@@ -1,0 +1,64 @@
+.carousel-container{
+    position: relative;
+    width: 100%;
+    height: max-content;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.carousel-wrapper{
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100%;
+}
+
+.carousel-slide{
+    min-width: 100%;
+    height: auto;
+    cursor: grab;
+}
+
+.carousel-slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.finance_banner_2_desktop{
+    width: 100%;
+    padding: var(--global-padding);
+    gap: 25px;
+    display: flex;
+}
+.finance_banner_2_mobile{
+    display: none;
+}
+
+@media only screen and (max-width: 480px){
+    .carousel-container{
+        display: none;
+    }
+    .finance_banner_2_desktop{
+        display: none;
+    }
+    .finance_banner_2_mobile{
+        display: flex;
+    }
+    
+}
+
+.finance_banner_2{
+    width: 100%;
+    height: auto;
+}
+
+.finance_banner_2_desktop img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.finance_banner_2_mobile img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}

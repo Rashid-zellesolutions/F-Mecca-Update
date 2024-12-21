@@ -1,0 +1,168 @@
+.payment-method-main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+}
+
+.payment-method-head-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+}
+
+.payment-method-head-container p{
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+.payment-method-head-container p a{
+    color: #50BED3;
+    text-decoration: none;
+}
+
+.payment-types-outer-container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #d7d7d7;
+    padding: 15px;
+    gap: 30px;
+}
+
+.payment-terms-and-procced-btn{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+}
+
+.payment-term-agree{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.payment-term-agree p{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: var(--text-color);
+    text-align: justify;
+}
+
+.terms-agree{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+    /* margin-top: 21px; */
+}
+
+.terms-agree input[type='checkbox']{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #D7D7D7;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    outline: none; /* Remove outline on focus */
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.terms-agree input[type='checkbox']:checked{
+    background-color: #C61B1A;
+    border: 2px solid #C61B1A;
+}
+
+.terms-agree input[type='checkbox']:checked::after {
+    content: '';
+    position: absolute;
+    left: 5px; /* Adjust position of tick mark */
+    top: 0px; /* Adjust position of tick mark */
+    width: 5px; /* Width of tick mark */
+    height: 10px; /* Height of tick mark */
+    border: solid white; /* Tick mark color */
+    border-width: 0 2px 2px 0; /* Create the tick shape */
+    transform: rotate(45deg); /* Rotate to create tick shape */
+    transition: opacity 0.3s; /* Add transition for opacity */
+    opacity: 0; /* Initially hidden */
+
+}
+
+.terms-agree input[type='checkbox']:checked::after {
+    opacity: 1; /* Fade in the tick mark when checked */
+}
+
+.terms-agree input[type='checkbox']:not(:checked)::after{
+    display: none;
+}
+
+.terms-agree label {
+    cursor: pointer; /* Make label clickable */
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.terms-agree label a{
+    color: #50BED3;
+    text-decoration: none;
+}
+
+.procced-btn-div{
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.procced-btn-div.hide-proced{
+    display: none;
+}
+
+.procced-btn-div button{
+    background-color: #595959;
+    color: var(--text-white);
+    border: 2px solid #595959;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 55px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.paypal-btns-option{
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.paypal-btns-option.show-paypal-btns{
+    display: flex;
+}
+
+.paypal-btns-option button{
+    width: 100%;
+    border-radius: 25px;
+    height: 55px;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    cursor: pointer;
+}

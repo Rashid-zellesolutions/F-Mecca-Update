@@ -1,0 +1,331 @@
+.near-store-pop-up{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999999999999;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.near-store-pop-up.show{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.near-store-container{
+    display: flex;
+    flex-direction: column;
+    width: 430px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-wrap: nowrap;
+    top: 0;
+    right: -430px;
+    height: 100%;
+    position: absolute;
+    z-index: 99999999999999999;
+    background-color: var(--text-white);
+    color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+.near-store-container.show-near-store-inner-container{
+    right: 0;
+}
+
+
+
+.pop-up-header{
+    background-color: #F0F0F0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    height: max-content;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    color: var(--text-color);
+}
+
+.pop-up-header span{
+    right: 10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    cursor: pointer;
+    color: var(--text-color);
+    
+}
+
+.pop-up-header span img{
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+.pop-up-header i{
+    background-color: var(--text-white);
+    /* padding: 11px 13px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50%;
+    width: max-content;
+    height: max-content;
+    /* border-radius: 50%; */
+}
+
+.pop-up-header i img{
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.pop-up-header h3{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-top: 13px;
+}
+
+.pop-up-header-search{
+    display: flex;
+    width: 100%;
+    height: 48px;
+    background-color: white;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    padding: 11px 12px;
+    gap: 5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 4px;
+    margin-top: 32px;
+    margin-bottom: 6px;
+}
+.pop-up-header-search input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.pop-up-header-search img{
+    width: 22px;
+    height: 22px;
+}
+
+.pop-up-header-location{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.pop-up-header-location p{
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--active-nav-item-color);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0 8px;
+}
+
+.pop-up-header-location p a{
+    color: var(--active-nav-item-color);
+}
+
+@media only screen and (max-width: 1200px){
+    .pop-up-header-location p{
+        font-size: 12px;
+        line-height: 16px;
+        color: var(--active-nav-item-color);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 0 8px;
+    }
+    
+    .pop-up-header-location p a{
+        color: var(--active-nav-item-color);
+    }
+}
+
+.pop-up-single-city-card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 24px 30px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.pop-up-single-city-cart{
+    display: flex;
+    width: 100%;
+    color: var(--text-color);
+    align-items: center;
+    gap: 16px;
+}
+
+.pop-up-single-city-cart h3{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.pop-up-city-and-distance{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    color: var(--text-color);
+}
+
+.pop-up-city-and-distance span{
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    gap: 20px;
+}
+
+.pop-up-city-and-distance span img{
+    width: 30px;
+    height: 30px;
+}
+
+.pop-up-city-and-distance.rotate-btn span img{
+    transform: rotate(45deg);
+}
+
+.pop-up-city-and-distance span h3{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.pop-up-city-and-distance p{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+.pop-up-store-open-time{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0 0 50px;
+}
+
+.pop-up-store-open-time p{
+    color: var(--text-color);
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.pop-up-store-open-time span{
+    color: var(--active-nav-item-color);
+}
+
+.pop-up-complete-address{
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+    padding: 10px 0 0 50px;
+}
+
+.pop-up-complete-address p{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-top: 5px;
+}
+
+.pop-up-complete-address a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    margin-top: 25px;
+}
+
+.pop-up-complete-address a:last-child{
+    text-decoration: underline;
+}
+
+.pop-up-store-open-days-and-time{
+    display: flex;
+    visibility: hidden;
+    transform: translateY(100%);
+    opacity: 0;
+    width: 100%;
+    height: 0px;
+    padding: 10px 50px;
+    color: var(--text-color);
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+}
+
+.pop-up-store-open-days-and-time.open-store{
+    height: 300px;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-0%);
+    transition: all 0.3s ease-in-out;
+}
+
+.pop-up-store-open-days-and-time a{
+    color: var(--text-color);
+    font-size: 13px;
+}
+
+.store-hours-detail{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.store-hours-detail p{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.store-hours{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.store-hours p{
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.store-hours p:nth-child(5){
+    font-weight: 600;
+}
+
+.store-hours-detail a{
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+}

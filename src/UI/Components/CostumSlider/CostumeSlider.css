@@ -1,0 +1,71 @@
+/* src/CustomSlider.css */
+.costume-slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .costume-slider-wrapper {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 24px;
+    gap: 15px;
+    padding: 25px 0;
+  }
+  
+  .costume-slider-item {
+    flex: 0 0 auto;
+    width: calc(100% / var(--visible-cards));
+    box-sizing: border-box;
+  }
+  
+  .costume-arrow {
+    position: absolute;
+    top: 50%;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    background-color: transparent;
+    outline: none;
+  }
+
+  .costume-arrow img{
+    height: 35px;
+    width: 35px;
+    object-fit: contain;
+  }
+  
+  .costume-arrow.costume-left {
+    left: 0;
+  }
+  
+  .costume-arrow.costume-right {
+    right: 0;
+  }
+  
+  .costume-dots-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    z-index: 99999;
+    /* background-color: orange; */
+  }
+  
+  .costume-dot {
+    background: lightgray;
+    border: none;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .costume-dot.active {
+    background: black;
+  }
+      

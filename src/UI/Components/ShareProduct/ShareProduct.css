@@ -1,0 +1,207 @@
+.share-product-link-pop-up-main{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+}
+
+.share-product-link-pop-up-main.show-product-share-pop-up{
+    display: flex;
+}
+
+.share-product-link-pop-up-inner{
+    width: 626px;
+    height: 316px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px #00000026;
+    position: relative;
+}
+
+.share-product-link-pop-up-close-btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.share-product-link-pop-up-close-btn img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* selected product styling */
+.share-product-selected-product-details{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    height: 100%;
+}
+.share-product-popup-product-div{
+    display: flex;
+    width: 100%;
+    height: max-content;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+}
+
+.share-product-selected-product-main-img{
+    width: 135px;
+    height: auto;
+    object-fit: contain;
+}
+
+.share-product-selected-product-regural-price{
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 600;
+    color: var(--active-nav-item-color);
+}
+
+.share-product-selected-product-rating{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+}
+
+.share-product-selected-product-rating img{
+    width: 14px;
+    height: auto;
+    object-fit: contain;
+}
+
+.share-product-selected-product-rating p{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 300;
+    color: var(--text-color);
+}
+
+.share-product-selected-product-regular-and-sale-price{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+
+.share-product-selected-product-regular-and-sale-price del{
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.share-product-selected-product-regular-and-sale-price h3{
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 600;
+    color: var(--active-nav-item-color);;
+}
+
+/* selected product social share flat forms */
+.share-product-social-platforms{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+
+.share-product-single-social-platform{
+    width: max-content;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.share-product-single-social-platform img{
+    width: 38px;
+    height: auto;
+    object-fit: contain;
+}
+
+.share-product-single-social-platform p{
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* link generator  */
+.share-product-generated-link-main-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 10px;
+    gap: 10px;
+    border: 1px solid var(--text-color);
+    border-radius: 10px;
+}
+
+.share-product-generated-link{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 500;
+    color: var(--text-color);
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.share-product-link-generator-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 10px;
+    gap: 10px;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 600;
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.share-product-link-generator-btn.share-products-copy-btn{
+    background: #77DE8A33;
+    color: #77DE8A;
+;
+}
+
+.share-product-link-generator-btn img{
+    width: 24px;
+    height: auto;
+    object-fit: contain;
+}

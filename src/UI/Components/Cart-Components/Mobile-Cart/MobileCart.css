@@ -1,0 +1,110 @@
+.mobile-cart{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 1px 6px 0px #00000026;
+    position: relative;
+    padding: 10px;
+    gap: 10px;
+    height: max-content;
+}
+
+.mobile-delete-product{
+    position: absolute;
+    background-color: transparent;
+    width: max-content;
+    height: max-content;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    top: 12px;
+    right: 12px;
+}
+
+.mobile-priduct-name{
+    display: flex;
+    width: 85%;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.mobile-cart-product-image-and-containt{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.mobile-cart-product-main-image{
+    width: 135px;
+    height: 90px;
+    object-fit: contain;
+    border: 1px solid var(--border-color);
+}
+
+.mobile-cart-product-containt{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.mobile-cart-product-containt p{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+}
+
+.mobile-cart-product-count-and-total-price{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-cart-product-count{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+}
+
+.mobile-cart-product-count button{
+    border: none;
+    outline: none;
+    background-color: #fff;
+    width: max-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+}
+
+.mobile-cart-product-count button img{
+    width: auto;
+    height: 15px;
+    object-fit: contain;
+}
+
+.mobile-cart-product-count p{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    padding: 0 10px;
+}
+
+@media only screen and (max-width: 480px){
+    .mobile-cart{
+        display: flex;
+    }
+}

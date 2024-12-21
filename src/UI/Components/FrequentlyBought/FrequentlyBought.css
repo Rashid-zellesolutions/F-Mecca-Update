@@ -1,0 +1,44 @@
+.frequently-bought-main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: var(--global-padding);
+    gap: 25px;
+}
+
+.frequently-bought-main h3{
+    font-size: 25px;
+    line-height: var(--heading-line-height);
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.frequently-bought-card{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+@media only screen and (max-width: 480px){
+    .frequently-bought-main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px 10px;
+        gap: 15px;
+    }
+    .frequently-bought-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .frequently-bought-main h3 {
+        font-size: 15px;
+        line-height: 18px;
+        font-weight: 600;
+        color: var(--text-color);
+    }
+    .stock-label{
+        display: none;
+    }
+}

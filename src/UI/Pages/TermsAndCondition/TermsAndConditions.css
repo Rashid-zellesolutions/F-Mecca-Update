@@ -1,0 +1,52 @@
+.terms-and-conditions-main-container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: var(--global-padding);
+    gap: 40px;
+}
+
+.terms-and-conditions-main-heading{
+    font-size: 25px;
+    line-height: 28px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.term-and-condition-detail-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.term-condition-title-and-list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+}
+
+.term-and-condition-title{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.term-condition-list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: start;
+    justify-content: start;
+    gap: 5px;
+}
+
+.term-condition-list-item{
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 400;
+}

@@ -1,0 +1,38 @@
+.banner-div{
+    display: flex;
+    width: 100%;
+    /* padding: 0 0 25px 0; */
+}
+
+.padding-bottom{
+    padding: 0 0 0px 0;
+}
+
+.banner-div img{
+    width: 100%;
+    top: -40px;
+    cursor: pointer;
+}
+
+.hide-banner{
+    display: none;
+    width: 100%;
+}
+
+.hide-banner img{
+    width: 100%;
+    top: -40px;
+    cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 480px){
+    .banner-div{
+        display: none;
+    }
+    .hide-banner{
+        display: flex;
+    }
+}
+

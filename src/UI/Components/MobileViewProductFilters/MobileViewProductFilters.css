@@ -1,0 +1,236 @@
+.mobile-view-flters-popup{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    background-color: #fff;
+    opacity: 0;
+    gap: 15px;
+    overflow: hidden;
+    z-index: 999;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.mobile-view-flters-popup.show-mobile-filter-popup{
+    visibility: visible;
+    opacity: 1;
+}
+
+.close-mobile-filters{
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.close-mobile-filters img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Mobile view head */
+.mobile-view-filters-head{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-view-filters-head img{
+    width: 160px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.mobile-view-filters-body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+}
+
+.mobile-view-filters-body-head{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 15px 3px 15px;
+}
+
+.mobile-view-filters-body-head h3{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 33px;
+    color: var(--text-color);
+}
+
+.mobile-view-filters-body-head a{
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.mobile-view-filters-div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 350px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* background-color: orange; */
+}
+
+.mobile-view-single-filter-dropdown{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.mobile-view-single-type{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    border-top: 1px solid var(--border-color);
+    cursor: pointer;   
+}
+
+.mobile-view-single-type p{
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.show-filter-add-button{
+    /* width: auto;
+    height: 20px;
+    object-fit: contain; */
+    transition: all 0.3s ease-in-out;
+}
+
+.mobile-filter-section-button-rotate{
+    transform: rotate(48deg);
+}
+
+.mobile-single-type-filters{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    gap: 15px;
+    transition: all 0.3s ease-in-out;   
+}
+
+.mobile-single-type-filters.show-filter-type{
+    visibility: visible;
+    height: 130px;
+    opacity: 1;
+    padding: 25px 10px;
+}
+
+.single-filter-label{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+}
+
+.custom-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+    margin-right: 0px;
+    cursor: pointer;
+    outline: none;
+}
+
+.custom-checkbox:checked {
+    background-color: #28828A;
+    border-color: #28828A;
+}
+
+.custom-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+
+/* Filters view more button */
+.mobile-view-filters-togle-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 25px;
+}
+
+.mobile-view-more-filters-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    border: 1px solid var(--text-color);
+    background-color: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #000;
+}
+
+.mobile-view-result-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    border: 1px solid var(--text-color);
+    background-color: var(--text-color);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #fff;
+}
+

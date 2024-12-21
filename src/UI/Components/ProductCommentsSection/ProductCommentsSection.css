@@ -1,0 +1,135 @@
+.product-comment-section-main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: 0px 0 15px 0;
+    gap: 20px;
+}
+
+.sort-by-related{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: end;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.sort-by-related p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--text-color);
+}
+
+.select-container {
+    border: 1px solid black;
+    width: 400px;
+    height: 50px; 
+    margin-bottom: 5px;
+    align-items: center;
+    display: flex;
+    border-radius: 10px;
+    position: relative;
+    background-color: #fff;
+}
+
+.select-label{
+    left: 10%;
+    margin-left: 8%;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 0 5px;
+}
+
+.select-container span{
+    display: flex;
+    width: 100%;
+    padding-bottom: 10px;
+    justify-content: space-between;
+    cursor: pointer;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+}
+
+.select-container span p{
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: black;
+}
+
+.select-container span img{
+    width: 15px;
+    height: 15px;
+}
+
+.rotate-input-arrow-down{
+    transform: rotate(175deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.not-rotated{
+    transform: rotate(0deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.related-dropdown{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 400px;
+    background-color: #ffff;
+    z-index: 3333;
+    border-radius: 4px;
+    /* padding: 10px 30px; */
+    /* gap: 10px; */
+    border: 1px solid var(--border-color);
+}
+
+.related-dropdown:hover{
+    border: 1px solid var(--border-color);
+}
+
+.related-dropdown p{
+    cursor: pointer;
+    padding: 5px 20px;
+}
+
+.related-dropdown p:hover{
+    background-color: var(--border-color);
+}
+.show-related-dropdown{
+    display: flex;
+}
+
+.comments-main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    padding: 16px 24px;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 480px){
+    .comments-main-container{
+        padding: 0;
+    }
+    .sort-by-related {
+        display: none;
+    }
+    .product-comment-section-main-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        padding: 0;
+        background-color: #fff;
+    }
+
+}

@@ -1,0 +1,47 @@
+.insta-two-image-gallery{
+    display: none;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 160px;
+    background-image: url('../../../Assets/Furniture Mecca/Landing Page/instagram images/insta-banner-one.png'), url('../../../Assets/Furniture Mecca/Landing Page/instagram images/insta-banner-two.png');
+    background-size: 50% 100%, 50% 100%;
+    background-position: left center, right center;
+    background-repeat: no-repeat, no-repeat;
+    cursor: pointer;
+    
+}
+
+.insta-two-image-gallery img{
+    width: 50px;
+    height: auto;
+    transition: transform 1.5s ease-in-out;
+}
+
+.insta-two-image-gallery:hover img{
+    transform: scale(0.8);
+}
+
+.insta-two-image-gallery img.animate{
+    animation: scaleAndReset 1.5s ease-in-out;
+    
+} 
+
+@keyframes scaleAndReset {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .insta-two-image-gallery{
+        display: flex;
+    }
+}
+

@@ -1,0 +1,193 @@
+/* Togle div styling */
+.slide-div {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    color: var(--text-white);
+    overflow: hidden;
+    transition: width 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    z-index: 333;
+  }
+  
+  .slide-div.open {
+    /* width: 35%; */
+    width: 500px;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: var(--text-white);
+    cursor: pointer;
+    z-index: 555;
+  }
+
+.left-bullets-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 150px;
+    padding: 20px 0;
+    gap: 20px;
+    background-color: #666666;
+    top: 30px;
+    left: 0;
+    position: absolute;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.bullet {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .bullet.active {
+    background-color: orange;
+  }
+  
+  
+  .content {
+    /* text-align: center; */
+    background-color: #666666;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    flex-direction: column;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    /* border-top-left-radius: 20px; */
+    
+}
+
+.customer-info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: start;
+    gap: 20px;
+    padding: 30px 20px;
+}
+
+.customer-info h3{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: auto;
+}
+
+
+
+.checkbox-div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.checkbox-div input[type="checkbox"] {
+    border: 1px solid red;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    appearance: none;
+    cursor: pointer;
+    position: relative;
+    border-radius: 0px !important;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.checkbox-div input[type="checkbox"]:checked {
+    background-color: #ffff;
+}
+
+.checkbox-div input[type="checkbox"]:checked::after {
+    contain: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 16px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg) translate(-50%, -50%);;
+    background-color: transparent;
+    z-index: 9999;
+    display: block;
+}
+
+.checkbox-div label{
+    font-size: 12px;
+    font-weight: 300;
+    line-height: auto;
+}
+
+.other-billing-address-div{
+    display: flex;
+    visibility: hidden;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    height: 0;
+    transform: translateY(100%);
+    overflow: hidden; /* Ensure content does not overflow during transition */
+    transition: height 0s ease,  transform 0.3s ease; 
+    
+}
+
+.other-billing-address-div.display-other-billing{
+    visibility: visible;
+    height: auto; /* Use auto to allow the div to grow based on its content */
+    transform: translateY(0%);
+}
+
+.other-billing-state-and-town{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.first-and-last-name-input-div{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.town-zip-and-state-input-div{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+/* Hide and Show Components according to screen size */
+@media only screen and (max-width: 480px){
+    .slide-div{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1080px){
+    .slide-div.open {
+        width: 420px;
+      }
+}

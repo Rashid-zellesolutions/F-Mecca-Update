@@ -1,0 +1,39 @@
+.main-slider-images-shimmer-outer{
+    position: relative;
+    width: 100%;
+    height: calc(100vw * 0.26355);
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0px #00000026;
+    display: flex;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.main-slider-image-shimmer{
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    position: relative;
+}
+
+.main-slider-image-shimmer::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%; /* Start off-screen */
+    height: 100%;
+    width: 150%; /* Width of the shimmer gradient */
+    background: linear-gradient(90deg, rgba(240, 240, 240, 0.5) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(240, 240, 240, 0.5) 100%);
+    animation: shimmer 1s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}

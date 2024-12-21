@@ -1,0 +1,124 @@
+.addresses-main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 25px;
+    align-items: start;
+    justify-content: start;
+}
+
+.addresses-main-container p{
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.billing-and-shipping-addresses{
+    display: flex;
+    width: 100%;
+    gap: 30px;
+}
+
+.user-billing-address{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 20px;
+    width: 50%;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.billing-address-details{
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+    width: 215px;
+    height: auto;
+}
+
+.title-and-edit-icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 40px; */
+    margin-bottom: 20px;
+}
+
+.title-and-edit-icon h3{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.title-and-edit-icon img{
+    width: auto;
+    height: 24px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.user-billing-address p{
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* .user-shipping-address{
+    display: flex;
+    flex-direction: column;
+
+} */
+
+.edit-billing-address{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    flex-grow: 1;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+}
+
+.edit-billing-address h3{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.edit-billing-address input{
+    width: 100%;
+    /* height: 43px; */
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+    outline: none;
+    color: var(--text-color);
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+.save-new-billing-address-btn{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: end;
+}
+
+.save-new-billing-address-btn button{
+    padding: 5px 30px;
+    background: #50BED3;
+    border: 1px solid #50BED3;
+    color: #fff;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+    border-radius: 25px;
+    cursor: pointer;
+}

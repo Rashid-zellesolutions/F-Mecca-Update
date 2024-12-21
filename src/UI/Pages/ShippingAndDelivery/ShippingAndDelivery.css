@@ -1,0 +1,73 @@
+.shipping-and-delivery-main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: var(--global-padding);
+    gap: 35px;
+}
+
+.shipping-and-delivery-head{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* gap: 10px; */
+}
+
+.shipping-and-delivery-main-heading{
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.shipping-and-delivery-head p{
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 400;
+    gap: 0;
+}
+
+.shipping-and-delivery-body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 35px;
+    align-items: start;
+    justify-content: start;
+}
+
+.shipping-and-detains-warehouses-heading{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.shipping-and-delivery-warehouses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.shipping-detail-warehouse-card{
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    align-items: start;
+    justify-content: start;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #F0F0F0;
+}
+
+.shipping-detail-warehouse-card img{
+    width: 30px;
+    height: auto;
+    object-fit: contain;
+}
+
+.shipping-detail-warehouse-card p{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: var(--text-color);
+}

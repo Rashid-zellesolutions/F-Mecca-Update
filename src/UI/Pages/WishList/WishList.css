@@ -1,0 +1,34 @@
+.wish-list-main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: var(--global-padding);
+    gap: 25px;
+}
+
+.wish-list-heading-container{
+    display: flex;
+    width: 100%;
+    /* gap: 30px; */
+    align-items: center;
+    justify-content: start;
+}
+
+.wish-list-main-heading{
+    width: 20%;
+    font-size: 25px;
+    line-height: 37px;
+    font-weight: 600;
+}
+
+.heading-line{
+    width: 80%;
+    border-bottom: 1px solid var(--text-color);
+    height: 1px;
+}
+
+.wish-listed-products{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}

@@ -1,0 +1,190 @@
+.deal-of-the-day-main-container{
+    display: flex;
+    width: 100%;
+    height: auto;
+    position: relative;
+    /* padding: var(--global-padding); */
+    padding: 55px 60px 35px 60px;
+    overflow: hidden;
+}
+
+.deal-of-the-day-border-heading{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    left: 90px;
+    background-color: #fff;
+    z-index: 9999;
+    padding: 5px 10px;
+    gap: 20px;
+    border: none;
+    overflow: hidden;
+    outline: none;
+}
+
+.deal-of-the-day-end-time{
+    display: flex;
+    background-color: #C61B1A;
+    height: 43px;
+    width: 235px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    margin-top: -3px;
+}
+
+.deal-of-the-day-end-time p{
+    color: var(--text-white) !important; 
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    line-height: 22px !important;
+}
+
+.deal-of-the-day-border-heading p{
+    font-size: 25px;
+    font-weight: 600;
+    line-height: var(--heading-line-height);
+    color: #595959;
+    margin-top: 5px;
+}
+
+.deal-of-the-day-outer-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #C61B1A;
+    border-radius: 8px;
+    padding: 38px 15px 32px 38px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-main-container{
+    height: auto;
+    width: 99%;
+}
+
+.slick-list{
+    width: 100% !important;
+}
+
+.slider-main-container .slick-track{
+    display: flex !important;
+    /* width: 100% !important; */
+}
+
+.slick-arrow.slick-next,
+.slick-arrow.slick-prev{
+position: absolute;
+    top: 65%;
+    transform: translateY(-50%);
+    border: none;
+    cursor: pointer;
+    z-index: 9999;
+    background-color: #C61B1A;
+    width: 32px;
+    height: 32px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.slick-arrow.slick-next img,
+.slick-arrow.slick-prev img{
+    width: auto;
+    height: 15px;
+    object-fit: contain;
+}
+
+.slick-arrow.slick-prev{left: -15px;}
+.slick-arrow.slick-next{right: 5px;}
+
+.slick-prev::before,.slick-next::before{
+   display:none;    
+}
+
+/* .slick-initialized .slick-slide {
+    width: 100% !important;
+} */
+
+/* Mobile timer */
+.mobile-view-deal-of-the-day-timer-and-product-count{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.mobile-view-deal-of-the-day-product-count{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+    height: max-content;
+    display: none;
+}
+
+.mobile-view-timer{
+    display: none;
+    background-color: #C61B1A;
+    width: max-content;
+    padding: 10px 25px;
+    border-radius: 20px;
+}
+
+.mobile-view-timer p{
+    font-size: 11px;
+    line-height: 17px;
+    font-weight: 600;
+    color: #fff;
+}
+
+@media only screen and (max-width: 480px){
+    .deal-of-the-day-main-container{
+        padding: 25px 10px 15px 10px;
+    }
+    .deal-of-the-day-end-time{
+        display: none;
+    }
+    .deal-of-the-day-border-heading{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 5px;
+        left: 20px;
+    }
+
+    .deal-of-the-day-border-heading p{
+        margin-top: 0px;
+        color: var(--active-nav-item-color);
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 600;
+    }
+    .deal-of-the-day-outer-container{
+        /* padding: 20px 15px 20px 38px; */
+        padding: 20px 22px 20px 25px;
+        gap: 10px;
+    }
+
+    .slider-main-container .slick-arrow.slick-next{
+        top: 35%;
+    }
+    .slider-main-container .slick-arrow.slick-prev {
+        top: 35% !important;
+    }
+    .slick-arrow.slick-prev {
+        left: -15px;
+    }
+    .slick-arrow.slick-next {
+        right: -12px;
+    }
+    .mobile-view-timer{
+        display: flex;
+    }
+    .mobile-view-deal-of-the-day-product-count{
+        display: flex;
+    }
+}

@@ -1,0 +1,146 @@
+.slider {
+    position: relative;
+    width: 100%;
+    height: calc(100vw * 0.26355);
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    z-index: 2;
+    width: 38px;
+    height: 38px;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+}
+
+.arrow img {
+    width: 38px;
+    height: 38px;
+}
+
+.left-arrow {
+    left: 30px !important;
+}
+
+.right-arrow {
+    right: 30px !important;
+}
+
+/* mobile slider */
+.mobile-view-slider{
+    display: none;
+}
+
+.mobile-view-slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: auto;
+}
+
+.mobile-slide {
+    min-width: 100%;
+    height: auto; /* Ensure slides fill the container height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.mobile-arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    z-index: 2;
+    width: 35px;
+    height: 35px;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+
+}
+
+.mobile-arrow img{
+    width: auto;
+    height: 35px;
+    object-fit: contain;
+}
+
+.mobile-left-arrow{
+    left: 20px;
+}
+
+.mobile-right-arrow{
+    right: 20px;
+}
+
+.image_preloader{
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0 ;
+    top: 0;
+}
+.image_preloader img{
+    height: 70px;
+    width: 70px;
+}
+
+
+@media only screen and (max-width: 480px) {
+    .slider {
+        display: none;
+    }
+    .mobile-view-slider{
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        overflow: hidden;
+    }
+}

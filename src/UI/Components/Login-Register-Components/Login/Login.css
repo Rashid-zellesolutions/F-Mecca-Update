@@ -1,0 +1,195 @@
+.login-main-section{
+    display: flex;
+    /* flex-direction: column; */
+    width: 50%;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0px 1px 4px 0px #00000026;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    transform: translateX(0%);
+    /* gap: 30px; */
+    z-index: 999;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-main-section.slide-log-in-into-left{
+    transform: translateX(-105%);
+    z-index: 999999;
+}
+
+/* signup section style */
+.signup-containt-container{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 50px;
+    gap: 40px;
+    width: 100%;
+    height: 100%;
+    align-items: start;
+    justify-content: start;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.signup-containt-container.hide-signup-content{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+ .signup-sec-main-register-heading{
+    font-size: 20px !important;
+    line-height: 30px !important;
+    font-weight: 600;
+    color: var(--text-color);
+} 
+
+.signup-sec-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+.signup-sec-label{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 5px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+/* .signup-sec-label input{
+    width: 100%;
+    border: 1px solid var(--border-color);
+    background-color: #fff;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    outline: none;
+    color: var(--text-color);
+}  */
+
+.signup-sec-content p{
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.signup-sec-register-btn{
+    width: 120px;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--active-nav-item-color);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+/* Login container styling */
+.login-main-container{
+    display: none;
+    flex-direction: column;
+    padding: 40px 50px;
+    gap: 40px;
+    width: 100%;
+    height: 100%;
+    align-items: start;
+    justify-content: start;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-main-container.show-login-main-section{
+   display: flex;
+    visibility: visible;
+    opacity: 1;
+}
+
+.login-sec-main-heading{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.login-sec-id-pass-content{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.login-sec-id-pass-content label{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+/* .login-sec-id-pass-content label input{
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: #fff !important;
+    color: var(--text-color) !important;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    outline: none;
+} */
+
+.login-sec-forgot-pass{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    gap: 5px;
+}
+
+.login-sec-forgot-pass p{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.login-sec-login-btn{
+    width: 120px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: var(--active-nav-item-color);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    border: 1px solid var(--active-nav-item-color);
+    border-radius: 5px;
+    cursor: pointer;
+}

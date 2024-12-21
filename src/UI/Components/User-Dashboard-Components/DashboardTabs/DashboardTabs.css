@@ -1,0 +1,41 @@
+.dashboard-all-tabs-toggler-main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 35px;
+}
+
+.dashboard-tabs-toggle-nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    border-bottom: 1px solid #595959;
+    border-top: 1px solid #595959;
+    padding: 20px 0;
+}
+
+.dash-single-tab-title{
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 400;
+    color: #595959;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.dash-single-tab-title:hover{
+    color: var(--active-nav-item-color);
+    border-bottom: 2px solid var(--active-nav-item-color);
+    margin-top: -2px;
+    padding-bottom: 2px;
+}
+
+.dash-single-tab-title.active-dash-tab{
+    color: var(--active-nav-item-color);
+    border-bottom: 2px solid var(--active-nav-item-color);
+    margin-top: -2px;
+    padding-bottom: 2px;
+}

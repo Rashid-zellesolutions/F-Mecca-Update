@@ -1,0 +1,109 @@
+.might-need-main-container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+.might-need-main-container h3{
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 600;
+}
+
+.might-need-cards-main-container{
+    display: flex;
+    align-items: center;
+    width: auto;
+    overflow-y: hidden;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 10px 5px;
+}
+
+.might-need-cards-main-container::-webkit-scrollbar {
+    width: 52px; /* Width for vertical scrollbar */
+    height: 6px;  /* Height for horizontal scrollbar */
+    background-color: #d7d7d7; /* Background color for the scrollbar */
+}
+
+.might-need-cards-main-container::-webkit-scrollbar-thumb {
+    background-color: #595959; /* Color for the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+.might-need-cards-main-container::-webkit-scrollbar-track {
+    background-color: #d7d7d7; /* Background color for the track */
+}
+
+.might-need-product-card{
+    display: flex;
+    width: 340px;
+    min-width: 340px;
+    height: auto;
+    gap: 10px;
+    box-shadow: 0px 0px 6px 0px #0000001A;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.might-need-product-card:hover{
+    transform: scale(1.01);
+    box-shadow: 0px 0px 6px 0px #0000003A;
+}
+
+.also-need-product-image{
+    width: auto;
+    height: 80px;
+    object-fit: contain;
+}
+
+
+
+.you-might-need-product-contant{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.you-might-need-product-contant h3{
+    font-size: 13px;
+    line-height: 19px;
+    font-weight: 500;
+}
+
+.you-might-need-product-contant p{
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.also-need-prices-div{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+    justify-content: start;
+}
+
+.might-need-product-price{
+    font-size: 15px !important;
+    line-height: 22px !important;
+    font-weight: 500 !important;
+}
+
+.might-need-product-rating{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.might-need-product-rating p{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 300;
+    margin-left: 5px;
+}

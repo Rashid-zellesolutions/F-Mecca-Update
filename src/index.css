@@ -1,0 +1,71 @@
+:root{
+  --text-color: #595959;
+  --text-white: #fff;
+  --icon-color: #C30000;
+  --button-color: #2F7A97;
+  --bg-color: #FFFFFF;
+  --work-sans-font: "Work Sans", sans-serif;
+  --hover-font-color: #C30000;
+  --border-color: #d7d7d7;
+  --active-nav-item-color: #C61B1A;
+  --button-color: #484F59;
+  --footer-bg-color: #484F59;
+  --footer-nav-items-color: #F8F8F8;
+  --mobile-nav-item-bg: #F0F0F0;
+  --banner-bg-color: #F8E6CD;
+  --footer-nav-heading: #FAFAFA;
+  --Poppins-font: "Poppins", sans-serif;
+  --products-bg: #C9EFF4;
+  --product-text-color: #595959;
+  --hover-btn-bg: #595959;
+  --service-card-bg: #f7f7f7;
+  --global-padding: 35px 60px;
+  --inner-padding: 35px 60px 0px 60px;
+  --heading-line-height: 28px;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: var(--Poppins-font);
+  color: var(--text-color) !important;
+}
+
+body::-webkit-scrollbar {
+  width: 4px; /* Slim width */
+  height: 4px; /* Slim height for horizontal scrollbar */
+}
+
+/* Style the scrollbar track */
+body::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light gray background */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Style the scrollbar thumb */
+body::-webkit-scrollbar-thumb {
+  background: #888; /* Darker gray for the thumb */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Style the scrollbar thumb on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker shade on hover */
+}
+
+
+button {
+  font-family: var(--Poppins-font);
+}
+
+input{
+  font-family: var(--Poppins-font);
+}
+
+h3{
+  color: var(--text-color);
+}

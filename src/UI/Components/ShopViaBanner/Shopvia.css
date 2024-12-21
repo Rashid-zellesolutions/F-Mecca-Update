@@ -1,0 +1,55 @@
+.shop-via-banner{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: var(--banner-bg-color);
+    padding: 16px 10px;
+}
+
+.close{
+    display: none;
+}
+
+.text-div{
+    display: flex;
+    width: 100%;  
+    align-items: center;
+    justify-content: center; 
+}
+
+.shop-via-banner span{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+}
+
+.shop-via-banner span a{
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.shop-via-banner img{
+    width: 15px; 
+    height: 15px;
+}
+
+@media only screen and (max-width: 480px){
+    .shop-via-banner{
+        padding: 13px 10px;
+    }
+    .shop-via-banner span{
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+    }
+    
+    .shop-via-banner span a{
+        font-weight: 600;
+    }
+}

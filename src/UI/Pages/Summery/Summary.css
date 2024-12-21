@@ -1,0 +1,184 @@
+.summary-main-container{
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 35px 0;
+}
+
+.summary-left-section{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0px 50px 30px 60px;
+    gap: 25px;
+}
+
+.checkout-pages-toggle-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.checkout-pages-toggle-nav span{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.checkout-pages-toggle-nav span p{
+    color: #A6A6A6;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 600;
+    border-bottom: 2px solid #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.checkout-pages-toggle-nav span.active-checkout-toggle p{
+    color: #595959;
+}
+
+.checkout-pages-toggle-nav span.active-checkout-toggle p:nth-child(2){
+    color: #595959;
+    border-bottom: 2px solid var(--active-nav-item-color);
+}
+
+.shipping-details-and-coupen-show{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.order-summery-and-proceed-btn{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+}
+
+.order-summery-proceed-btn-div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: end;
+}
+
+.order-summery-proceed-btn-div button{
+    width: 305px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: var(--active-nav-item-color);
+    color: #fff;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.summary-right-section{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: max-content;
+    background-color: #F6FAFE;
+    padding: 35px 0 60px 70px;
+    gap: 50px;
+}
+
+.summery-right-section-according-payment{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 500px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #F6FAFE;
+    padding: 35px 72px 72px 72px;
+    gap: 50px;
+}
+
+.summery-right-section-according-payment::-webkit-scrollbar{
+    display: none;
+}
+
+.summery-right-section-low-height{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 550px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #F6FAFE;
+    padding: 35px 72px 72px 72px;
+    gap: 50px;
+}
+
+.summery-right-section-low-height::-webkit-scrollbar{
+    display: none;
+}
+
+@media only screen and (max-width: 1024px){
+    .summary-main-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .summary-left-section{
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    .summary-right-section{
+        width: 100%;
+    }
+
+    
+
+    
+}
+
+@media only screen and (max-width: 480px){
+    .summary-main-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 30px 0px;
+    }
+    .summary-left-section{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .checkout-pages-toggle-nav{
+        justify-content: start;
+    }
+    .summary-right-section,
+    .summery-right-section-according-payment,
+    .summery-right-section-low-height{
+        display: none;
+    }
+    .checkout-pages-toggle-nav span p{
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: 600;
+    }
+    .order-summery-proceed-btn-div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    .order-summery-proceed-btn-div button {
+        width: 100%;
+    }
+}

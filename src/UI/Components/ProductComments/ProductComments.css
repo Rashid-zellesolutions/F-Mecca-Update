@@ -1,0 +1,15 @@
+.customer-comments-main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: var(--inner-padding);
+    gap: 16px;
+}
+
+@media only screen and (max-width: 480px){
+    .customer-comments-main-container{
+        padding: 30px 10px;
+        background-color: #fff;
+    }
+}

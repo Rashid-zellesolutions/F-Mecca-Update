@@ -1,0 +1,47 @@
+.quick-view-attributes-main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0px;
+    align-items: start;
+    justify-content: start;
+}
+
+.quick-view-attribute-heading-1{
+    color: var(--text-color) !important;
+    font-size: 14px !important;
+    line-height: 22px !important;
+    font-weight: 500 !important;
+}
+
+.quick-view-atribute-option-name{
+    font-size: 10px;
+    line-height: 18px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+.variation-image-div.active-selected-image-variation{
+    border: 1px solid var(--text-color);
+}
+
+/* Hide the option name by default */
+.attribute-image-type .quick-view-atribute-option-name {
+    display: none;
+    text-align: center;
+}
+
+/* Show the option name when hovering over the parent div */
+.attribute-image-type:hover .quick-view-atribute-option-name {
+    display: block;
+}
+
+/* Hide the option name by default */
+.attribute-single-color .quick-view-atribute-option-name {
+    display: none;
+    text-align: center;
+}
+
+/* Show the option name when hovering over the parent div */
+.attribute-single-color:hover .quick-view-atribute-option-name {
+    display: block;
+}

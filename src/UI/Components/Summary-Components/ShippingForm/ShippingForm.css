@@ -1,0 +1,248 @@
+.shipping-detail-form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.first-name-last-name{
+    display: flex;
+    width: 100%;
+    gap: 45px;
+}
+
+.email-container{
+    display: flex;
+    width: 100%;
+}
+
+.country-region{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* align-items: center; */
+    justify-content: start;
+    gap: 0px;
+}
+
+.country-region p{
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+.country-region h3{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.city-state-zip{
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    align-items: center;
+}
+
+.different-billing-option{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.different-billing-checkox{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    gap: 16px;
+}
+
+.different-billing-checkox input[type='checkbox']{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #D7D7D7;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    outline: none; /* Remove outline on focus */
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.different-billing-checkox input[type='checkbox']:checked{
+    background-color: #C61B1A;
+    border: 2px solid #C61B1A;
+}
+
+.different-billing-checkox input[type='checkbox']:checked::after {
+    content: '';
+    position: absolute;
+    left: 5px; /* Adjust position of tick mark */
+    top: 0px; /* Adjust position of tick mark */
+    width: 5px; /* Width of tick mark */
+    height: 10px; /* Height of tick mark */
+    border: solid white; /* Tick mark color */
+    border-width: 0 2px 2px 0; /* Create the tick shape */
+    transform: rotate(45deg); /* Rotate to create tick shape */
+    transition: opacity 0.3s; /* Add transition for opacity */
+    opacity: 0; /* Initially hidden */
+
+}
+
+.different-billing-checkox input[type='checkbox']:checked::after {
+    opacity: 1; /* Fade in the tick mark when checked */
+}
+
+.different-billing-checkox input[type='checkbox']:not(:checked)::after{
+    display: none;
+}
+
+.different-billing-checkox label {
+    cursor: pointer; /* Make label clickable */
+}
+
+.defferent-billing-option-true{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease;
+}
+
+.defferent-billing-option-true.show-defferent-billing-option{
+    height: 370px;
+}
+
+.order-note{
+    display: flex;
+    width: 100%;
+}
+
+.desktop-billing-details-send-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    background-color: var(--active-nav-item-color);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Mobile Styling */
+.mobile-view-shipping-details-form{
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+    gap: 15px;
+}
+
+.mobile-view-personal-details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.mobile-delivery-details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.mobile-view-city-and-zip{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.mobile-delivery-options-sections{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px 20px;
+    background-color: #F9FAFA;
+    gap: 20px;
+}
+
+.mobile-delivery-option-details{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 15px;
+}
+
+.mobile-delivery-option-single-detail{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: -5px;
+}
+
+.mobile-delivery-option-single-detail h3{
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.mobile-delivery-option-single-detail p{
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 400;
+}
+
+.mobile-pay-btn-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 20px 10px; */
+    width: 100%;
+}
+
+.mobile-pay-btn-section button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    background-color: var(--active-nav-item-color);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 600;
+}
+
+/* Media queries for 1024 to large screen */
+@media only screen and (min-width: 1024px) and (max-width: 1200px){
+    .first-name-last-name{
+        gap: 10px;
+    }
+    .city-state-zip{
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .shipping-detail-form{
+        display: none;
+    }
+    .mobile-view-shipping-details-form{
+        display: flex;
+    }
+}

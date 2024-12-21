@@ -1,0 +1,208 @@
+.card {
+    width: 98%;
+    box-sizing: border-box; 
+    /* padding: 0 10px 0 15px;  */
+}
+
+.card-header{
+    position: relative;
+    width: 100%;
+    height: 254px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.pieces-text {
+    position: absolute;
+    bottom: -15px;
+    font-size: 55px;
+    line-height: 64px;
+    font-weight: 700;
+    color: var(--text-white);
+    left: 10px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+    z-index: 0;
+
+}
+
+.title-and-price{
+    position: absolute;
+    bottom: 0;
+    display: none;
+    width: 100%;
+    background-color: #FAFAFA;
+    padding: 5px 10px;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.new-arrival-product-name{
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;
+}
+
+.new-arrival-product-price{
+    font-size: 25px;
+    line-height: 29px;
+    font-weight: 700;
+}
+
+.card-buttons{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 15px;
+    background-color: var(--button-color);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    gap: 10px;
+}
+
+
+.card-buttons a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 40px;
+    gap: 15px;
+    color: var(--text-white) !important;
+    text-decoration: none;
+    justify-content: center;
+    height: 40px;
+}
+
+.card-buttons a p{
+    color: #fff !important;
+    font-size: 15px !important;
+    line-height: 17px !important;
+    font-weight: 400 !important;
+}
+
+.card-buttons a:hover{
+    background-color: var(--active-nav-item-color);
+    border-radius: 6px;
+}
+
+.card-buttons a img{
+    width: 20px;
+}
+
+.new-arrival-desc-and-price{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 15px;
+    background-color: var(--button-color);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 999;
+    position: relative;
+}
+
+.new-arrival-desc{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.new-arrival-desc p{
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.new-arrival-new-and-old-price{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* gap: 10px; */
+    width: max-content;
+}
+
+.new-arrival-desc-and-price del, .new-arrival-new-price{
+    color: #fff;
+}
+
+.new-arrival-desc-and-price del{
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.new-arrival-desc-and-price h3{
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+.mobile-view-new-ariival-price{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.mobile-view-new-ariival-price del{
+    font-size: 10px;
+    line-height: 15px;
+    font-weight: 600;
+}
+
+.mobile-view-new-arrival-product-price{
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 480px){
+    .pieces-text{
+        bottom: -5px;
+        font-size: 25px;
+        line-height: 30px;
+        font-weight: 700;
+    }
+    .card-buttons{
+        display: none;
+    }
+    .title-and-price{
+        position: relative;    
+        display: none;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 15px;
+        background-color: var(--button-color);
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        color: #fff;
+    }
+    .new-arrival-product-price{
+        display: none;
+    }
+    /* .new-arrival-desc-and-price{
+        display: none;
+    } */
+    .new-arrival-product-name{
+        font-size: 10px;
+        line-height: 15px;
+        font-weight: 600;
+    }
+    .mobile-view-new-ariival-price{
+        display: flex;
+    }
+}

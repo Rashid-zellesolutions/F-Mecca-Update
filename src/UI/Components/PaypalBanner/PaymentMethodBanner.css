@@ -1,0 +1,8 @@
+.paypal-banner-container{
+    display: flex;
+    width: 100%;
+}
+
+.paypal-banner-container img{
+    width: 50%;
+}

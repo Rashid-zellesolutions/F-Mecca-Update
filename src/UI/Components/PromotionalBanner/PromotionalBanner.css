@@ -1,0 +1,126 @@
+.furniture-mecca-promotional-banner{
+    display: flex;
+    width: 100%;
+    height: 42px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 70px 11px 20px;
+    background-color: #F0F0F0;
+}
+
+.rotating-message{
+    color: var(--text-color);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.toll-free-ancor{
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.header-links-and-select-language{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.banner-link-container{
+    display: flex;
+    width: 253px;
+    height: 25px;
+    align-items: center;
+    gap: 30px;
+    /* border-right: 1px solid #595959; */
+}
+
+.banner-link-container a{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    text-decoration: none;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.header-main-banner-language-div{
+    display: flex;
+    position: relative;
+}
+
+.header-main-banner-language-div button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    gap: 15px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    cursor: pointer;
+}
+
+.header-main-banner-language-div img{
+    height: 32px;
+    width: auto;
+    object-fit: cover;
+}
+
+.on-tab-deliver-to{
+    display: none;
+    /* display: flex; */
+    gap: 5px;
+    width: auto;
+    align-items: center;
+    justify-self: start;
+}
+
+.on-tab-deliver-to img{
+    width: auto;
+    height: 18px;
+    object-fit: contain;
+}
+
+.mobile-view-delever-to{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.mobile-view-delever-to p{
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 400;
+}
+
+.mobile-view-delever-to a{
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+@media only screen and (max-width: 480px){
+    .banner-link-container{
+        display: none;
+    }
+    .header-main-banner-language-div{
+        display: none;
+    }
+    .furniture-mecca-promotional-banner{
+        padding: 8px 10px;
+    }
+
+    .rotating-message{
+        font-size: 8px;
+        line-height: 12px;
+        font-weight: 400;
+    }
+    .on-tab-deliver-to{
+        display: flex;
+    }
+}

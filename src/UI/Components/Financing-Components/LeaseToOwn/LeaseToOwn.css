@@ -1,0 +1,42 @@
+.lease-to-own-main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 35px 100px;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.lease-to-own-main-container h3{
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.leasing-options{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 480px){
+    .lease-to-own-main-container{
+        padding: 30px 20px;
+    }
+    .lease-to-own-main-container h3{
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 600;
+    }
+    .leasing-options {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 25px;
+    }
+}

@@ -1,0 +1,65 @@
+.hottest-deal-main-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  /* padding: var(--global-padding); */
+  padding: 25px 60px 50px 60px;
+}
+
+.hot-deal-main-heading{
+  font-size: 25px;
+  line-height: 29px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.hot-deals-main-banner {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  /* padding: var(--global-padding); */
+}
+
+.left-banners, .right-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 0 0 25%; /* This ensures left and right banners take up 20% of the width */
+}
+
+.center-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1; /* This ensures the center banner takes up the remaining 60% of the width */
+}
+
+.left-banners img, .right-banner img, .center-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the container while maintaining aspect ratio */
+  cursor: pointer;
+}
+
+.left-banners, .right-banner, .center-banner {
+  height: auto;
+}
+
+.mobile-view-hottest-deal-banner{display: none;}
+
+@media only screen and (max-width: 480px){
+  .hottest-deal-main-container{
+    display: none;
+  }
+  .mobile-view-hottest-deal-banner{
+    display: flex;
+    width: 100%;
+    height: auto;
+  }
+  .mobile-view-hottest-deal-banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

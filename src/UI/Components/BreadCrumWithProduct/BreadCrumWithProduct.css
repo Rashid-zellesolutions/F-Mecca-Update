@@ -1,0 +1,71 @@
+.breadcrum-with-products{
+    display: flex;
+    flex-direction: column;
+    /* background-color: #EDF1FE; */
+    background-color: #fff;
+    font-family: var(--Poppins-font);
+}
+
+.breadcrum{
+    display: flex;
+    padding: 23px 60px 10px 60px;
+}
+
+.breadcrum p{
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.breadcrum p a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.breadcrum-products-container{
+    display: none;
+    /* flex-wrap: wrap; */
+    width: 100%;
+    gap: 10px;
+    padding: 0px 60px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.breadcrum-products-container::-webkit-scrollbar{
+    display: none;
+}
+
+.single-product{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: auto;
+    padding: 0px 0;
+    gap: 5px;
+    align-items: center;
+    text-align: center
+
+}
+
+.breadcrum-product-image{
+    border: 1px solid var(--text-color);
+    padding: 10px;
+    border-radius: 50%;
+    width: 80px;
+    height: 70px;
+}
+
+.single-product img{
+    width: 98%;
+    height: 98%;
+    object-fit: contain;
+}
+
+.single-product p{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+}

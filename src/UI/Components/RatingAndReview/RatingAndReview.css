@@ -1,0 +1,223 @@
+.rating-and-customers-photos{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    /* align-items: center; */
+    background-color: #f7f7f7;
+    margin-top: 35px;
+    padding: 25px 60px 0 60px;
+}
+
+.rating-and-review-main-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: #f7f7f7;
+    /* padding: var(--inner-padding); */
+    /* padding: 0px 0 0 60px; */
+    gap: 16px;
+    
+}
+
+.rating-and-review-main-container h3{
+    color: var(--text-color);
+    font-size: 25px;
+    line-height: var(--heading-line-height);
+    font-weight: 600;
+}
+
+.rating-and-review-main-container p{
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.rating-and-review-main-container p a{
+    color: var(--active-nav-item-color);
+}
+
+.rating-and-review-div{
+    /* background-color: var(--bg-color); */
+    /* padding: 24px; */
+    border-radius: 8px;
+    display: flex;
+    width: 100%;
+}
+
+.rating-div{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating-div h3{
+    font-size: 61px;
+    line-height: 65px;
+    font-weight: 400;
+    color: black;
+}
+
+.rating-div span{
+    display: flex;
+    gap: 5px;
+    /* margin-bottom: 16px; */
+}
+
+.rating-div span img{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.rating-div p{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.rating-progress-bar-div{
+    display: flex;
+    flex-direction: column;
+    /* width: 50%; */
+    gap: 5px;
+    
+}
+
+.progress-bar-div{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.rating-count-div{
+    display: flex;
+    width: 15px;
+}
+
+.progress-bar-div p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+}
+
+.progress-bar-div img{
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.progress-bar-container{
+    width: 170px;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 15px;
+}
+
+.progress-bar{
+    height: 15px;
+    background-color: #50BED3;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+.customer-images-section{
+    display: flex;
+    width: 50%;
+    /* padding: 10px; */
+    background-color: transparent;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.customer-images-section h3{
+    color: var(--text-color);
+    font-size: 25px;
+    line-height: var(--heading-line-height);
+    font-weight: 600;
+}
+
+.customer-images-section-not{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.customer-images-section-not > img{
+    height: 200px;
+    width: auto;
+}
+
+@media only screen and (max-width: 480px){
+    .rating-and-customers-photos {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 30px;
+        /* align-items: center; */
+        background-color: #fff;
+        /* margin-top: 35px; */
+        padding: 20px 10px;
+    }
+    .rating-and-review-main-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        /* padding: var(--inner-padding); */
+        /* padding: 0px 0 0 60px; */
+        gap: 10px;
+    }
+    .rating-and-review-main-container h3{
+        font-size: 15px;
+        line-height: 18px;
+        font-weight: 600;
+        color: var(--text-color);
+    }
+    .rating-and-review-main-container p {
+        color: var(--text-color);
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 300;
+    }
+    .rating-div h3{
+        font-size: 30px;
+        line-height: 45px;
+        font-weight: 400;
+    }
+    .rating-div span img {
+        width: auto;
+        height: 15px;
+        object-fit: contain;
+    }
+    .rating-div span {
+        display: flex;
+        gap: 5px;
+        margin-bottom: 10px;
+    }
+    .progress-bar-div img {
+        width: auto;
+        height: 15px;
+        object-fit: contain;
+    }
+    .progress-bar-container {
+        height: 15px;
+    }
+    .progress-bar {
+        height: 15px;
+    }
+
+    .customer-images-section {
+        display: flex;
+        width: 100%;
+        /* padding: 10px; */
+    }
+}

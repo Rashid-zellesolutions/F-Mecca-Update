@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+.thanks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.thanks_heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.thanks_heading h1{
+    font-size: 55px;
+    color: #C61B1A;
+    font-family: "Quicksand", "Poppins";
+    font-weight: 700 !important;
+}
+
+.thanks_heading img{
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.thanks h3{
+    text-align: center;
+    font-family: "Quicksand", "Poppins";
+}
+
+.order_number{
+    display:flex ;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.order_number_head{
+    font-size: 12px;
+    color: #595959;
+    font-weight: 600;
+}
+
+.order_number_value{
+    padding: 10px 15px;
+    border-radius:5px 5px 5px 5px;
+    border: 2px solid #595959;
+    /* background-color: #C61B1A; */
+    color: #595959;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.shipping_details_ty {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Keeps single-column for narrow layouts */
+    gap: 0; /* No gaps between rows to simulate table lines */
+    width: 50%;
+    border: 1px solid #ccc; /* Outer border for the table */
+    border-collapse: collapse; /* Makes borders look like a table */
+}
+
+.shipping_details_row {
+    display: flex;
+    border-bottom: 1px solid #ccc; /* Row separator */
+    display: grid;
+    border-bottom: 1px solid #ccc;
+    grid-template-columns: 30% 50%;
+}
+
+.shipping_details_ty_label,
+.shipping_details_ty_value {
+    flex: 1;
+    padding: 10px; /* Adds spacing inside the cells */
+    border-right: 1px solid #ccc; /* Separator between label and value */
+    font-size: 14px;
+}
+
+
+.shipping_details_ty_value {
+    font-weight: 500;
+    text-align: left;
+    border-right: none; /* No right border for the last column */
+
+}
+
+.shipping_details_row:last-child {
+    border-bottom: none; /* Removes the bottom border for the last row */
+}
+
+
+.shipping_details_1{
+    font-weight: 600;
+    font-size: 16px;
+    
+}
+
+.back_to_home{
+    background-color: #595959;
+    padding: 10px 15px;
+    transition:background-color 2s ;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    font-family: "Quicksand", "Poppins";
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.back_to_home:hover{
+    background-color: #C61B1A;
+}

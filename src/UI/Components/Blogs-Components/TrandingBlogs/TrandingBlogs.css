@@ -1,0 +1,60 @@
+.tranding-blogs-main-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: #FDFDFD;
+    border: 1px solid #F0F0F0;
+    border-radius: 10px;
+}
+
+.tranding-blogs-main-section h3{
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: 600;
+    color: #000;
+}
+
+.tranding-blogs-cards{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.tranding-single-blog-card{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+}
+
+.tranding-blog-man-image{
+    width: 75px;
+    height: auto;
+    object-fit: contain;
+}
+
+.tranding-blog-content{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-items: start;
+    justify-content: start;
+}
+
+.tranding-blog-name{
+    font-size: 18px !important;
+    line-height: 22px !important;
+    font-weight: 500 !important;
+}
+
+.tranding-blog-post-date{
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 400;
+}
