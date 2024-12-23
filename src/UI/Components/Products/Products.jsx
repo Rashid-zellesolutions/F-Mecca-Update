@@ -562,6 +562,7 @@ const Products = ({productArchiveHading}) => {
                         singleProductData={item}
                         maxWidthAccordingToComp="100%"
                         // justWidth={'310px'}
+                        percent={'-12%'}
                         tagIcon={item.productTag ? item.productTag : item.heart}
                         tagClass={item.productTag ? 'tag-img' : 'heart-icon'}
                         mainImage={`${item.image.image_url}`}

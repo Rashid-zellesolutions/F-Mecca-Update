@@ -38,9 +38,11 @@ const FurnitureForBudget = ({budgetCardData}) => {
                     </div>
                     <div className='budget-furniture-card-details'>
                         <p>{items.sale}</p>
-                        <button onClick={()=>{
-                            navigateToDetails(items.uid,items.max_price,items.category)
-                        }}>
+                        <button 
+                            // onClick={()=>{
+                            //     navigateToDetails(items.uid,items.max_price,items.category)
+                            // }}
+                        >
                             {items.shopNow}
                             <div className='shop-now-btn-under-line'></div>
                         </button>

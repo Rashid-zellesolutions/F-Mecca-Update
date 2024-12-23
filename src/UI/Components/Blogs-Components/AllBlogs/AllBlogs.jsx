@@ -3,6 +3,7 @@ import './AllBlogs.css';
 import BlogCard from '../BlogCard/BlogCard';
 import BlogCardShimmer from '../../Loaders/blogCardShimmer/BlogCardShimmer';
 import { useNavigate } from 'react-router-dom';
+import { url } from '../../../../utils/api';
 
 const AllBlogs = ({blogData}) => {
   const navigate = useNavigate()
@@ -13,12 +14,12 @@ const AllBlogs = ({blogData}) => {
 
   return (
     <div className='blog-page-blog-cards-main-container'>
-      {blogData && blogData.length > 0 ? (
+      {blogData && blogData.length >= 0 ? (
         blogData.slice(0, 9).map((item, index) => (
         <div key={index} className='blog-cards-col'>
           <BlogCard
             singleBlog={item} 
-            blogMainImage={item.img}
+            blogMainImage={`${url}${item.img}`}
             ind={index}
             blogCategory={item.category}
             blogTitle={item.title}

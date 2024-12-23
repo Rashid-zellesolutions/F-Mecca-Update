@@ -113,6 +113,7 @@ const BestSellerSlider = () => {
     const [width, setWidth] = useState(window.innerWidth);
 
     const [activeItem, setActiveItem] = useState(0)
+    const [MobileActiveIndex, setMobileActiveIndex] = useState(0)
     const bestSellerNav = ['Living Room', 'Bedroom', 'Dining Room']
     const [mobIndex, setMobIndex] = useState(0)
     const [cardIndex, setCardIndex] = useState(0)
@@ -127,6 +128,11 @@ const BestSellerSlider = () => {
         //     setLoading(false); // Hide loader after 2 seconds
         // }, 1000);
     }
+
+    const handleMobileActiveindex = (index) => {
+        setActiveItem(index)
+    }
+
     // const settings = {
     //     className: 'center',
     //     dots: true,
@@ -318,6 +324,10 @@ const BestSellerSlider = () => {
         ]
     };
 
+    useEffect(() => {
+        console.log("active image", url + bestSellerNav1[MobileActiveIndex].image.image_url)
+    }, [MobileActiveIndex])
+
 
     return (
         <div className="best-seller-slider-container">
@@ -393,6 +403,7 @@ const BestSellerSlider = () => {
                 <div className={`mobile-view-best-seller-loading ${applyFilter ? 'show-mobile-view-best-seller-filter' : ''}`}></div>
                 <h3 className='mobile-view-best-seller-heading'>Best Seller</h3>
                 <div className='mobile-view-nav-and-card-contaner'>
+                        <img src={url + bestSellerNav1[mobIndex].image.image_url} alt='mobile-cards-banner' className='mobile-category-menu-banner' />
 
                     <div className='mobile-view-best-seller-menu-items'>
                         {bestSellerNav1.map((items, index) => (
@@ -401,6 +412,7 @@ const BestSellerSlider = () => {
                                 className={`mobile-view-best-seller-nav ${mobIndex === index ? "mobile-view-nav-active" : ""}`}
                                 onClick={() => {
                                     handleMobileNavClick(index)
+                                    handleMobileActiveindex(index)
                                     getBestSellerProducts(items.slug)
                                 }}
                             >
@@ -413,19 +425,6 @@ const BestSellerSlider = () => {
                         {!loading ? (
                             <Slider {...settings}>
                                 {allProducts.map((item, index) => (
-                                    // <BestSellerProductCard
-                                    //     productData={item}
-                                    //     isDiscountable={item.discount.is_discountable === 1 ? true : false}
-                                    //     key={index}
-                                    //     productMainImage={item.images?.[0]?.image_url}
-                                    //     starIcon={ratingStars}
-                                    //     reviews={'200'}
-                                    //     productName={item.name}
-                                    //     oldPrice={item.regular_price}
-                                    //     newPrice={item.newPrice}
-                                    //     handleCardClicked={() => handleCardClicked(item)}
-                                    //     handleWishListClecked={() => handleWishlisted(item)}
-                                    // />
                                     <BestSellerProductCard
                                         productData={item}
                                         isDiscountable={item.discount.is_discountable === 1 ? true : false}
@@ -442,7 +441,6 @@ const BestSellerSlider = () => {
                                     />
                                 ))
                                 }
-
                             </Slider>
                         ) : (
                             <BestSellerProductCardShimmer width={'85%'} />

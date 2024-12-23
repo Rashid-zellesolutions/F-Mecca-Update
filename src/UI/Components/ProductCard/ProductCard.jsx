@@ -202,12 +202,13 @@ const ProductCard = ({
                                         }} 
                                     /> 
                             : 
-                                <img 
-                                    src={tagIcon} alt='heart img' 
-                                    className={tagClass} 
-                                    loading='lazy'
-                                    onClick={(e) => {e.stopPropagation(); handleWishListclick(singleProductData)}}
-                                />
+                                // <img 
+                                //     src={tagIcon} alt='heart img' 
+                                //     className={tagClass} 
+                                //     loading='lazy'
+                                //     onClick={(e) => {e.stopPropagation(); handleWishListclick(singleProductData)}}
+                                // />
+                                <></>
                             }
                             
                         </div>

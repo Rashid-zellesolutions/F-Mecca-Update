@@ -46,7 +46,7 @@ import KidsRoom from './Assets/to-be-change/kids-room.png';
 import AreaRugs from './Assets/to-be-change/area-rugs.png';
 import HomeDecor from './Assets/to-be-change/home-decor.png';
 import Outlet from './Assets/to-be-change/outlet.png';
-import Haider from './Global-Components/Header/Haider';
+import Header from './Global-Components/Header/Header';
 import Footer from './Global-Components/Footer/Footer';
 import ProductArchive from './UI/Pages/ProductArchive/ProductArchive';
 import SingleProduct from './UI/Pages/SingleProduct/SingleProduct';
@@ -120,7 +120,7 @@ function App() {
           autoClose={1000}
           // limit={1}
         />
-        <Haider />
+        <Header />
         <Shopvia />
         {/* <Breadcrumb /> */}
         <Routes>

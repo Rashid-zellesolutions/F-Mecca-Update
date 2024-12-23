@@ -1,7 +1,8 @@
-.cover_photo{
+.cover_photo {
     margin-bottom: 30px;
 }
-.cover_photo img{
+
+.cover_photo img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -15,27 +16,109 @@
     padding: 0 60px;
 }
 
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
-    gap: 20px; /* space between items */
-    width: 100%; /* or set a max-width as desired */
-    margin: 20px 0;
-   
+.furniture-for-every-budget-main-heading {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    margin-bottom: 5px;
 }
 
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columns per row */
+    gap: 20px;
+    /* space between items */
+    width: 100%;
+    /* or set a max-width as desired */
+    margin: 20px 0;
+
+}
+
+/* mobile view grid */
+.mobile-view-furniture-for-every-budget {
+    display: none;
+}
+
+.mobile-view-wishlist-card-grid-select {
+    display: none;
+}
+
+.mobile-view-budget-card-grid-single-col {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+}
+
+.mobile-view-budget-card-grid-single-col.grid-active {
+    background-color: var(--text-color);
+}
+
+.mobile-view-budget-card-grid-dual-col {
+    display: flex;
+    width: max-content;
+    gap: 1px;
+    cursor: pointer;
+}
+
+.mobile-view-budget-card-grid-dual-col-inner {
+    width: 10px;
+    height: 20px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+}
+
+.mobile-view-budget-card-grid-dual-col-inner.active-dual-col {
+    background-color: var(--text-color);
+}
+
+
+
+
 .product-card {
-    width: 100%; /* Each card takes full width of its grid cell */
+    width: 100%;
+    /* Each card takes full width of its grid cell */
 }
 
 @media (max-width: 1200px) {
     .product-grid {
-        grid-template-columns: repeat(3, 1fr); /* 4 columns per row */
-       
+        grid-template-columns: repeat(3, 1fr);
+        /* 4 columns per row */
+
     }
-    .furniture_at_every_budget{
+
+    .furniture_at_every_budget {
         padding: 0 40px;
     }
-  }
+}
 
+@media only screen and (max-width: 480px) {
+    .furniture_at_every_budget {
+        padding: 10px 20px;
+        gap: 15px;
+    }
 
+    .product-grid {
+        display: none;
+    }
+
+    .mobile-view-furniture-for-every-budget {
+        display: grid;
+    }
+
+    .mobile-view-furniture-for-every-budget.single-col {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .mobile-view-furniture-for-every-budget.two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}

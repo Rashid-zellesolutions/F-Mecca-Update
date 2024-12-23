@@ -1,23 +1,27 @@
 import React from 'react'
 import './TrandingBlogs.css'
 import trandingBlogImage from '../../../../Assets/blogs-images/tranding-blog.png'
+import { useBlog } from '../../../../context/BlogsContext/blogsContext'
+import { url } from '../../../../utils/api'
+import { useLocation, useNavigate } from 'react-router-dom'
 
-const TrandingBlogs = () => {
-    const trandingData = [
-        { img: trandingBlogImage, name: `Mid-Century Modern Tricks & TipsMid-Century`, date: '31-Dec-2023' },
-        { img: trandingBlogImage, name: `Mid-Century Modern Tricks & TipsMid-Century`, date: '31-Dec-2023' },
-        { img: trandingBlogImage, name: `Mid-Century Modern Tricks & TipsMid-Century`, date: '31-Dec-2023' },
-    ]
+const TrandingBlogs = ({blogs}) => {
+    const navigate = useNavigate();
+    const navigateToSingleBlog = (item) => {
+        navigate(`/single-blog/${item.id}`, {state:  item});
+    }
+
+    // const {blogs} = useBlog();
     return (
         <div className='tranding-blogs-main-section'>
-            <h3>Tranding</h3>
+            <h3>Trending</h3>
             <div className='tranding-blogs-cards'>
-                {trandingData.map((item, index) => (
-                    <div className='tranding-single-blog-card'>
-                        <img src={item.img} alt='imm' className='tranding-blog-man-image' />
+                {blogs?.map((item, index) => (
+                    <div className='tranding-single-blog-card' onClick={() => navigateToSingleBlog(item)}>
+                        <img src={`${url}${item.img}`} alt='imm' className='tranding-blog-man-image' />
                         <div className='tranding-blog-content'>
-                            <h3 className='tranding-blog-name'>{item.name}</h3>
-                            <p className='tranding-blog-post-date'>{item.date}</p>
+                            <h3 className='tranding-blog-name'>{item.title}</h3>
+                            <p className='tranding-blog-post-date'>{item.postDate}</p>
                         </div>
                     </div>
                 ))}

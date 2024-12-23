@@ -32,7 +32,8 @@ const ProductCard = ({
             style={{ backgroundColor }}
             className="top_rated_head"
           >
-            TOP RATED
+            {/* TOP RATED */}
+            Featured
           </div>
           <div className="top_rated_price_cont">
             <p>Starting From</p>

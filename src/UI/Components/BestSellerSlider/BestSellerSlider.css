@@ -323,7 +323,8 @@
     display: none;
     flex-direction: column;
     width: 100%;
-    height: 485px;
+    /* height: 485px; */
+    height: 440px;
     gap: 15px;
     position: relative;
 }
@@ -370,7 +371,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 .mobile-view-best-seller-menu-items{
@@ -378,20 +379,31 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
+    z-index: 99999;
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+.mobile-category-menu-banner{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .mobile-view-best-seller-nav{
-    font-size: 12px;
+    font-size: 10px;
     line-height: 21px;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--text-color);
     border-bottom: 2px solid transparent;
     cursor: pointer;
 }
 
 .mobile-view-best-seller-nav.mobile-view-nav-active{
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 12px;
     border-bottom: 2px solid var(--active-nav-item-color);
 }
 
@@ -399,9 +411,12 @@
     position: absolute;
     display: flex;
     width: 100%;
+    height: max-content;
+    padding: 4px;
     align-items: center;
     justify-content: center;
-    top: 165px;
+    /* top: 165px; */
+    top: 110px;
 }
 
 .mobile-view-slider-cards .slick-slider{

@@ -22,15 +22,17 @@ import { SEOctxProvider } from './context/SEOcontext/SEOcontext';
 import { GlobalContextProvider } from './context/GlobalContext/globalContext';
 import { ActiveSalePageProvider } from './context/ActiveSalePageContext/ActiveSalePageContext';
 import { APILoadingStatus } from '@vis.gl/react-google-maps';
+import { BlogsProvider } from './context/BlogsContext/blogsContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <APILoadingStatus key={`AIzaSyD8f3iK7p7riixIlOhI63h_uGGGguP4Vr0`}> */}
-      <HelmetProvider>
-        <SEOctxProvider>
-          <CartProvider>
-            <GlobalContextProvider>
+    <HelmetProvider>
+      <SEOctxProvider>
+        <CartProvider>
+          <GlobalContextProvider>
+            <BlogsProvider>
               <ActiveSalePageProvider>
                 <WishListProvider>
                   <LPContentProvider>
@@ -64,10 +66,11 @@ root.render(
                   </LPContentProvider>
                 </WishListProvider>
               </ActiveSalePageProvider>
-            </GlobalContextProvider>
-          </CartProvider>
-        </SEOctxProvider>
-      </HelmetProvider>
+            </BlogsProvider>
+          </GlobalContextProvider>
+        </CartProvider>
+      </SEOctxProvider>
+    </HelmetProvider>
     {/* </APILoadingStatus> */}
   </React.StrictMode>
 );
