@@ -1,7 +1,6 @@
 import { createContext, useState, useContext, useEffect } from "react";
 
 import heartImg from '../../Assets/icons/like.png'
-import muellerSofa from '../../Assets/images/Mueller-Sofa-and-Loveseat-01-300x200 1.png';
 import dakotaSet from '../../Assets/Furniture Mecca/product archive page/product images/Dakota-Dining-Set-01-600x400 1.png';
 import goldDiningSet from '../../Assets/Furniture Mecca/product archive page/product images/Dining-Room-Set-in-Gold-01-600x400 1.png';
 import webImage from '../../Assets/Furniture Mecca/product archive page/product images/web-image-600x400 1.png';
@@ -11,13 +10,8 @@ import whiteDiningSet from '../../Assets/Furniture Mecca/product archive page/pr
 import brownDiningSet from '../../Assets/Furniture Mecca/product archive page/product images/1-4-600x400 1.png';
 import knightDaleSet from '../../Assets/Furniture Mecca/product archive page/product images/Knightdale-Dining-Room-Set-01-600x400 1.png'
 import zoraDiningSet from '../../Assets/Furniture Mecca/product archive page/product images/Zora-600x400 1.png'
-import sherryImage from '../../Assets/images/Sherry-Set-01-300x200 1.png';
-import filledStar from '../../Assets/icons/Star 19.png';
-import productTag from '../../Assets/images/product-tag.png';
+
 import star from '../../Assets/icons/blue-star.png'
-import { IoStar } from "react-icons/io5";
-import productsData from '../../data/products.json'
-import axios from "axios";
 
 const ProductContext = createContext()
 
@@ -196,20 +190,6 @@ export const ProductProvider = ({ children }) => {
     ]);
 
     const [allProducts, setAllProducts] = useState([]);
-
-    // const fetchProductData = async () =>  {
-    //     try {
-    //         const response = await axios.get('https://fm.skyhub.pk/api/v1/products/get');
-    //         // Parse the JSON response
-    //         const data = response.data.products;
-    //         setAllProducts(data);
-    //     } catch (error) {
-    //         console.error("Error fetching data:", error);
-    //     }
-    // };
-    // useEffect(() => {
-    //     fetchProductData()
-    // }, [])
 
     return (
         <ProductContext.Provider value={{ products, allProducts }}>

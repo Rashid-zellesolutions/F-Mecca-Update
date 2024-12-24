@@ -13,7 +13,6 @@ const MobileCart = (
         productAccesories,
         productSinglePrice,
         productQuantity,
-        productsTotalPrice,
         handleRomoveProduct,
         handleIncreament,
         handleDecreament,
@@ -21,14 +20,6 @@ const MobileCart = (
     }) => {
 
         const productTotalPrice = productSinglePrice * productQuantity;
-        // const singlePrice = productSinglePrice.toLocaleString('en-US', {
-        //     style: 'currency',
-        //     currency: 'USD'
-        // }); 
-        // const formatedProductTotalPrice = productTotalPrice.toLocaleString('en-US', {
-        //     style: 'currency',
-        //     currency: 'USD'
-        // });
 
         const formatedSinglePrice = Intl.NumberFormat('en-us', {
             style: 'currency',

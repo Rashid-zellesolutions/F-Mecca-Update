@@ -60,7 +60,6 @@ const DealCard = () => {
         return () => clearInterval(interval);
     }, [targetDate]);
 
-
   return (
     <div className='deal-card-main-div'>
         <div className='deal-card-containt-section'>
@@ -127,7 +126,6 @@ const DealCard = () => {
             </div>
             <div className='deal-card-end-timer'>
                 <p>Ends in:</p>
-                {/* <button>201d : 23h : 33m : 20s</button> */}
                 <button>
                     {`${timeLeft.days}d : ${timeLeft.hours}h : ${timeLeft.minutes}m : ${timeLeft.seconds}s`}
                 </button>

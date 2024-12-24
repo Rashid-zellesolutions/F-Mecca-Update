@@ -13,12 +13,10 @@ export const ProductPageProvider = ({ children }) => {
         return list.find(obj => obj.uid === uid) || null;
     }
     
-
-
-
     useEffect(()=>{
-        console.log(singleProductData,"single product data context",selectedVariationUid,"selected Variation uid")
+        // console.log(singleProductData,"single product data context",selectedVariationUid,"selected Variation uid")
     },[singleProductData])
+    
     return (
         <ProductPageContext.Provider value={{ 
             singleProductData,setSingleProductData,

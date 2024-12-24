@@ -1,9 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './BlogPagination.css'
 import { LuArrowLeftCircle } from "react-icons/lu";
 import { LuArrowRightCircle } from "react-icons/lu";
 
-const BlogPagination = ({ currentPage, totalPages, setCurrentPage, handlePrev, handleNext }) => {
+const BlogPagination = (
+  { 
+    currentPage, 
+    totalPages, 
+    setCurrentPage, 
+    handlePrev, 
+    handleNext 
+  }) => {
 
   return (
     <>

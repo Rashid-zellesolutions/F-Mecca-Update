@@ -4,7 +4,6 @@ import './CheckSlider.css';
 
 const CheckSlider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
-
     const cards = [
         "Card 1", "Card 2", "Card 3", 
         "Card 4", "Card 5", "Card 6"

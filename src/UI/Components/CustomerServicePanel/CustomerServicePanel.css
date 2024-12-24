@@ -1,7 +1,6 @@
 .customer-services-panel-main-container{
     display: flex;
     width: 100%;
-    /* padding: var(--global-padding); */
     padding: 50px 60px 50px 60px;
 }
 
@@ -36,12 +35,9 @@
 .customer-support-features{
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    /* display: flex;
-    flex-wrap: wrap; */
     width: 100%;
     padding-top: 30px;
     align-items: center;
-    /* justify-content: space-evenly; */
     gap: 20px; 
 }
 

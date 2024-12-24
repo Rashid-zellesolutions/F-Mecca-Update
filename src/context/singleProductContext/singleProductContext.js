@@ -8,6 +8,7 @@ export const SingleProductProvider = ({children}) => {
         const savedSingleProduct = localStorage.getItem('singleProduct');
         return savedSingleProduct ? JSON.parse(savedSingleProduct) : []
     });
+    
     useEffect(() => {
         const storedSingleProduct = localStorage.getItem('singleProduct');
         if (storedSingleProduct) {

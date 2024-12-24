@@ -1,90 +1,74 @@
 import React, { useState, useEffect } from 'react'
 import './Header.css';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+
+// Assets
 import logo from '../../Assets/Logo/m_logo_360 2.png'
 import searchIcon from '../../Assets/icons/search-icon-charcol.png';
 import NearStoreIcon from '../../Assets/icons/home.png';
 import HeartIcon from '../../Assets/icons/like.png';
-// import cartIcon from '../../Assets/icons/new-cart.png';
 import cartIcon from '../../Assets/icons/shopping-bag.png';
-import mobileCartIcon from '../../Assets/icons/mobile-cart.png';
 import profileIcon from '../../Assets/icons/profile.png'
 import locationIcon from '../../Assets/icons/location-red.png';
 import navToggler from '../../Assets/icons/Union.png'
 import searchRed from '../../Assets/icons/search-red.png'
+import mobileUserIcon from '../../Assets/icons/user-charcol.png';
+import usaFlag from '../../Assets/icons/usa-flage.png';
+import crossIcon from '../../Assets/icons/close-btn.png';
+import { FaArrowLeftLong } from "react-icons/fa6";
+
+
+
+// Components
 import Nav from '../Navbar/Nav';
 import TabMenu from '../Navbar/TabMenu/TabMenu';
 import NearStorePopUp from '../../UI/Components/NearStorePopUp/NearStorePopUp';
-import { MdOutlineStars } from "react-icons/md";
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import usaFlag from '../../Assets/icons/usa-flage.png'
 import LocationPopUp from '../../UI/Components/LocationPopUp/LocationPopUp';
 import LanguagePopUp from '../../UI/Components/LanguagePopUp/LanguagePopUp';
 import PromotionalBanner from '../../UI/Components/PromotionalBanner/PromotionalBanner';
 import CartSidePannel from '../../UI/Components/Cart-side-section/CartSidePannel';
+import MobileNavbar from '../Navbar/MobileNavbar/MobileNavbar';
+
+// Context and functions
 import { useCart } from '../../context/cartContext/cartContext';
 import { useProducts } from '../../context/productsContext/productContext';
-import mobileUserIcon from '../../Assets/icons/user-charcol.png';
-import MobileNavbar from '../Navbar/MobileNavbar/MobileNavbar';
-import axios from 'axios';
 import { url } from '../../utils/api';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { useGlobalContext } from '../../context/GlobalContext/globalContext';
 
+import 'react-toastify/dist/ReactToastify.css';
+
 const Header = () => {
-  // const notify = () => toast()
+
+  // States and variables
   const [isTabMenuOpen, setIsTabMenuOpen] = useState(false);
   const [showCart, setShowCart] = useState(false)
-  const { products } = useProducts()
-  const { cart, addToCart, cartSectionOpen, setCartSectionOpen, increamentQuantity, decreamentQuantity, removeFromCart, calculateTotalPrice, cartProducts } = useCart()
+  const [headerData, setHeaderData] = useState([]);
+  const [headerSale, setHeaderSale] = useState([]);
+  const [nearStorePopUp, setNearStorePopUp] = useState(false)
+  const [changeLanguage, setChangeLanguage] = useState(false)
+  const [currentSelectedCountry, setCurrentSelectedCountry] = useState('');
+  const [currentSelectedCountryFlag, setCurrentSelectedCountryFlag] = useState();
+  const [searchLocation, setSearchLocation] = useState(false);
+  const [mobileNavVisible, setMobileNavVisible] = useState(false)
+  const [isSearchInputFocused, setIsSearchInputFocused] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchedProducts, setSearchedProducts] = useState([]);
+  const [isSearching, setIsSearching] = useState(false);
+  const [currentInd, setCurrentInd] = useState(0)
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate()
+
+  const {
+    cart,
+    increamentQuantity,
+    decreamentQuantity,
+    removeFromCart,
+    cartProducts
+  } = useCart()
   const cartItemCount = cart.length
-  const handleCartSectionOpen = () => {
-    setShowCart(true)
-    console.log("cart clicked")
-  }
-  const handleCartSectionClose = () => {
-    setShowCart(false)
-  }
-
-  const handleTabMenu = () => {
-    setIsTabMenuOpen(!isTabMenuOpen)
-  }
-
-  async function fetchHeaderPayloads() {
-    // const url = ;
-
-    try {
-      const response = await fetch(`${url}/api/v1/header-payloads/get`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json", // Adjust headers as needed
-        },
-      });
-
-      if (!response.ok) {
-        throw new Error(`Error: ${response.status} ${response.statusText}`);
-      }
-
-      const data = await response.json();
-      console.log("Data fetched successfully:", data);
-      return data;
-    } catch (error) {
-      console.error("Error fetching data:", error.message);
-      throw error;
-    }
-  }
-
-  const [headerData,setHeaderData] = useState([]);
-  const [headerSale,setHeaderSale] = useState([]);
-
-  useEffect(() => {
-    fetchHeaderPayloads().then(data => {
-      setHeaderData(data.data[0].categories)
-      setHeaderSale(data.data[0].sale)
-    }).catch(error => {
-      console.error(error);
-    });
-  }, [])
+  const { info } = useGlobalContext();
+  const [isMobileSearched, setIsMobileSearched] = useState(false);
 
   const navLinks = [
     { name: "Living Room", link: 'living-room-category', hasDropdown: true },
@@ -98,53 +82,57 @@ const Header = () => {
     { name: "Holiday Sale", link: '/holiday-sale', hasDropdown: true },
 
   ]
-  const [nearStorePopUp, setNearStorePopUp] = useState(false)
+
+  // Functions and logincs
+  const handleCartSectionOpen = () => {
+    setShowCart(true)
+  }
+
+  const handleCartSectionClose = () => {
+    setShowCart(false)
+  }
+
+  const handleTabMenu = () => {
+    setIsTabMenuOpen(!isTabMenuOpen)
+  }
+
+  async function fetchHeaderPayloads() {
+    try {
+      const response = await fetch(`${url}/api/v1/header-payloads/get`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json", // Adjust headers as needed
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error: ${response.status} ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error("Error fetching data:", error.message);
+      throw error;
+    }
+  }
+
+  useEffect(() => {
+    fetchHeaderPayloads().then(data => {
+      setHeaderData(data.data[0].categories)
+      setHeaderSale(data.data[0].sale)
+    }).catch(error => {
+      console.error(error);
+    });
+  }, [])
+
   const handleNearStorePopUp = () => {
     setNearStorePopUp(true)
-    console.log("near stor pop up on Mobile")
   }
 
   const handleCloseNearStoreModal = () => {
     setNearStorePopUp(false)
-    console.log("near stor pop up", nearStorePopUp)
   }
-
-  // const storeDetailsData = [
-  //   {
-  //     city: 'Philadelphia', miles: '0.8 Miles', openUntil: '(Open Until 06: 30 PM)', openUntilIcon: <MdOutlineStars size={20} />,
-  //     address: 'E Venango st, Philadelphia, PA 19134', addressCity: 'Philadelphia, Pennsylvania, 101', call: '267-639-6801',
-  //     outlet: 'Outlet', outletLink: '#', direction: 'Directions', directionLink: '#', appointment: 'Book Appointment', appointmentLink: '#', openHours: 'Store Hours', hours: [
-  //       { day: 'Sunday', time: '06: 30 PM' },
-  //       { day: 'Monday', time: '06: 30 PM' },
-  //       { day: 'Tuesday', time: '06: 30 PM' },
-  //       { day: 'Wednesday', time: '06: 30 PM' },
-  //       { day: 'Thursday', time: '06: 30 PM' },
-  //       { day: 'Friday', time: '06: 30 PM' },
-  //       { day: 'Saturday', time: '06: 30 PM' },
-  //     ],
-  //     virtualTour: 'Virtual Tour', virtualTourLink: '#', storeDetails: 'Store DEtails', storeDetailsLink: '#'
-  //   },
-  //   {
-  //     city: 'Philadelphia', miles: '0.8 Miles', openUntil: '(Open Until 06: 30 PM)', openUntilIcon: <MdOutlineStars size={20} />,
-  //     address: 'E Venango st, Philadelphia, PA 19134', addressCity: 'Philadelphia, Pennsylvania, 101', call: '267-639-6801',
-  //     outlet: 'Outlet', outletLink: '#', direction: 'Directions', directionLink: '#', appointment: 'Book Appointment', appointmentLink: '#', openHours: 'Store Hours', hours: [
-  //       { day: 'Sunday', time: '06: 30 PM' },
-  //       { day: 'Monday', time: '06: 30 PM' },
-  //       { day: 'Tuesday', time: '06: 30 PM' },
-  //       { day: 'Wednesday', time: '06: 30 PM' },
-  //       { day: 'Thursday', time: '06: 30 PM' },
-  //       { day: 'Friday', time: '06: 30 PM' },
-  //       { day: 'Saturday', time: '06: 30 PM' },
-  //     ],
-  //     virtualTour: 'Virtual Tour', virtualTourLink: '#', storeDetails: 'Store DEtails', storeDetailsLink: '#'
-  //   }
-  // ]
-
-  // Language Modal Script
-  
-  const [changeLanguage, setChangeLanguage] = useState(false)
-  const [currentSelectedCountry, setCurrentSelectedCountry] = useState('');
-  const [currentSelectedCountryFlag, setCurrentSelectedCountryFlag] = useState();
 
   const handleLanguageModal = () => {
     setChangeLanguage(true)
@@ -154,31 +142,17 @@ const Header = () => {
     setChangeLanguage(false);
   }
 
-  // Location Modat script
-  const [searchLocation, setSearchLocation] = useState(false);
-
-
   const handleSearchModal = () => {
     setSearchLocation(true)
   }
+
   const handleCloseSearch = () => {
     setSearchLocation(false)
-    console.log("close btn cicked", searchLocation)
   }
-  const [mobileNavVisible, setMobileNavVisible] = useState(false)
+
   const showMobileNav = () => {
     setMobileNavVisible(true)
   }
-
-  // Login redirect
-
-  const [isSearchInputFocused, setIsSearchInputFocused] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [searchedProducts, setSearchedProducts] = useState([]);
-  const [isSearching, setIsSearching] = useState(false);
-  const [currentInd, setCurrentInd] = useState(0)
-  const [isLoading, setIsLoading] = useState(false);
-  const navigate = useNavigate()
 
   const searchForProducts = async (text) => {
     const api = `/api/v1/products/by-name?name`;
@@ -186,7 +160,6 @@ const Header = () => {
       setIsSearching(true)
       setIsLoading(true);
       const response = await axios.get(`${url}${api}=${text}`)
-      console.log("searched response", response.data.products)
       setSearchedProducts(response.data.products)
     } catch (error) {
       console.error("error fething data", error);
@@ -194,8 +167,8 @@ const Header = () => {
       setIsSearching(false)
       setIsLoading(false)
     }
-
   }
+
 
   const handleSearchInput = (e) => {
     const value = e.target.value;
@@ -208,6 +181,7 @@ const Header = () => {
   }
 
   const handleSearchInputFocus = () => setIsSearchInputFocused(true);
+
   const handleBlur = () => {
     setIsSearchInputFocused(false)
     setSearchQuery('')
@@ -227,6 +201,7 @@ const Header = () => {
   const handleProductHOver = (index) => {
     setCurrentInd(index);
   }
+
   const handleMouseLeave = () => {
     setCurrentInd(0)
   }
@@ -248,6 +223,7 @@ const Header = () => {
     navigate(`/single-product/${items.slug}`, { state: items })
     setSearchQuery('')
     setSearchedProducts([])
+    setIsMobileSearched(false)
 
   }
 
@@ -260,10 +236,43 @@ const Header = () => {
 
   const nearZip = locationDetails.zipCode || 'PA 19134';
   const nearState = locationDetails.state || 'E Venango - ST';
-  // console.log("on header location details", locationDetails)
+
+  // mobile view search modal
+  
+  // const [mobileSearchedQuery, setMobileSearchedQuery] = useState('');
+  const [mobileProductSearch, setMobileSearchProduct] = useState('')
+  const handleMobileSearchModal = () => {
+    setIsMobileSearched(true)
+  }
 
 
-  const { info } = useGlobalContext();
+  const handleMobileSearchValue = (e) => {
+    const value = e.target.value;
+    setMobileSearchProduct(value);
+    if (value.length > 2) {
+      searchForProducts(value);
+    } else {
+      setSearchedProducts([]);
+    }
+    console.log("searched value", value)
+
+  }
+
+  console.log("searched products", searchedProducts)
+
+  const handleCloseMobileSearchProductModal = () => {
+    setIsMobileSearched(false);
+    setMobileSearchProduct('');
+    setSearchedProducts([]);
+  }
+
+  const formatePrice = (price) => {
+    return new Intl.NumberFormat('en-us', {
+      style: 'currency',
+      currency: 'USD'
+    }).format(price)
+  }
+
   return (
     <div className='haider-main-container'>
 
@@ -285,7 +294,7 @@ const Header = () => {
 
         {isSearchInputFocused ? <div className='on-input-focus-overlay'></div> : <></>}
         <div className={`search-bar-container ${searchedProducts.length > 0 || isSearchInputFocused ? 'focused-search-container' : ''}`}>
-          {/* {isSearchInputFocused ? <div className='on-input-focus-overlay'></div> : <></>} */}
+
           <div className='search-bar-div'>
             <img src={searchIcon} alt="search icon" />
             <input
@@ -408,6 +417,7 @@ const Header = () => {
 
       {/* Mobile View Header */}
       <div className='mobile-view-header'>
+
         <div className='mobile-view-logo-and-other-containt-section'>
           <img className='nav-toggler' src={navToggler} alt="togle button" onClick={showMobileNav} />
           <Link to='/'>
@@ -415,17 +425,24 @@ const Header = () => {
           </Link>
           <div className='mobile-view-cart-and-location'>
             <img src={locationIcon} alt='location' onClick={handleNearStorePopUp} />
-            {/* <img src={mobileCartIcon} alt='cart-icon' onClick={handleCartSectionOpen} /> */}
+            <NearStorePopUp isOpen={nearStorePopUp} handleCloseNearBy={handleCloseNearStoreModal} />
             <button className='header-cart-icon-count' onClick={handleCartSectionOpen}>
-            <img src={cartIcon} alt="cart" />
-            <p className='header-cart-products-count'>{cartItemCount}</p>
-          </button>
+              <img src={cartIcon} alt="cart" />
+              <p className='header-cart-products-count'>{cartItemCount}</p>
+            </button>
           </div>
         </div>
+
         <div className='mobile-view-search-section'>
           <div className='mobile-view-search'>
             <img src={searchIcon} alt='search-icon' />
-            <input type='text' placeholder='Search All Things Mecca' />
+            <input
+              type='text'
+              placeholder='Search All Things Mecca'
+              // value={mobileProductSearch}
+              onFocus={handleMobileSearchModal}
+            // onChange={handleMobileSearchValue}
+            />
           </div>
           <Link to='/login'>
             <img className='mobile-user-icon' src={mobileUserIcon} alt='user-icon' />
@@ -433,10 +450,61 @@ const Header = () => {
         </div>
 
       </div>
+      <div className={`mobile-view-search-products-modal ${searchedProducts.length > 0 || isMobileSearched ? 'mobile-view-search-products-modal-visible' : ''}`}>
+        
+        <div className={`mobile-view-search-products-modal-header ${isMobileSearched ? 'add-border-bottom' : ''}`}>
+          <button className='mobile-view-search-products-modal-back-btn'>
+            <FaArrowLeftLong size={15} onClick={handleCloseMobileSearchProductModal} />
+          </button>
+
+          <input
+            type='text'
+            placeholder='search product'
+            value={mobileProductSearch}
+            onChange={handleMobileSearchValue}
+          />
+
+          <button className='mobile-view-search-products-modal-close-btn'>
+            <img src={crossIcon} alt='close' onClick={handleCloseMobileSearchProductModal} />
+          </button>
+
+        </div>
+
+        <div className={`mobile-view-search-products-modal-body `}>
+            {
+              searchedProducts && searchedProducts.map((item, index) => (
+                <div className='mobile-view-searched-product-result' onClick={() => handleNavigateToSingleProduct(item)}>
+                  <img 
+                    src={`${url}${item.image.image_url}`} 
+                    alt='product' 
+                    className='mobile-searched-product-image' 
+                  />
+                  <div className='mobile-searched-product-content'>
+                    <div className='mobile-searched-product-name-and-sku'>
+                      <p>{truncateTitle(item.name, 17)}</p>
+                      <p>SKU: {item.sku}</p>
+                    </div>
+                    <span className='searched-product-prices'>
+                      {item.sale_price ? (
+                        <div>
+                        <del>{formatePrice(item.regular_price)}</del>
+                        <p>{formatePrice(item.sale_price)}</p>
+                        </div>
+                      ) : (
+                        <p>{formatePrice(item.regular_price)}</p>
+                      )}
+                    </span>
+                  </div>
+                </div>
+              ))
+            }
+        </div>
+      </div>
+
       {
-      isTabMenuOpen ? 
-      <TabMenu isNavbarVisible={isTabMenuOpen} setIsNavbarVisible={setIsTabMenuOpen} navLinks={navLinks} /> :
-      <Nav navLinks={headerData && headerData} sale_data={headerSale && headerSale} />
+        isTabMenuOpen ?
+          <TabMenu isNavbarVisible={isTabMenuOpen} setIsNavbarVisible={setIsTabMenuOpen} navLinks={navLinks} /> :
+          <Nav navLinks={headerData && headerData} sale_data={headerSale && headerSale} />
       }
 
       {/* Language Modal */}
@@ -457,6 +525,7 @@ const Header = () => {
         setLocationDetails={setLocationDetails}
         locationDetails={locationDetails}
       />
+
       <CartSidePannel
         cartData={cartProducts}
         addToCartClicked={showCart}
@@ -466,10 +535,12 @@ const Header = () => {
         decreamentQuantity={decreamentQuantity}
         removeFromCart={removeFromCart}
       />
+
       <MobileNavbar
         showMobileNav={mobileNavVisible}
         setMobileNavVisible={setMobileNavVisible}
       />
+
     </div>
   )
 }

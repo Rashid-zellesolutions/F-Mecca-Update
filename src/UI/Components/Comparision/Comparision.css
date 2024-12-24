@@ -36,7 +36,6 @@
     
     .comparision-main-div h3{
         font-size: 18px;
-        /* text-align: center; */
     }
 }
 
@@ -52,7 +51,6 @@
         line-height: 24px;
         font-weight: 600;
         color: var(--text-color);
-        /* margin-left: 20px; */
     }
 
     .comparision-img-div{

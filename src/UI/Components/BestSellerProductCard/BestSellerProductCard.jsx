@@ -1,19 +1,32 @@
 import React from 'react'
 import './BestSellerProductCard.css';
 import heartIcon from '../../../Assets/icons/like.png'
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { VscHeartFilled } from "react-icons/vsc";
 import { useList } from '../../../context/wishListContext/wishListContext';
 import { FaStar } from "react-icons/fa";
 
-const BestSellerProductCard = ({ productMainImage, listed, handleWishListClicked, isDiscountable, productData, starIcon, reviews, productName, oldPrice, newPrice, singleProductLink, handleCardClicked}) => {
+const BestSellerProductCard = (
+    { 
+        productMainImage, 
+        handleWishListClicked, 
+        isDiscountable, 
+        productData, 
+        productName, 
+        oldPrice, 
+        newPrice, 
+        handleCardClicked
+    }) => {
+    
+    // States and Variables
     const url = 'https://fm.skyhub.pk/'
+    const {isInWishList} = useList()
+
+    // Functions
     const maxLength = 40;
     const truncateTitle = (title, maxLength) => {
         if(!title) return '';
         return title.length > maxLength ? title.slice(0, maxLength) + '...' : title;
     };
-    // console.log("product uid", productData.uid)
 
     const formatedPrice = (price) => {
         return new Intl.NumberFormat('en-us', {
@@ -22,8 +35,7 @@ const BestSellerProductCard = ({ productMainImage, listed, handleWishListClicked
         }).format(price)
     }
 
-    // console.log("product name", productName)
-    const {isInWishList} = useList()
+    
 
   return (
     <div 

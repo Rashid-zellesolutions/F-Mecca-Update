@@ -17,8 +17,6 @@ const TabMenuTab = ({name, ind, closeMenu, headingLink}) => {
         setIsTabClicked(index)
         setActiveIndex(index);
         setIsSubNavOpen(true);
-        console.log("active index is", activeIndex)
-        console.log("inner active index ", activeInnerIndex)
     }
 
     const handleActiveIndex = (index) => {

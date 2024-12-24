@@ -68,7 +68,6 @@ export const ActiveSalePageProvider = ({ children }) => {
         try {
             setLoading(true);
             const data = await fetchWithRetry(url, options);
-            console.log(data,"here are products")
             setProducts(data.products); // Store the fetched products in state
         } catch (error) {
             setError(error.message);

@@ -264,89 +264,6 @@ const Footer = ({ notLandingPage }) => {
         { icon: calander, details: 'Monday - Sunday' },
     ]
 
-    // const [storesLongitudesAndLatitudes, setStoresLongitudesAndLatitudes] = useState()
-    // const [storesData, setStoresData] = useState([])
-    // const [placeId, setPlaceId] = useState(`ChIJawhh3PS3xokRDDJlO7IrVCA`)
-    // useEffect(() => {
-    //     const fetchStores = async () => {
-    //         const api = `https://fm.skyhub.pk/api/v1/stores/get`;
-    //         try {
-    //             const response = await axios.get(api);
-    //             console.log("stores response", response.data.data)
-    //             setStoresData(response.data.data)
-    //         } catch (error) {
-    //             console.error("error fetching stores", error);
-    //         }
-    //     }
-    //     fetchStores()
-    //     const fetchPlaceId = async () => {
-    //         const API_KEY = `AIzaSyB9nW_l7Dw8WnnSCOJyJSGjtTYyF9ct3qk&amp;libraries=maps,marker,places,geometry`
-    //         const googleApi = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${storesData?.[1]?.latitude},${storesData?.[1]?.longitude}&key=${API_KEY}&result_type=furniture_store`;
-    //         const detailsApiUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&key=${API_KEY}`;
-    //         try {
-    //             const response = await axios.get(googleApi);
-    //             if (response.data.status === "OK") {
-    //                 const placeId = response.data.results[0]?.place_id;
-    //                 // setPlaceId(placeId)
-    //                 console.log("google response", response.data.results[0].place_id)
-    //                 // fetchReviews()
-    //                 // const responseId = await axios.get(detailsApiUrl);
-    //                 // console.log("reviews", responseId)
-    //                 // if (responseId.data.status === "OK") {
-    //                 //     const fetchedReviews = responseId.data.result.reviews || [];
-    //                 //     // setReviews(fetchedReviews);
-    //                 // } else {
-    //                 //     console.log(responseId.data.error_message || "Failed to fetch reviews");
-    //                 // }
-    //                 // setPlaceId(placeId || "No place_id found");
-    //             } else {
-    //                 // setError(response.data.error_message || "Failed to fetch place_id");
-    //                 console.log("error")
-    //             }
-    //         } catch (error) {
-    //             console.error("error geting place id", error);
-    //         }
-    //     }
-    //     fetchPlaceId()
-
-
-
-    // }, [])
-
-
-    // const fetchReviews = async (placeId) => {
-    //     console.log("reviews funct call")
-    //     const API_KEY = `AIzaSyB9nW_l7Dw8WnnSCOJyJSGjtTYyF9ct3qk&amp;libraries=maps,marker,places,geometry`
-    //     const detailsApiUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&key=${API_KEY}`;
-    //     try {
-    //         console.log("try block call")
-    //         const response = await axios.get(detailsApiUrl);
-    //         console.log("reviews", response)
-    //         console.log("after fetch")
-    //         if (response.data.status === "OK") {
-    //             const fetchedReviews = response.data.result.reviews || [];
-    //             // setReviews(fetchedReviews);
-    //         } else {
-    //             console.log(response.data.error_message || "Failed to fetch reviews");
-    //         }
-    //     } catch (error) {
-    //         console.error("error geting reviews", error);
-    //         console.log("error")
-    //     }
-    // }
-    // useEffect(() => {
-    //     fetchReviews(placeId)
-    //     console.log("place id in fetch", placeId)
-    // }, [placeId])
-
-    // console.log("store latitudes", storesData)
-    // console.log("place id", placeId)
-
-    // useState(() => {
-    //     fetchReviews(placeId)
-    // }, [placeId])
-
-
     return (
         <>
             <div className='footer-main-container'>
@@ -467,21 +384,6 @@ const Footer = ({ notLandingPage }) => {
                 </div>
             </div>
             <div className='mobile-view-footer-main-div'>
-                {/* <div className='mobile-footer-top-section'>
-                <div className='mobile-footer-owner-logo'>
-                    <div>
-                        <img src={ownerTag} alt='owner tag' />
-                    </div>
-                    <div>
-                        <h3>Furniture Mecca</h3>
-                        <div>
-                            {stars.map((items, indes) => (
-                                <img ssrc={items} alt='star' />
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </div> */}
                 <MobileFooter />
             </div>
         </>

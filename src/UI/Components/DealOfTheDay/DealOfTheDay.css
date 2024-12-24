@@ -3,7 +3,6 @@
     width: 100%;
     height: auto;
     position: relative;
-    /* padding: var(--global-padding); */
     padding: 55px 60px 35px 60px;
     overflow: hidden;
 }
@@ -71,7 +70,6 @@
 
 .slider-main-container .slick-track{
     display: flex !important;
-    /* width: 100% !important; */
 }
 
 .slick-arrow.slick-next,
@@ -105,9 +103,6 @@ position: absolute;
    display:none;    
 }
 
-/* .slick-initialized .slick-slide {
-    width: 100% !important;
-} */
 
 /* Mobile timer */
 .mobile-view-deal-of-the-day-timer-and-product-count{

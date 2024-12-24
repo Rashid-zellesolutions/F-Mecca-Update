@@ -1,7 +1,6 @@
 .breadcrum-with-products{
     display: flex;
     flex-direction: column;
-    /* background-color: #EDF1FE; */
     background-color: #fff;
     font-family: var(--Poppins-font);
 }
@@ -25,7 +24,6 @@
 
 .breadcrum-products-container{
     display: none;
-    /* flex-wrap: wrap; */
     width: 100%;
     gap: 10px;
     padding: 0px 60px;

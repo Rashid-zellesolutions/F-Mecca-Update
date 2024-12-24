@@ -65,7 +65,6 @@
 }
 
 .looking-to-start{
-    /* background-color: transparent; */
     display: flex;
     width: 50%;
     align-items: center;
@@ -82,7 +81,6 @@
 }
 
 .looking-to-start p{
-    /* text-align: center; */
     font-size: 15px;
     line-height: 22px;
     font-weight: 400;

@@ -35,7 +35,6 @@
     display: flex;
     width: 100%;
     height: max-content;
-    /* padding: 5px; */
     align-items: center;
     justify-content: center;
 }
@@ -87,9 +86,6 @@
     cursor: pointer;
     text-decoration: none;
     color: var(--text-color);
-    /* height: 100vh;
-    overflow-y: auto;
-    overflow-x: hidden; */
 }
 
 .mobile-sub-nav-single-item img{

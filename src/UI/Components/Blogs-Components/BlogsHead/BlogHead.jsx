@@ -2,6 +2,7 @@ import React from 'react'
 import './BlogHead.css'
 
 const BlogHead = () => {
+
     const blogCategories = [
         {name: 'All Blogs', type: 'all-blogs'},
         {name: 'Organization', type: 'organization'},
@@ -13,6 +14,7 @@ const BlogHead = () => {
         {name: 'Guides', type: 'guide'},
         {name: 'Renovations', type: 'renovation'},
     ]
+    
   return (
     <>
     <div className='blog-head-main-container'>

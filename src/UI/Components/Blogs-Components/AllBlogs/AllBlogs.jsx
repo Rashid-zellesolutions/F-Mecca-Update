@@ -6,8 +6,11 @@ import { useNavigate } from 'react-router-dom';
 import { url } from '../../../../utils/api';
 
 const AllBlogs = ({blogData}) => {
+
+  // States and Variables
   const navigate = useNavigate()
 
+  // Functions
   const handleNavigate = (item) => {
     navigate(`/single-blog/${item.id}`, {state:  item});
   }

@@ -1,15 +1,15 @@
-import React, {useRef, useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import './DealOfTheDayCard.css';
 import testImage from '../../../../Assets/Furniture Mecca/product page/frequently bought/MN600__04-300x200 1.png'
 import star from '../../../../Assets/icons/Star 19.png'
-import cartIcon from '../../../../Assets/icons/cart-bag-charcol.png';
-import cartWhite from '../../../../Assets/icons/cart-bag-white.png'
+// import cartIcon from '../../../../Assets/icons/cart-bag-charcol.png';
+// import cartWhite from '../../../../Assets/icons/cart-bag-white.png'
 import heartIcon from '../../../../Assets/icons/heart-charcol.png';
-import heartWhite from '../../../../Assets/icons/heart-white.png'
-import combinedArrows from '../../../../Assets/icons/multi-arrow-charcol.png'
-import multiArrowWhite from '../../../../Assets/icons/multi-arrow-white.png'
-import leftArrow from '../../../../Assets/icons/arrow-left-white.png';
-import rightArrow from '../../../../Assets/icons/right-arrow-white.png';
+// import heartWhite from '../../../../Assets/icons/heart-white.png'
+// import combinedArrows from '../../../../Assets/icons/multi-arrow-charcol.png'
+// import multiArrowWhite from '../../../../Assets/icons/multi-arrow-white.png'
+// import leftArrow from '../../../../Assets/icons/arrow-left-white.png';
+// import rightArrow from '../../../../Assets/icons/right-arrow-white.png';
 import { url } from '../../../../utils/api';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useList } from '../../../../context/wishListContext/wishListContext';
@@ -110,10 +110,8 @@ const DealOfTheDayCard = ({
     review, 
     price, 
     newPrice, 
-    imgIcons, 
     isDiscountable,
     productImage, 
-    descount, 
     handleDealCardClick, 
     dealDayData,
     handleWishListClick,
@@ -127,7 +125,7 @@ const DealOfTheDayCard = ({
         currency: 'USD'
       }).format(price)
     }
-    const [isHovered, setIsHovered] = useState(null);
+    // const [isHovered, setIsHovered] = useState(null);
 
     
 
@@ -146,13 +144,11 @@ const DealOfTheDayCard = ({
         className='deal-of-the-day-product-card' 
         onClick={() => handleDealCardClick(dealDayData)}
       >
-
         <div 
             className='deal-of-the-day-product-rating-and-name'
           >
           <h3 className='deal-of-the-day-product-name'>
             {truncateTitle(name, maxLength)}
-            {/* {name} */}
           </h3>
           <div 
             className='deal-of-the-day-price'>
@@ -164,7 +160,6 @@ const DealOfTheDayCard = ({
             <div 
                 className='deal-of-the-day-card-stars'>
               {star && star.map((items, innIndex) => (
-                // <p className='deal-of-the-day-stars'>{items.icon}</p>
                 <img 
                     key={innIndex} 
                     src={items.icon} 
@@ -181,46 +176,24 @@ const DealOfTheDayCard = ({
           <div className='deal-of-the-day-product-discount'><p>-12%</p></div>
           <LazyLoadImage src={`${url}${productImage}`} alt='img' effect='blur' />
           <div className='deal-of-the-day-card-icons-div'>
-            {/* {imgIcons.map((items, iconIndex) => ( */}
               <button 
-                  // key={iconIndex}  
                   className={`deal-of-the-day-icon-one`}
                   onClick={() => handleCartSection(dealDayData)} 
-                  // onMouseEnter={() => handleIconMouseEnter(iconIndex)} 
-                  // onMouseLeave={handleIconMouseLeave}
               >
-                {/* <img 
-                    src={isHovered === iconIndex ? items.hoveredIcon : items.defIcon} 
-                    alt='icon'  
-                /> */}
               </button>
               
-              <button 
-                  // key={iconIndex}  
+              <button  
                   className={`deal-of-the-day-icon-two ${isInWishList(dealDayData.uid) ? 'active-wish-list-btn' : ''}`}
                   onClick={(e) => {e.stopPropagation(); handleWishListClick(dealDayData)}} 
-                  // onMouseEnter={() => handleIconMouseEnter(iconIndex)} 
-                  // onMouseLeave={handleIconMouseLeave}
               >
-                {/* <img 
-                    src={isHovered === iconIndex ? items.hoveredIcon : items.defIcon} 
-                    alt='icon'  
-                /> */}
               </button>
 
               <button 
-                  // key={iconIndex}  
                   className={`deal-of-the-day-icon-three `} 
                   onClick={(e) => {e.stopPropagation() ; handleShareProduct(dealDayData)}}
-                  // onMouseEnter={() => handleIconMouseEnter(iconIndex)} 
-                  // onMouseLeave={handleIconMouseLeave}
               >
-                {/* <img 
-                    src={isHovered === iconIndex ? items.hoveredIcon : items.defIcon} 
-                    alt='icon'  
-                /> */}
+                
               </button>
-            {/* ))} */}
           </div> 
         </div>
 
@@ -234,7 +207,6 @@ const DealOfTheDayCard = ({
                 <p>{review}</p>
             </div>
             <h3 className='mobile-view-deal-of-the-day-product-name'>
-                {/* {truncateTitle(name, maxLength)} */}
                 {name}
             </h3>
             <div 
@@ -243,7 +215,6 @@ const DealOfTheDayCard = ({
               <p>$ 1,599.00</p>
             </div>
         </div>
-
       </div>
     );
 };

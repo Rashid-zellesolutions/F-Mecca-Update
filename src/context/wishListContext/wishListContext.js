@@ -18,7 +18,6 @@ export const WishListProvider = ({children}) => {
 
     // save cart to local storage when eer it changes
     useEffect(() => {
-
         localStorage.setItem('wishList', JSON.stringify(wishList));
         // console.log("cart storage", cart)
     }, [wishList])
@@ -29,7 +28,7 @@ export const WishListProvider = ({children}) => {
         if (!exists) {
             setWishList((prevList) => [...prevList, product]);
         } else {
-            console.warn(`Product with ID ${product.uid} already in the wishlist.`);
+            // console.warn(`Product with ID ${product.uid} already in the wishlist.`);
             alert(`Product with ID ${product.uid} already in the wishlist.`)
         }
     };
@@ -42,7 +41,7 @@ export const WishListProvider = ({children}) => {
     const isInWishList = (productId) => {
         return wishList.some((item) => item.uid === productId);
     };
-    console.log("cart added into wish list", wishList)
+    
     return (
         <WishListContext.Provider value={
             { 

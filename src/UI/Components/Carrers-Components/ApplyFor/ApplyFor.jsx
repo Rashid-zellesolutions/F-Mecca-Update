@@ -20,20 +20,9 @@ const ApplyFor = () => {
         file: null,
     })
 
-    // const formateContact = (input) => {
-    //     const senitiezedInput = input.replace(/[^0-9.,]/g, '');
-    //     const parts = senitiezedInput.split('.');
-    //     if(parts[0]){
-    //         parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-    //     }
-    //     return parts.join('.')
-    // }
-
-
     const [newData, setNewData] = useState({...applyForData})
     const handleInputChange = (e) => {
         const {name, value} = e.target;
-        // const formatedValues = formateContact(value)
         setNewData((prev) => ({...prev, [name]: value}));
     }
     const handleFileChange = (e) => {
@@ -43,8 +32,8 @@ const ApplyFor = () => {
     const sendUserData = (e) => {
         e.preventDefault();
         setApplyForData(newData);
-        console.log("new Data", newData)
     }
+    
   return (
     <form className='apply-for-main'>
         <label className='apply-for-input-labels'>

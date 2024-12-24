@@ -14,14 +14,17 @@ const TabMenu = ({navLinks}) => {
     setIsTabSubNavOpen(true)
     
   }
+
   const handleCloseSubMenu = () => {
     setActiveIndex(null)
     setIsTabSubNavOpen(false)
   }
+
   const handleActiveIndex = (index) => {
     setActiveIndex(index)
     
   }
+  
   return (
     <div className='tablet-menu-container'>
       <div className={`tab-menu-items ${isTabSubNavOpen ? 'hide' : ''}`}>

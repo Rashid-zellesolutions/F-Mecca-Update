@@ -1,13 +1,17 @@
 import React from 'react'
 import './BlogCard.css';
 import rightArrowWithooutOutline from '../../../Assets/icons/arrow-right-without-outline-black.png'
-import starBlack from '../../../Assets/icons/star-black.png';
-import startUnfilled from '../../../Assets/icons/star-transperent-bg.png'
 import { FaStar } from "react-icons/fa";
 import { CiStar } from "react-icons/ci";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-const BlogCard = ({img, category, title, createdBy, comments}) => {
+const BlogCard = (
+    {
+        img, 
+        category, 
+        title, 
+        comments
+    }) => {
     
     const stars = [
         {star: <FaStar size={14} />},
@@ -33,7 +37,6 @@ const BlogCard = ({img, category, title, createdBy, comments}) => {
                 <div className='blog-created-by-and-comments'>
                     <div className='blog-star-rating'>
                         {stars.map((item, index) => (
-                            // <img src={item} alt='star' />
                             <p key={index}>{item.star}</p>
                         ))}
                         (200)

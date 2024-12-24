@@ -5,12 +5,6 @@
     cursor: pointer;
 }
 
-/* @media only screen and (min-width: 1750px){
-    .categoty-card{
-        width: 300px;
-    }
-} */
-
 .categoty-card:hover{
     background-color: #F0F0F0;
 }
@@ -27,7 +21,6 @@
 }
 
 .category-card-items p{
-    /* font-size: 0.88rem; */
     font-size: 16px;
     line-height: 1.125rem;
     font-weight: 500;
@@ -55,9 +48,6 @@
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1200px){
-    /* .categoty-card{
-        padding: 10px;
-    } */
     .category-card-items img{
         width: 80px;
         height: 60px;

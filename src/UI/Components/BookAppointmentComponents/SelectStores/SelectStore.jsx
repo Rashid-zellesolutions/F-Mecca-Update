@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './SelectStore.css'
-import storeIcon from '../../../../Assets/icons/rounded-store.png';
 import axios from 'axios';
 import arrowRight from '../../../../Assets/icons/arrow-right-white.png'
 
@@ -12,7 +11,6 @@ const SelectStore = () => {
             const api = `https://fm.skyhub.pk/api/v1/stores/get`;
             try {
                 const response = await axios.get(api);
-                console.log("response ", response)
                 setStoresData(response.data.data)
             } catch (error) {
                 console.error("Error fetching stores", error);

@@ -143,7 +143,6 @@
 }
 
 /* Large Screen cart styling */
-
 .desktop-cart-product{
     display: none;
     width: 100%;
@@ -383,14 +382,6 @@
     color: #fff;
 }
 
-
-
-
-/* .protect-product-tag p{
-    
-} */
-
-
 .desktop-quantity-and-save-for-leter{
     display: flex;
     height: 100%;
@@ -549,6 +540,7 @@
     height: 22px;
     width: 22px;
 }
+
 .protection-all-protected p{
     margin: 0 0 0 5px;
     font-size: 10.5px;

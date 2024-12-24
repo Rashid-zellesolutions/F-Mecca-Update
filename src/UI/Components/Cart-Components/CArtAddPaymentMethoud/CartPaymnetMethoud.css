@@ -12,14 +12,13 @@
     align-items: center;
     justify-content: start;
     z-index: 333;
-  }
-  
-  .slide-div.open {
-    /* width: 35%; */
+}
+
+.slide-div.open {
     width: 500px;
-  }
-  
-  .close-btn {
+}
+
+.close-btn {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -29,9 +28,9 @@
     color: var(--text-white);
     cursor: pointer;
     z-index: 555;
-  }
+}
 
-.left-bullets-div{
+.left-bullets-div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,31 +55,25 @@
     border: 1px solid #ddd;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .bullet.active {
+}
+
+.bullet.active {
     background-color: orange;
-  }
-  
-  
-  .content {
-    /* text-align: center; */
+}
+
+.content {
     background-color: #666666;
     width: 90%;
     height: 100%;
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
     flex-direction: column;
     right: 0;
     top: 0;
     bottom: 0;
     position: absolute;
-    /* border-top-left-radius: 20px; */
-    
 }
 
-.customer-info{
+.customer-info {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -89,15 +82,13 @@
     padding: 30px 20px;
 }
 
-.customer-info h3{
+.customer-info h3 {
     font-size: 20px;
     font-weight: 700;
     line-height: auto;
 }
 
-
-
-.checkbox-div{
+.checkbox-div {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -130,19 +121,19 @@
     height: 16px;
     border: solid black;
     border-width: 0 3px 3px 0;
-    transform: rotate(45deg) translate(-50%, -50%);;
+    transform: rotate(45deg) translate(-50%, -50%);
     background-color: transparent;
     z-index: 9999;
     display: block;
 }
 
-.checkbox-div label{
+.checkbox-div label {
     font-size: 12px;
     font-weight: 300;
     line-height: auto;
 }
 
-.other-billing-address-div{
+.other-billing-address-div {
     display: flex;
     visibility: hidden;
     width: 100%;
@@ -150,44 +141,43 @@
     gap: 20px;
     height: 0;
     transform: translateY(100%);
-    overflow: hidden; /* Ensure content does not overflow during transition */
-    transition: height 0s ease,  transform 0.3s ease; 
-    
+    overflow: hidden;
+    transition: height 0s ease, transform 0.3s ease;
 }
 
-.other-billing-address-div.display-other-billing{
+.other-billing-address-div.display-other-billing {
     visibility: visible;
-    height: auto; /* Use auto to allow the div to grow based on its content */
+    height: auto;
     transform: translateY(0%);
 }
 
-.other-billing-state-and-town{
+.other-billing-state-and-town {
     display: flex;
     gap: 10px;
     width: 100%;
 }
 
-.first-and-last-name-input-div{
+.first-and-last-name-input-div {
     display: flex;
     width: 100%;
     gap: 10px;
 }
 
-.town-zip-and-state-input-div{
+.town-zip-and-state-input-div {
     display: flex;
     width: 100%;
     gap: 10px;
 }
 
 /* Hide and Show Components according to screen size */
-@media only screen and (max-width: 480px){
-    .slide-div{
+@media only screen and (max-width: 480px) {
+    .slide-div {
         display: none;
     }
 }
 
-@media only screen and (max-width: 1080px){
+@media only screen and (max-width: 1080px) {
     .slide-div.open {
         width: 420px;
-      }
+    }
 }

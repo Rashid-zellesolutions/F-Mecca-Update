@@ -1,42 +1,45 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import './CartPaymnetMethoud.css';
 import CartContinueBtn from '../CartContinueBtn/CartContinueBtn';
 import CartPaymentInfo from '../CartPaymentInfo/CartPaymentInfo';
 import CartInput from '../CartInput/CartInput';
 
-const CartPaymnetMethoud = ({isOpen, handleToggle}) => {
+const CartPaymnetMethoud = ({ isOpen, handleToggle }) => {
 
     const [activeBullet, setActiveBullet] = useState(0);
     const [isPaymentTrue, setIsPaymentTrue] = useState(false);
+
     const handleBulletClick = (index) => {
         setActiveBullet(index);
         setIsPaymentTrue(index === 1);
     };
+
     useEffect(() => {
         if (!isOpen) {
-          setActiveBullet(0);
-          setIsPaymentTrue(false);
+            setActiveBullet(0);
+            setIsPaymentTrue(false);
         }
-      }, [isOpen]);
+    }, [isOpen]);
 
-      const [otherBillingChecked, setOtherBillingChecked] = useState(false);
-      const handleOtherBilling = (event) => {
+    const [otherBillingChecked, setOtherBillingChecked] = useState(false);
+    const handleOtherBilling = (event) => {
         setOtherBillingChecked(event.target.checked);
-      }
+    }
 
-      const handleCheckedIndex = () => {
+    const handleCheckedIndex = () => {
         setActiveBullet(1);
         setIsPaymentTrue(true);
-      }
-  return (
-    <div className={`slide-div ${isOpen ? 'open' : ''}`}>
+    }
+    
+    return (
+        <div className={`slide-div ${isOpen ? 'open' : ''}`}>
             <button className="close-btn" onClick={handleToggle}>&times;</button>
             <div className='left-bullets-div'>
                 {[0, 1, 3].map((index) => (
                     <div
-                    key={index}
-                    className={`bullet ${activeBullet === index ? 'active' : ''}`}
-                    onClick={() => handleBulletClick(index)}
+                        key={index}
+                        className={`bullet ${activeBullet === index ? 'active' : ''}`}
+                        onClick={() => handleBulletClick(index)}
                     />
                 ))}
             </div>
@@ -77,7 +80,7 @@ const CartPaymnetMethoud = ({isOpen, handleToggle}) => {
                 <CartPaymentInfo isPaymentTrue={isPaymentTrue} />
             </div>
         </div>
-  )
+    )
 }
 
 export default CartPaymnetMethoud

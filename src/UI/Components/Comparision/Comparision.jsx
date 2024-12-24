@@ -4,6 +4,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { url } from '../../../utils/api';
 
 const Comparision = ({heading,image,mobileImage}) => {
+  
   return (
     <div className='comparision-main-div'>
         <h3>{heading}</h3>

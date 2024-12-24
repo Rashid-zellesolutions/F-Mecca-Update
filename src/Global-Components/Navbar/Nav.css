@@ -64,7 +64,6 @@
     font-size: 12px;
     line-height: 18px;
     font-weight: 500;
-    /* height: 22px; */
     display: flex;
     white-space: nowrap; /* Prevent text wrapping */
     width: max-content;

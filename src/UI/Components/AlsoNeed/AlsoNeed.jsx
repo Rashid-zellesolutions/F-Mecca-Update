@@ -1,39 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import './AlsoNeed.css';
-import imageOne from '../../../Assets/Furniture Mecca/product page/comment images/default_name 7.png';
-import imageTwo from '../../../Assets/Furniture Mecca/product page/comment images/default_name 8.png';
-import imageThree from '../../../Assets/Furniture Mecca/product page/comment images/default_name 9.png';
 import filledStar from '../../../Assets/icons/Star 19.png';
 import axios from 'axios';
 import { url } from '../../../utils/api';
 
 const AlsoNeed = ({productsUid}) => {
-    // const mightNeedData = [
-    //     {
-    //         name: "Lola Spa Blue 89'' Sofa, Chair & Storage Ottoman", colorAndCategory: 'White, Quen', price: '$59,99', filledStars: [
-    //             filledStar,filledStar,filledStar,filledStar, filledStar
-    //         ], reviewCount: '(200)', img: imageOne 
-    //     },
-    //     {
-    //         name: "Lola Spa Blue 89'' Sofa, Chair & Storage Ottoman", colorAndCategory: 'White, Quen', price: '$59,99', filledStars: [
-    //             filledStar,filledStar,filledStar,filledStar, filledStar
-    //         ], reviewCount: '(200)', img: imageTwo 
-    //     },
-    //     {
-    //         name: "Lola Spa Blue 89'' Sofa, Chair & Storage Ottoman", colorAndCategory: 'White, Quen', price: '$59,99', filledStars: [
-    //             filledStar,filledStar,filledStar,filledStar, filledStar
-    //         ], reviewCount: '(200)', img: imageThree 
-    //     }
-    // ]
-    console.log("also neewuid", productsUid)
-
+    
+    // States and variables
     const filledStars = [filledStar, filledStar, filledStar, filledStar]
-
     const relatedProduct = productsUid.map((item) => item)
-    // console.log("also needed products", relatedProduct)
-    // console.log("transfered valued", relatedProduct)
-
     const [data, setData] = useState();
+
+    // Functions
     const getFromApi = async () => {
         const api = `/api/v1/products/get/`
         try {
@@ -48,6 +26,7 @@ const AlsoNeed = ({productsUid}) => {
             console.error("error geting data", error)
         }
     }
+
     const fetchRelatedProducts = async () => {
         const products = await getFromApi();
         setData(products); // Update the state with the fetched products
@@ -62,12 +41,14 @@ const AlsoNeed = ({productsUid}) => {
         if(!title) return '';
         return title.length > maxLength ? title.slice(0, maxLength) + '...' : title;
     };
+
     const formatedPrice = (price) => {
         return Intl.NumberFormat('en-us', {
             style: 'currency',
             currency: 'USD'
         }).format(price)
     }
+
   return (
     <div className={`might-need-main-container`}>
         <h3>You Might Also Need</h3>
@@ -91,7 +72,6 @@ const AlsoNeed = ({productsUid}) => {
                     </div>
                 </div>
             ))}
-            
         </div>
     </div>
   )

@@ -1,6 +1,5 @@
 import React from 'react'
 import './AnnouncmentBanner.css';
-import installmentBanner from '../../../Assets/Furniture Mecca/Landing Page/sale banner/download 121.png'
 
 const AnnouncmentBanners = ({bannerImage, padding}) => {
   return (

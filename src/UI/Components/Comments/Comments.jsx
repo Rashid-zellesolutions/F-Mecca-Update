@@ -1,6 +1,5 @@
 import React from 'react'
 import './Comments.css';
-import { Link } from 'react-router-dom';
 import productOne from '../../../Assets/images/product-one.png'
 import productTwo from '../../../Assets/images/product-two.png'
 import productThree from '../../../Assets/images/product-three.png'
@@ -67,6 +66,7 @@ const Comments = ({ data ,order }) => {
             ]
         }
     ]
+    
 
     return (
         <div >

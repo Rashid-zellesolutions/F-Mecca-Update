@@ -40,7 +40,6 @@ const AllStores = () => {
     }, [])
 
     const handleModalPopUp = (index) => {
-      console.log('Opening modal for index:', index);
 
       if(window.innerWidth <= 900){
         setModalIndex(index);
@@ -48,7 +47,6 @@ const AllStores = () => {
       }
     }
     const closeModal = () => {
-      console.log('Closing modal');
       setCardClicked(false);
     }
 
@@ -60,7 +58,6 @@ const AllStores = () => {
                     <div className='image-container'
                         onMouseEnter={() => setHovered(true)}
                         onMouseLeave={() => setHovered(false)}
-                        // onMouseLeave={delaySliderHide}
                         onClick={() => handleModalPopUp(index)}
                     >
                         <img src={item.img} alt='img' />

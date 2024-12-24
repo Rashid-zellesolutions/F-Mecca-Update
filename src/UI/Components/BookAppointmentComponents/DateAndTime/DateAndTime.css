@@ -61,12 +61,9 @@
     font-size: 25px;
 }
 
-
-
 .react-calendar__navigation button:nth-child(5){
     display: none !important;
 }
-
 
 /* Time start */
 .time-container{

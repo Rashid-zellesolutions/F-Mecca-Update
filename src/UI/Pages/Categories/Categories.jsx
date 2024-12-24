@@ -91,8 +91,17 @@ import ScreenSizer from '../../../utils/ScreenResizer/ScreenResizer';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import { url } from '../../../utils/api';
 import { useSEOContext } from '../../../context/SEOcontext/SEOcontext';
+import Loader from '../../Components/Loader/Loader';
 
-const Categories = ({categoriesMainImage, mobileViewMainImage, categoryCartTitle, categoryCardData, newArrival , showPromotionsBaneers}) => {
+const Categories = ({
+  categoriesMainImage, 
+  mobileViewMainImage, 
+  categoryCartTitle, 
+  categoryCardData, 
+  newArrival, 
+  showPromotionsBaneers
+}) => {
+
   const { categorySlug } = useParams();
   const navigate = useNavigate();
   const location = useLocation(); 
@@ -112,6 +121,7 @@ const Categories = ({categoriesMainImage, mobileViewMainImage, categoryCartTitle
 
   const getPageData = async () => {
     try {
+      setLoading(true);
       const response = await fetch(`${url}/api/v1/sub-category/get/${categorySlug}`, {
         method: 'GET',
         headers: {
@@ -132,6 +142,7 @@ const Categories = ({categoriesMainImage, mobileViewMainImage, categoryCartTitle
 
   const getCategoryData = async () => {
     try {
+      setLoading(true);
       const response = await fetch(`${url}/api/v1/productCategory/get?slug=${categorySlug}`, {
         method: 'GET',
         headers: {
@@ -150,6 +161,12 @@ const Categories = ({categoriesMainImage, mobileViewMainImage, categoryCartTitle
       setLoading(false);
     }
   };
+
+  useEffect(()=>{
+    getPageData();
+    getCategoryData();
+    console.log("category page data",categoryPageData)
+  },[categorySlug]);
 
   useEffect( ()=> {
     getPageData();
@@ -171,6 +188,7 @@ const Categories = ({categoriesMainImage, mobileViewMainImage, categoryCartTitle
     <>
       {/* <Shopvia /> */}
       <LatestModulerBanner customWidth={false} showBanners={false} mainImgShow={true} mobileMainImage={url+(location.state? location.state?.bannerImage : categoryData?.bannerImage)}  /* { url+(location.state? location.state?.bannerImage2 : categoryData?.bannerImage2) } */ mainImage={url+(location.state? location.state?.bannerImage : categoryData?.bannerImage)} />
+      
       <Category title={location.state? location.state?.name : categoryData?.name } categoryData={categoryPageData} handleNavigate={handleNavigate} />
       {/* <CategoryShimmer/> */}
       {/* {isMobile ? <BestSellerSlider /> : <BestSeller />} */}

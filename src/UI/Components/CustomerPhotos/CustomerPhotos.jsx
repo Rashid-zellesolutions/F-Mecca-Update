@@ -1,30 +1,13 @@
 import React, {useState, useEffect, useRef} from 'react'
 import './CustomerPhotos.css';
-import customerImageOne from '../../../Assets/images/customer-slider-image-one.png'
-import customerImageTwo from '../../../Assets/images/customer-slider-image-2.png'
-import customerImageThree from '../../../Assets/images/customer-slider-image-3.png'
-import customerImageFour from '../../../Assets/images/customer-slider-image-4.png'
-import customerImageFive from '../../../Assets/images/customer-slider-image-5.png'
-import customerImageSix from '../../../Assets/images/customer-slider-image-6.png'
 
 import arrowLeft from '../../../Assets/icons/arrow-left-red.png';
 import arrowRight from '../../../Assets/icons/arrow-right-red.png';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { url } from '../../../utils/api';
 
 const CustomerPhotos = ({images}) => {
 
-    // const images = [
-    //     customerImageOne,
-    //     customerImageTwo,
-    //     customerImageThree,
-    //     customerImageFour,
-    //     customerImageFive,
-    //     customerImageSix,
-    //     customerImageOne,
-    //     customerImageThree,
-    //     customerImageFive,
-    //   ];
+    
 
       const [currentIndex, setCurrentIndex] = useState(5); // Start from the first duplicate set
       const [isTransitioning, setIsTransitioning] = useState(false);

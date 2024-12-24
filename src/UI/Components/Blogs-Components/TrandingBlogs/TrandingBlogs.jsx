@@ -1,9 +1,7 @@
 import React from 'react'
 import './TrandingBlogs.css'
-import trandingBlogImage from '../../../../Assets/blogs-images/tranding-blog.png'
-import { useBlog } from '../../../../context/BlogsContext/blogsContext'
 import { url } from '../../../../utils/api'
-import { useLocation, useNavigate } from 'react-router-dom'
+import {useNavigate } from 'react-router-dom'
 
 const TrandingBlogs = ({blogs}) => {
     const navigate = useNavigate();
@@ -11,7 +9,6 @@ const TrandingBlogs = ({blogs}) => {
         navigate(`/single-blog/${item.id}`, {state:  item});
     }
 
-    // const {blogs} = useBlog();
     return (
         <div className='tranding-blogs-main-section'>
             <h3>Trending</h3>

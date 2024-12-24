@@ -158,8 +158,6 @@
     object-fit: contain;
 }
 
-
-
 /* Best Seller Banner Section */
 .category-best-seller-banners-section{
     display: flex;
@@ -173,6 +171,7 @@
     height: 100%;
     object-fit: contain;
 }
+
 .category-best-seller-banners-section .banner_one{
     width: auto;
     height: 100%;
@@ -266,8 +265,6 @@
 .mobile-view-category-best-seller-card-section{
     display: flex;
     width: 100%;
-    /* position: absolute; */
-    /* padding: 0 25px; */
     top: -40px;
     position: relative;
 }
@@ -297,7 +294,6 @@
     border: none;
     background-color: transparent;
     z-index: 99999;
-
 }
 
 .mobile-view-best-seller-slider-arrows img{
@@ -313,10 +309,6 @@
 .mobile-view-best-seller-arrow-right{
     right: 10px;
 }
-
-
-
-
 
 @media only screen and (max-width: 480px){
     .category-besst-seller-main-container{

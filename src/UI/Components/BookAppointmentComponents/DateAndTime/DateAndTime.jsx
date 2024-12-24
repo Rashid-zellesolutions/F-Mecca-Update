@@ -9,7 +9,6 @@ const DateAndTime = () => {
   const [dateState, setDateState] = useState(new Date())
   const changeDate = (e) => {
     setDateState(e)
-    console.log("date selected", dateState)
   }
 
   const timeSlots = [
@@ -24,7 +23,6 @@ const DateAndTime = () => {
   const handleTimeStamp = (index, time) => {
     setTimeStamp((prevState) => prevState === time ? null : timeStamp);
   }
-
 
   return (
     <div className='date-and-time-main-container'>

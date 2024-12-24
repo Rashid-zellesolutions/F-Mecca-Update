@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -6,22 +6,17 @@ import "slick-carousel/slick/slick-theme.css";
 import '@splidejs/react-splide/css'
 import './BestSellerSlider.css';
 import BestSellerSliderMainBanner from '../../../Assets/Furniture Mecca/Landing Page/best seller products/Home Page Banner 396x595.jpg';
-import bestSellerMainSecondImage from '../../../Assets/Furniture Mecca/Landing Page/best seller products/Bedroom Side Banners 2 (2).png';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import BestSellerProductCard from '../BestSellerProductCard/BestSellerProductCard';
-import { useProducts } from '../../../context/productsContext/productContext';
 import star from '../../../Assets/icons/Star 19.png'
 
 import leftArrow from '../../../Assets/icons/arrow-left-white.png';
 import rightArrow from '../../../Assets/icons/right-arrow-white.png';
 import axios from 'axios';
 import { url } from '../../../utils/api';
-import { addQuantityIntoProduct } from '../../../utils/AddQuantityIntoProduct/AddQuantity';
 import { useSingleProductContext } from '../../../context/singleProductContext/singleProductContext';
 import { useCart } from '../../../context/AddToCart/addToCart';
 import { useList } from '../../../context/wishListContext/wishListContext';
-// import { SingleProductProvider } from '../../../context/AddToCart/addToCart';
-import { VscHeartFilled } from "react-icons/vsc";
 import { toast } from 'react-toastify';
 import BestSellerProductCardShimmer from '../BestSellerProductCard/BestSellerProductCardShimmer';
 
@@ -47,10 +42,9 @@ function BestSellerNextArrow(props) {
 
 
 const BestSellerSlider = () => {
-    const navigate = useNavigate()
 
-    // const { products} = useProducts()
-    // const {allProducts} = useProducts()
+    // States and Variables
+    const navigate = useNavigate()
     const [allProducts, setAllProducts] = useState([])
     const [bestSellerNav1, setBestSellerNav1] = useState([
         {
@@ -71,7 +65,6 @@ const BestSellerSlider = () => {
     ]);
     const [currentSlug, setCurrentSlug] = useState();
     const [loading, setLoading] = useState(false);
-    // console.log("products", allProducts)
     const getBestSellerProducts = async (slug) => {
         const api = `/api/v1/products/get-deal-of-month-products?slug=${slug}`
         try {
@@ -86,7 +79,6 @@ const BestSellerSlider = () => {
             setLoading(false);
         }
     }
-
     const getBestSellerData = async () => {
         const api = `/api/v1/best-seller-home/get`
         try {
@@ -103,48 +95,31 @@ const BestSellerSlider = () => {
         // getBestSellerProducts()
         getBestSellerData()
     }, [])
-
-    // States for current page, cards per page, and loading
     const [currentIndex, setCurrentIndex] = useState(0);
     const [cardsPerPage] = useState(6);
     const [totalPages] = useState(Math.ceil(allProducts.length / cardsPerPage));
     const [applyFilter, setApplyFilter] = useState(false);
-
     const [width, setWidth] = useState(window.innerWidth);
-
     const [activeItem, setActiveItem] = useState(0)
     const [MobileActiveIndex, setMobileActiveIndex] = useState(0)
-    const bestSellerNav = ['Living Room', 'Bedroom', 'Dining Room']
     const [mobIndex, setMobIndex] = useState(0)
-    const [cardIndex, setCardIndex] = useState(0)
+    // const [cardIndex, setCardIndex] = useState(0)
+    const { addSingleProduct } = useSingleProductContext();
+    const { addToCart } = useCart()
+    const { addToList, isInWishList, removeFromList } = useList()
+    const notify = (str) => toast.success(str);
+    const notifyRemove = (str) => toast.error(str)
+    const [listed, setListed] = useState(false);
+    const [currentPage, setCurrentPage] = useState(0);
 
-
-
+    // Functions
     const handleActiveItem = (index) => {
         setActiveItem(index)
-        // setLoading(true); // Show loader
-        // setTimeout(() => {
-        //     setActiveItem(index);
-        //     setLoading(false); // Hide loader after 2 seconds
-        // }, 1000);
     }
 
     const handleMobileActiveindex = (index) => {
         setActiveItem(index)
     }
-
-    // const settings = {
-    //     className: 'center',
-    //     dots: true,
-    //     infinite: true,
-    //     centerMode: true,
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     variableWidth: true,
-    //     // arrows: false,
-    //     nextArrow: <BestSellerNextArrow to="next" />,
-    //     prevArrow: <BestSellerPrevArrow to="prev" />,
-    // };
 
     useEffect(() => {
         const handleResizer = () => setWidth(window.innerWidth);
@@ -153,9 +128,6 @@ const BestSellerSlider = () => {
     })
 
     // product slice to show 6 product maxx
-    const { addSingleProduct } = useSingleProductContext();
-    const { addToCart } = useCart()
-    // const {addSingleProduct} = SingleProductProvider()
     const handleCardClicked = (item) => {
         // console.log("item clicked", item)
         // addSingleProduct(item)
@@ -167,12 +139,6 @@ const BestSellerSlider = () => {
         // console.log("added quantity into payload", allProducts)
 
     }
-
-    const { wishList, addToList, isInWishList, removeFromList } = useList()
-    const notify = (str) => toast.success(str);
-    const notifyRemove = (str) => toast.error(str)
-    const [listed, setListed] = useState(false);
-
 
     const handleWishlisted = (item) => {
         console.log("to delete uid", item.uid)
@@ -191,20 +157,6 @@ const BestSellerSlider = () => {
         }
     }
 
-    // mobile scripts
-    // const mobileSettings = {
-    //     className: 'center',
-    //     dots: true,
-    //     infinite: true,
-    //     centerMode: true,
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     variableWidth: false,
-    //     arrows: false,
-    //     nextArrow: <BestSellerNextArrow to="next" />,
-    //     prevArrow: <BestSellerPrevArrow to="prev" />,
-    // };
-
     const handleMobileNavClick = (index) => {
         setApplyFilter(true);
         setTimeout(() => {
@@ -212,15 +164,6 @@ const BestSellerSlider = () => {
             setMobIndex(index)
         }, 1000)
     }
-
-
-    // State for the current page (used for pagination and translateX calculation)
-    const [currentPage, setCurrentPage] = useState(0);
-
-    // Function to handle page change on dot click
-    const handlePageChange = (page) => {
-        setCurrentPage(page);
-    };
 
     // Get the slice of products to display based on the current page
     const getDisplayedCards = () => {
@@ -259,21 +202,6 @@ const BestSellerSlider = () => {
         return productWithDiscount.slice(start, end);
     };
 
-
-    const handlePaginationClick = (index) => {
-        // setCardIndex(index);
-        const newIndex = Math.max(0, Math.min(allProducts.length - 1, index));
-        setCardIndex(newIndex);
-    };
-
-    const getDisplayedIndexes = () => {
-        const halfVisible = 1; // Half of the dots
-        const start = Math.max(0, currentIndex - halfVisible);
-        const end = Math.min(totalPages - 1, start + 3);
-        return Array.from({ length: end - start + 1 }, (_, i) => start + i);
-    };
-
-    const displayedIndexes = getDisplayedIndexes();
     const ratingStars = [
         { icon: star },
         { icon: star },
@@ -281,8 +209,6 @@ const BestSellerSlider = () => {
         { icon: star },
         { icon: star }
     ]
-
-    // console.log("best seller data", bestSellerNav1)
 
     var settings = {
         dots: false,
@@ -325,7 +251,6 @@ const BestSellerSlider = () => {
     };
 
     useEffect(() => {
-        console.log("active image", url + bestSellerNav1[MobileActiveIndex].image.image_url)
     }, [MobileActiveIndex])
 
 
@@ -445,29 +370,6 @@ const BestSellerSlider = () => {
                         ) : (
                             <BestSellerProductCardShimmer width={'85%'} />
                         )}
-                        {/* <Slider {...settings}>
-                            {!loading ? (
-                                allProducts.map((item, index) => (
-                                    <BestSellerProductCard
-                                        productData={item}
-                                        isDiscountable={item.discount.is_discountable === 1 ? true : false}
-                                        key={index}
-                                        productMainImage={item.images?.[0]?.image_url}
-                                        starIcon={ratingStars}
-                                        reviews={'200'}
-                                        productName={item.name}
-                                        oldPrice={item.regular_price}
-                                        newPrice={item.newPrice}
-                                        handleCardClicked={() => handleCardClicked(item)}
-                                        handleWishListClecked={() => handleWishlisted(item)}
-                                    />
-                                ))
-                            ) : (
-                                <BestSellerProductCardShimmer />
-                            )
-                            }
-
-                        </Slider> */}
 
                     </div>
 

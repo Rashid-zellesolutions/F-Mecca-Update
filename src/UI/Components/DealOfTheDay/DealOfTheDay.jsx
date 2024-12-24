@@ -1,24 +1,14 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './DealOfTheDay.css';
-import { useProducts } from '../../../context/productsContext/productContext';
 
 import DealOfTheDayCard from './DealOfTheDayCard/DealOfTheDayCard';
 import leftArrow from '../../../Assets/icons/arrow-left-white.png';
 import rightArrow from '../../../Assets/icons/right-arrow-white.png';
 
-
-import testImage from '../../../Assets/Furniture Mecca/product page/frequently bought/MN600__04-300x200 1.png'
 import star from '../../../Assets/icons/Star 19.png'
-import cartIcon from '../../../Assets/icons/cart-bag-charcol.png';
-import cartWhite from '../../../Assets/icons/cart-bag-white.png'
-import heartIcon from '../../../Assets/icons/heart-charcol.png';
-import heartWhite from '../../../Assets/icons/heart-white.png'
-import combinedArrows from '../../../Assets/icons/multi-arrow-charcol.png'
-import multiArrowWhite from '../../../Assets/icons/multi-arrow-white.png'
-import { IoStar } from "react-icons/io5";
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { url } from '../../../utils/api';
@@ -146,13 +136,12 @@ const DealOfTheDay = () => {
     const api = `/api/v1/products/get-deal-of-month-products`
     try {
       const response = await axios.get(`${url}${api}`);
-      // console.log("deal of the month products", response.data.products)
       setAllProducts(response.data.products)
-      // console.log("deal month all products", allProducts)
     } catch (error) {
       console.error("error geting deal of the month products", error);
     }
   }
+
   useEffect(() => {
     getDealOfTheMonthProducts()
   }, []);
@@ -163,7 +152,7 @@ const DealOfTheDay = () => {
       .filter((product) => product.parent === 0) // Add filter condition here
       .map((product) => {
         let newPrice = parseFloat(product.regular_price);
-  
+
         if (product.discount && product.discount.is_discountable === 1) {
           const oldPrice = parseFloat(product.regular_price);
           const discountedValue = parseFloat(product.discount.discount_value);
@@ -176,16 +165,16 @@ const DealOfTheDay = () => {
             newPrice = oldPrice;
           }
         }
-  
+
         return {
           ...product,
           newPrice
         };
       });
-  
+
     return productWithDiscount;
   };
-  
+
 
   const { addSingleProduct } = useSingleProductContext();
   const handleDealCardClick = (items) => {
@@ -200,24 +189,24 @@ const DealOfTheDay = () => {
   productCount = publishedProductsLength.length;
 
   // wish list 
-  const {wishList, addToList, removeFromList, isInWishList} = useList()
+  const { addToList, removeFromList, isInWishList } = useList()
   const notify = (str) => toast.success(str);
-    const notifyRemove = (str) => toast.error(str)
+  const notifyRemove = (str) => toast.error(str)
   const handleWishList = (item) => {
-    if(isInWishList(item.uid)){
+    if (isInWishList(item.uid)) {
       removeFromList(item.uid)
       notifyRemove('Removed from wish list', {
-                autoClose: 10000,
-                className: "toast-message",
-            })
-    }else{
+        autoClose: 10000,
+        className: "toast-message",
+      })
+    } else {
       addToList(item)
       notify("added to wish list", {
-                autoClose: 10000,
-            })
+        autoClose: 10000,
+      })
     }
   }
-  
+
   const handleCartPanel = (items) => {
 
   }
@@ -239,9 +228,6 @@ const DealOfTheDay = () => {
           <p>end in: {days}d : {hours}h : {minutes}m : {seconds}s</p>
         </div>
       </div>
-      {/* <div>
-          Rashid
-        </div> */}
       <div className='deal-of-the-day-outer-container'>
         <div className='mobile-view-deal-of-the-day-timer-and-product-count'>
           <div className='mobile-view-timer'>
@@ -262,7 +248,6 @@ const DealOfTheDay = () => {
                 review={'200'}
                 price={items.regular_price}
                 newPrice={items.newPrice}
-                // imgIcons={imgIcons}
                 descount={items.disc}
                 handleDealCardClick={() => handleDealCardClick(items)}
                 handleWishListClick={() => handleWishList(items)}

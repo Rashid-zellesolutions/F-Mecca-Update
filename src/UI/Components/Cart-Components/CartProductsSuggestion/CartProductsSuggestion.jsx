@@ -4,6 +4,7 @@ import productImage from '../../../../Assets/Furniture Mecca/Cart Page/products/
 
 
 const CartProductsSuggestion = () => {
+
     const suggestionCartData = [
         {img: productImage, name: "Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat", price: '$120'},
         {img: productImage, name: "Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat", price: '$120'},
@@ -17,6 +18,7 @@ const CartProductsSuggestion = () => {
         {img: productImage, name: "Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat", price: '$120'},
         {img: productImage, name: "Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat", price: '$120'},
     ]
+
     const maxLength = 30;
     const truncateTitle = (title, maxLength) => {
         if (title.length > maxLength) {
@@ -25,7 +27,6 @@ const CartProductsSuggestion = () => {
         return title; 
     };
 
-    // title={truncateTitle(item.title, maxLength)}
   return (
     <div className='cart-suggestion-produts'>
         {suggestionCartData.map((item, index) => (

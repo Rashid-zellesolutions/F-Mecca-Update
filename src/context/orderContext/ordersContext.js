@@ -9,13 +9,14 @@ const MyOrderContext = createContext();
 
 export const MyOrdersProvider = ({ children }) => {
 
-    const [activePaymentMethods,setActivePaymentMethods]=useState([]);
-    const [loader,setLoader]=useState(false);
-    const {cartProducts,subTotal} = useCart();
-    const {totalTax,calculateTotalTax,getShippingInfo,selectedOption} = useGlobalContext();
-    const [showThankyou,setThankyouState] = useState(false);
-    const [orderPlacedInfo,setOrderPlacedInfo]=useState({
-        orderNumber:0,
+    const [activePaymentMethods, setActivePaymentMethods] = useState([]);
+    const [loader, setLoader] = useState(false);
+    const { cartProducts, subTotal } = useCart();
+    const { totalTax, calculateTotalTax, getShippingInfo, selectedOption } = useGlobalContext();
+    const [showThankyou, setThankyouState] = useState(false);
+
+    const [orderPlacedInfo, setOrderPlacedInfo] = useState({
+        orderNumber: 0,
         billing: {
             first_name: "",
             last_name: "",
@@ -34,12 +35,8 @@ export const MyOrdersProvider = ({ children }) => {
         card_number: '',
         expiry_date: '',
         sec_code: '',
-        card_type:''
+        card_type: ''
     })
-
-
- 
-
 
     const [orderPayload, setOrderPayload] = useState({
         status: 'pending',
@@ -55,7 +52,7 @@ export const MyOrdersProvider = ({ children }) => {
             email: "",
             phone: ""
         },
-        shipToDiffAdd:false,
+        shipToDiffAdd: false,
         shipping: {
             first_name: "",
             last_name: "",
@@ -76,16 +73,16 @@ export const MyOrdersProvider = ({ children }) => {
             expiry_year: '',
             sec_number: ''
         },
-        tax_lines:{
-            id:"",
-            name:"",
-            tax_rate:""
+        tax_lines: {
+            id: "",
+            name: "",
+            tax_rate: ""
         },
-        shipping_lines:{
-            id:"",
-            method_id:"",
-            tax:"",
-            cost:""
+        shipping_lines: {
+            id: "",
+            method_id: "",
+            tax: "",
+            cost: ""
         },
         items: [],
         discount: 0,
@@ -93,8 +90,9 @@ export const MyOrdersProvider = ({ children }) => {
         cart_protected: cartProducts.is_all_protected,
         is_shipping: 1,
         shipping_cost: 10,
-        professional_assembled:cartProducts.is_professional_assembly
+        professional_assembled: cartProducts.is_professional_assembly
     })
+
     const [emptyField, setEmptyField] = useState({});
     const [loading, setLoading] = useState(true); // Loading state
     const [selectedTab, setSelectedTab] = useState(0)
@@ -103,25 +101,24 @@ export const MyOrdersProvider = ({ children }) => {
 
     async function fetchActivePaymentMethods() {
         const apiUrl = `${url}/api/v1/payment-methods/get`;
-      
+
         try {
             setLoader(true)
-          const response = await fetch(apiUrl);
-          
-          if (!response.ok) {
+            const response = await fetch(apiUrl);
+
+            if (!response.ok) {
+                setLoader(false)
+                throw new Error(`Error: ${response.status} - ${response.statusText}`);
+
+            }
+
+            const data = await response.json();
             setLoader(false)
-            throw new Error(`Error: ${response.status} - ${response.statusText}`);
-            
-          }
-      
-          const data = await response.json();
-          console.log("API Response:", data);
-          setLoader(false)
-          return data; // You can return the data for further processing
+            return data; // You can return the data for further processing
         } catch (error) {
-          console.error("Error fetching data:", error);
-          setLoader(false)
-          return null; // Return null or handle the error accordingly
+            console.error("Error fetching data:", error);
+            setLoader(false)
+            return null; // Return null or handle the error accordingly
         }
     }
 
@@ -183,10 +180,7 @@ export const MyOrdersProvider = ({ children }) => {
         }));
     };
 
-    
-
     const addProducts = (products) => {
-        console.log(products,"here is data of products")
         setOrderPayload((prevOrder) => ({
             ...prevOrder,
             items: [
@@ -194,7 +188,7 @@ export const MyOrdersProvider = ({ children }) => {
                     .map((product) => ({
                         name: product.name,
                         product_id: product.product_uid,
-                        variation_uid:product.variation_uid,
+                        variation_uid: product.variation_uid,
                         quantity: product.quantity,
                         sku: product.sku,
                         is_protected: product.is_protected,
@@ -204,14 +198,9 @@ export const MyOrdersProvider = ({ children }) => {
         }));
     }
 
-
-
-    useEffect(()=>{
+    useEffect(() => {
         addProducts(cartProducts.products)
-    },[cartProducts])
-
-
-
+    }, [cartProducts])
 
     const handleValueChange = (e) => {
         const { name, value } = e.target;
@@ -231,7 +220,6 @@ export const MyOrdersProvider = ({ children }) => {
     const handleTabOpen = (tabId, scrollTop) => {
 
         setSelectedTab(tabId);
-        console.log("selected id", selectedTab)
 
         if (scrollTop) {
             scrollTop();
@@ -241,7 +229,7 @@ export const MyOrdersProvider = ({ children }) => {
     const sendProducts = async () => {
         try {
             setIsLoader(true);
-    
+
             const updatedPayload = {
                 ...orderPayload,
                 items: cartProducts.products.map((product) => ({
@@ -272,17 +260,15 @@ export const MyOrdersProvider = ({ children }) => {
                     cost: selectedOption?.cost || ""
                 },
             };
-    
-            console.log("Updated Payload:", updatedPayload);
-    
+
             // const url = "http://localhost:8080";
             const api = `/api/v1/orders/add`;
             const response = await axios.post(`${url}${api}`, updatedPayload);
-    
+
             if (response.status === 201) {
                 console.log("Order added successfully!");
                 setThankyouState(true);
-    
+
                 // Update orderPlacedInfo with response data
                 setOrderPlacedInfo((prev) => ({
                     ...prev,
@@ -292,7 +278,6 @@ export const MyOrdersProvider = ({ children }) => {
                         ...response.data.order.billing, // Merge new billing details with existing
                     },
                 }));
-                console.log("Updated Order Info:", response.data.order);
             }
         } catch (error) {
             console.error("Error adding order:", error);
@@ -300,8 +285,6 @@ export const MyOrdersProvider = ({ children }) => {
             setIsLoader(false);
         }
     };
-    
-    
 
     const handlePaymentInfo = () => {
         // Split the expiry_date to get month and year
@@ -321,10 +304,9 @@ export const MyOrdersProvider = ({ children }) => {
         }));
     }
 
-    useEffect(()=>{
-        console.log(orderPayload,"here is order payload")
+    useEffect(() => {
         handlePaymentInfo();
-    },[creditCardData])
+    }, [creditCardData])
 
     return (
         <MyOrderContext.Provider value={{

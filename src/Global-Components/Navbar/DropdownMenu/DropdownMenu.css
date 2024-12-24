@@ -68,7 +68,6 @@
 
 .mattres-links a:hover{
     color: #7f7f7f;
-    /* text-decoration: underline; */
 }
 
 .mattres-links.active a{
@@ -90,7 +89,6 @@
     flex-direction: column;
     position: relative;
     width: 315px !important;
-    /* height: 235px; */
     height: auto;
     gap: 00px;
 }
@@ -116,6 +114,7 @@
     letter-spacing: normal;
     text-decoration: none;
 }
+
 .price{
     color: var(--text-color);
     font-size: 14px;

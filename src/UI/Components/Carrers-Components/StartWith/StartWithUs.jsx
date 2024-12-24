@@ -1,6 +1,7 @@
 import React from 'react'
 import './StartWithUs.css'
 import ApplyFor from '../ApplyFor/ApplyFor'
+import { Link } from 'react-alice-carousel'
 
 const StartWithUs = () => {
   return (
@@ -10,7 +11,7 @@ const StartWithUs = () => {
             <p>We Are Lot More Than Just A Furniture Store</p>
         </div>
         <div className='career-apply-now'>
-            <a href='#'>Apply Now</a>
+            <Link to={'#'}>Apply Now</Link>
             <p>
                 Furniture Mecca stands as the preeminent home furnishings retailer in the Northeast, 
                 distinguished by its unwavering commitment to delivering an exceptional shopping experience.

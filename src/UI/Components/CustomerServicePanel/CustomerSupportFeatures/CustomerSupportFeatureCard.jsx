@@ -1,10 +1,17 @@
 import React, { useState } from 'react'
 import './CustomerSupportFeatureCard.css';
-
 import addBtnIcon from '../../../../Assets/icons/Group 437 (2).png';
 
-
-const CustomerSupportFeatureCard = ({img, heading, desc, isExtended, link, onToggle, className }) => {
+const CustomerSupportFeatureCard = (
+    {
+        img, 
+        heading, 
+        desc, 
+        isExtended, 
+        link, 
+        onToggle, 
+        className 
+    }) => {
 
   return (
     <>

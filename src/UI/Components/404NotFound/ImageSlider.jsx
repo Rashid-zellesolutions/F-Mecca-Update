@@ -66,7 +66,6 @@ const ImageSlider = () => {
                   productName={item.productTitle} 
                   oldPrice={item.priceTag}
                   newPrice={item.priceTag} // Update as needed for the new price
-                //   handleCardClicked={() => handleCardClicked(item)}/
                 />
               </div>
             ))}

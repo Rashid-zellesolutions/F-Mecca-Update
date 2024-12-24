@@ -13,7 +13,6 @@ export const GlobalContextProvider = ({ children }) => {
   const [taxLoader, setTaxLoader] = useState(false);
   const { subTotal, cartProducts } = useCart();
 
-
   const [info, setInfo] = useState(() => {
     const savedInfo = localStorage.getItem('other_info');
     return savedInfo ? JSON.parse(savedInfo) : {
@@ -37,7 +36,6 @@ export const GlobalContextProvider = ({ children }) => {
         ...newLocationData
       }
     }));
-
   };
 
   useEffect(() => {
@@ -45,8 +43,6 @@ export const GlobalContextProvider = ({ children }) => {
     fetchAllstores();
     // console.log(subTotal,"here is")
   }, [info])
-
-
 
   const [zipCode, setZipCode] = useState("");
   const handleInputChange = (e) => {
@@ -72,7 +68,6 @@ export const GlobalContextProvider = ({ children }) => {
     }
   }
 
-
   async function getStoresByDistance1(using,zip,lat,lng) {
     var apiUrl = ``;
     // const url ="http://localhost:8080";
@@ -82,7 +77,6 @@ export const GlobalContextProvider = ({ children }) => {
      apiUrl = `${url}/api/v1/stores/get-distant?latitude=${lat}&longitude=${lng}`:
     apiUrl = `${url}/api/v1/stores/get-distant`;
    
-
     try {
       const response = await fetch(apiUrl);
 
@@ -91,14 +85,13 @@ export const GlobalContextProvider = ({ children }) => {
       }
 
       const data = await response.json();
-      console.log("API Response:", data);
+      // console.log("API Response:", data);
       return data.data; // You can return the data for further processing
     } catch (error) {
       console.error("Error fetching data:", error);
       return null; // Return null or handle the error accordingly
     }
   }
-
 
   async function getShippingMethodss() {
     const apiUrl = `${url}/api/v1/shipping/get?stateCode=${info.locationData.stateCode}`;
@@ -114,7 +107,6 @@ export const GlobalContextProvider = ({ children }) => {
       }
 
       const data = await response.json();
-      console.log("API Response:", data);
       setShippingLoader(false)
       return data; // You can return the data for further processing
     } catch (error) {
@@ -123,8 +115,6 @@ export const GlobalContextProvider = ({ children }) => {
       return null; // Return null or handle the error accordingly
     }
   }
-
-
 
   async function getTotalTax() {
     const apiUrl = `${url}/api/v1/tax/get?stateCode=${info.locationData.stateCode}`;
@@ -140,7 +130,6 @@ export const GlobalContextProvider = ({ children }) => {
       }
 
       const data = await response.json();
-      console.log("API Response:", data);
       setTaxLoader(false)
       return data; // You can return the data for further processing
     } catch (error) {
@@ -173,7 +162,6 @@ export const GlobalContextProvider = ({ children }) => {
     setShippingMethods(data?.shippingZones[0]);
   };
 
-
   const setTaxValues = async () => {
     const data = await getTotalTax();
     setTotalTax(data?.tax[0]);
@@ -187,52 +175,15 @@ export const GlobalContextProvider = ({ children }) => {
     return taxAmount;
   }
 
-
-  //      function getShippingMethods(subtotal, shippingMethods) {
-  //     let selectedMethods = [];
-
-  //     // Case 1: METHOD-1 (Free Shipping)
-  //     const method1 = shippingMethods.find(method => method.id === "METHOD-1");
-  //     if (method1 && subtotal >= method1.min_cost) {
-  //         selectedMethods.push(method1);
-  //     }
-
-  //     // If METHOD-1 is applied, no other methods will be shown
-  //     if (selectedMethods.length > 0) {
-
-  //         setSelectedShippingMethods(selectedMethods);
-  //         console.log(selectedMethods,"selectedMethods are here");
-  //         return;
-  //     }
-
-  //     // Case 2: METHOD-2 (Flat Rate Shipping)
-  //     const method2 = shippingMethods.find(method => method.id === "METHOD-2");
-  //     if (method2) {
-  //         selectedMethods.push({ ...method2, cost: subtotal >= method2.min_cost ? method2.cost : 0 });
-  //     }
-
-  //     // Case 3: METHOD-3 (Local Pickup)
-  //     const method3 = shippingMethods.find(method => method.id === "METHOD-3");
-  //     if (method3 && method3.cost === 0) {
-  //         selectedMethods.push(method3);
-  //     }
-  //     console.log(selectedMethods,"selectedMethods are here");
-
-  //     setSelectedShippingMethods(selectedMethods)
-  //   }
   const [selectedOption, setSelectedOption] = useState(null);
 
   const handleChange = (e, option) => {
     setSelectedOption(option);
-    console.log(option, "Selected option is here");
   };
-
-
 
   const [selectedShippingMethods, setSelectedShippingMethods] = useState(null);
   function getShippingMethods(subtotal, shippingMethods) {
     setSelectedOption({});
-    console.log(subtotal, shippingMethods, "these are two");
     let selectedMethods = [];
 
     // Case 1: METHOD-1 (Free Shipping)
@@ -245,7 +196,6 @@ export const GlobalContextProvider = ({ children }) => {
     if (selectedMethods.length === 1) {
       setSelectedOption(method1); // Automatically select METHOD-1
       setSelectedShippingMethods(selectedMethods);
-      console.log(selectedMethods, "selectedMethods are here");
       return;
     }
 
@@ -269,10 +219,8 @@ export const GlobalContextProvider = ({ children }) => {
       setSelectedOption(selectedMethods[0]); // Default to the first available method
     }
 
-    console.log(selectedMethods, "selectedMethods are here");
     setSelectedShippingMethods(selectedMethods);
   }
-
 
   useEffect(() => {
     setAllShippingMethods();
@@ -280,12 +228,9 @@ export const GlobalContextProvider = ({ children }) => {
     setSelectedOption(null)
   }, [info])
 
-
-
   const handleButtonClick = async () => {
-    console.log("Updated Zip Code:", zipCode);
     const data = await getStateByPostalCode(zipCode);
-    console.log(data)
+    // console.log(data)
     if (data) {
       updateLocationData({
         zipCode: zipCode,
@@ -323,7 +268,6 @@ export const GlobalContextProvider = ({ children }) => {
     return { result, taxIncluded, cost };
   }
   
-
   const [grandTotal, setGrandTotal] = useState(0);
 
   function CalculateGrandTotal() {
@@ -332,9 +276,6 @@ export const GlobalContextProvider = ({ children }) => {
     console.log(subTotal1,taxValue,getShippingInfo(selectedOption)?.cost,"here are subtotal & tax")
     return subTotal + calculateTotalTax(subTotal1, taxValue) + getShippingInfo(selectedOption)?.cost;
   }
-  
-
-  
   
   return (
     <GlobalContext.Provider value={{
